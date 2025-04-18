@@ -139,9 +139,9 @@ function generatePracticeTrials(audio_trials, response_trials) {
 
         firstAudio.stimulus = firstAudioPath;
         firstAudio.prompt = firstPrompt;
-        firstAudio.trial_duration = 2000;
+        firstAudio.trial_duration = 4000;
         secondAudio.stimulus = secondAudioPath;
         secondAudio.prompt = secondPrompt;
-        secondAudio.trial_duration = 2000;
+        secondAudio.trial_duration = 4000;
     }
 }
