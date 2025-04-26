@@ -208,6 +208,7 @@ for (i = 0; i < (NUM_TRIALS * NUM_BLOCKS); i++) { // for every trial
   timeline.push(all_trial_response_objects[i]); // response
 }
 
+
 /* survey 1: demographic questions */
 var survey1 = {
   type: jsPsychSurvey,
@@ -218,12 +219,47 @@ var survey1 = {
         prompt: `<p style="color: #000000">Please answer the following questions:</p>`,
       },
       {
-        type: 'multi-choice',
-        prompt: "What is your citizenship status?",
-        name: 'citizenship',
-        options: ['Singaporean', 'Singapore PR', 'None of the above', 'Prefer not to answer'],
-        required: true
+        type: 'text',
+        prompt: "What was your ZIP code when you were growing up (before the age of 14)?",
+        name: 'zipcode_growing_up',
+        required: true,
+        input_type: 'text',
+        placeholder: 'Enter 5-digit ZIP code',
+        regex: /^[0-9]{5}$/,  // Regular expression to validate 5 digits
+        error_message: "Please enter a valid 5-digit ZIP code."
       },
+      {
+        type: 'text',
+        prompt: "What was your ZIP code during most of your teenage years?",
+        name: 'zipcode_teenage_years',
+        required: true,
+        input_type: 'text',
+        placeholder: 'Enter 5-digit ZIP code',
+        regex: /^[0-9]{5}$/,  // Regular expression to validate 5 digits
+        error_message: "Please enter a valid 5-digit ZIP code."
+      },
+      {
+        type: 'text',
+        prompt: "What was your ZIP code during most of your adult years?",
+        name: 'zipcode_adult_years',
+        required: true,
+        input_type: 'text',
+        placeholder: 'Enter 5-digit ZIP code',
+        regex: /^[0-9]{5}$/,  // Regular expression to validate 5 digits
+        error_message: "Please enter a valid 5-digit ZIP code."
+      },
+      {
+        type: 'text',
+        prompt: "What is your current ZIP code?",
+        name: 'zipcode_current',
+        required: true,
+        input_type: 'text',
+        placeholder: 'Enter 5-digit ZIP code',
+        regex: /^[0-9]{5}$/,  // Regular expression to validate 5 digits
+        error_message: "Please enter a valid 5-digit ZIP code."
+      },
+      
+      
       {
         type: 'multi-choice',
         prompt: "What is your gender?",
@@ -242,14 +278,24 @@ var survey1 = {
         type: 'multi-select',
         prompt: "What is your race? Please select all that apply.",
         name: 'race',
-        options: ['Chinese', 'Malay', 'Indian', 'Other', 'Prefer not to answer'],
+        options: [
+          'American Indian or Alaska Native',
+          'Asian',
+          'Black or African American',
+          'Hispanic or Latino',
+          'Middle Eastern or North African',
+          'Native Hawaiian or Pacific Islander',
+          'White',
+          'Prefer not to answer'
+        ],
         required: true,
       },
+      
       {
         type: 'text',
-        prompt: "What is your estimated total monthly household income (in USD)?",
+        prompt: "What is your estimated total yearly household income (in USD)?",
         name: 'income',
-        textbox_columns: 8,
+        textbox_columns: 9,
         input_type: "number",
         required: true,
       },
@@ -271,7 +317,7 @@ var survey2a = {
   type: jsPsychSurveyHtmlForm,
   preamble: `<p>What languages do you speak?</p>
   <p>Please indicate up to 5 languages and list them <b>in order of descending frequency of use</b>, i.e., Language 1 is the most frequently spoken language, Language 2 the second-most frequently spoken language, and so on.</p>
-  <p>For example, if English is Language 1, Malay is Language 2, and Hokkien is Language 3, that means you speak English the most frequently, Malay the second-most frequently, and Hokkien the least frequently.
+  <p>For example, if English is Language 1, Cantonese is Language 2, and Spanish is Language 3, that means you speak English the most frequently, Cantonese the second-most frequently, and Spanish the least frequently.
   </p>`,
   html: `<p>
   <input name="lang1" type="text" placeholder="Language 1" required><BR><BR>
@@ -283,79 +329,85 @@ var survey2a = {
 };
 timeline.push(survey2a);
 
-var survey2b = {
+var survey2b_part1 = {
+  type: jsPsychSurvey,
+  pages: [
+    [
+      {
+        type: 'text',
+        prompt: "How many generations of your family have lived in this area? (If you're the first generation, please enter 1.)",
+        name: 'family_generations_in_area',
+        required: true
+      },
+      {
+        type: 'multi-choice',
+        prompt: "Do you think there is a distinct Boston accent?",
+        name: 'boston_accent_opinion',
+        options: ['Yes', 'No', 'Not sure'],
+        required: true
+      },
+      {
+        type: 'text',
+        prompt: "Are there any areas where people sound like they're from Boston? Please specify. (For example, 'South Boston' or 'Dorchester')",
+        name: 'boston_accent_area',
+        required: true
+      }
+    ]
+  ],
+  button_label_finish: 'Continue',
+};
+timeline.push(survey2b_part1);
+
+var survey2b_part2 = {
   type: jsPsychSurvey,
   pages: [
     [
       {
         type: 'multi-choice',
-        prompt: "Do you speak Singlish?",
-        name: 'singlish',
+        prompt: "Do you speak with a Boston accent?",
+        name: 'speak_with',
         options: ['Yes', 'No'],
         required: true,
       },
       {
         type: 'text',
-        prompt: "How many hours a day do you spend interacting in Singlish?",
-        name: 'singlish_hours',
+        prompt: "Approximately what percentage of the people you know have immigrated to this country? Please enter a number.",
+        name: 'immigrant_percentage',
+        required: true
+      },
+      {
+        type: 'text',
+        prompt: "How many people do you hear in a given week that speak with a Boston accent?",
+        name: 'Boston_people',
         input_type: "number",
         required: true,
       },
       {
         type: 'multi-choice',
-        prompt: "Do your friends speak Singlish?",
-        name: 'singlish_friends',
+        prompt: "Do your friends speak with a Boston accent?",
+        name: 'boston_friends',
         options: ['Yes', 'No'],
         required: true,
-      },
-      {
-        type: 'likert',
-        prompt: "How often do your friends speak Singlish?",
-        name: 'singlish_friends_frequency',
-        required: true,
-        likert_scale_min_label: 'Never',
-        likert_scale_max_label: 'All the time',
-        likert_scale_values: [
-          { value: 1 },
-          { value: 2 },
-          { value: 3 },
-          { value: 4 },
-          { value: 5 }
-        ]
       },
       {
         type: 'multi-choice',
-        prompt: "Does your family speak Singlish?",
-        name: 'singlish_family',
+        prompt: "Does anyone in your family speak with a Boston accent?",
+        name: 'boston_family',
         options: ['Yes', 'No'],
         required: true,
-      },
-      {
-        type: 'likert',
-        prompt: "How often does your family speak Singlish?",
-        name: 'singlish_family_frequency',
-        required: true,
-        likert_scale_min_label: 'Never',
-        likert_scale_max_label: 'All the time',
-        likert_scale_values: [
-          { value: 1 },
-          { value: 2 },
-          { value: 3 },
-          { value: 4 },
-          { value: 5 }
-        ]
-      },
-    ],
+      }
+    ]
   ],
   button_label_finish: 'Continue',
 };
-timeline.push(survey2b);
+timeline.push(survey2b_part2);
 
-/* survey 3: open-ended singlish questions */
+
+/* survey 3: open-ended Boston questions */
 
 var survey3a = {
   type: jsPsychSurveyHtmlForm,
-  preamble: '<p>List three attributes to describe the speakers that sounded more Singlish:</p>',
+  preamble: '<p>Thinking to the experiment, list three attributes to describe the speakers that sounded like they were more likely to have been born in Boston:</p>',
   html: '<p><input name="word1" class="try" type="text" placeholder="Word 1" required><BR><BR><input name="word2" type="text" placeholder="Word 2" required><BR><BR><input name="word3" type="text" placeholder="Word 3" required></p>'
 };
 timeline.push(survey3a);
@@ -366,20 +418,20 @@ var survey3b = {
     [
       {
         type: 'text',
-        prompt: "In your opinion, when and/or where is it acceptable to use Singlish? When and/or where is it not acceptable to use Singlish?",
-        name: 'singlish_acceptability',
+        prompt: "In your opinion, how have changes in your neighborhood (e.g., new businesses, buildings, or residents) affected daily life? What do you like or dislike about these changes?",
+        name: 'neighborhood_changes_opinion',
         required: true,
       },
       {
         type: 'text',
-        prompt: "What is Singlish? Give a definition.",
-        name: 'singlish_definition',
+        prompt: "What are the top three issues that are affecting your community?",
+        name: 'community_issues',
         required: true,
       },
       {
         type: 'multi-choice',
-        prompt: "How important do you think Singlish is?",
-        name: 'singlish_important',
+        prompt: "How important is it to preserve the original character or culture of a neighborhood?",
+        name: 'preserve_culture_importance',
         options: ['Very important', 'Important', 'Neutral', 'Not important', 'Not important at all'],
         required: true,
       }
@@ -388,6 +440,7 @@ var survey3b = {
   button_label_finish: 'Continue',
 };
 timeline.push(survey3b);
+
 
 /* survey 4: language attitude questions */
 var likert_scale = [
@@ -402,10 +455,10 @@ var survey4 = {
   type: jsPsychSurveyLikert,
   preamble: `Please rate how much you agree or disagree with the following statements.`,
   questions: [
-    { prompt: "Singlish is just bad English.", name: 'likert_badenglish', labels: likert_scale, required: true },
-    { prompt: "Singlish is the only thing that really makes us Singaporean.", name: 'likert_singaporean', labels: likert_scale, required: true },
-    { prompt: "Singlish unites the different races of Singapore.", name: 'likert_race', labels: likert_scale, required: true },
-    { prompt: "It would be better for Singapore if Singlish did not exist.", name: 'likert_exist', labels: likert_scale, required: true },
+    { prompt: "The Boston accent is just bad English.", name: 'likert_badenglish', labels: likert_scale, required: true },
+    { prompt: "The Boston accent is a key part of Bostonian identity.", name: 'likert_identity', labels: likert_scale, required: true },
+    { prompt: "The Boston accent brings together people from different backgrounds in the area.", name: 'likert_unity', labels: likert_scale, required: true },
+    { prompt: "It would be better for Boston if the Boston accent faded away.", name: 'likert_disappear', labels: likert_scale, required: true },
   ],
   randomize_question_order: true,
 };
