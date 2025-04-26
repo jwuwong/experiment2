@@ -88,8 +88,8 @@ function generateTrials(trial_ord, audio_trials, response_trials) {
         let response = response_trials[i]; // tbd
 
         // stich together audio path for stimulus
-        let firstAudioPath = '../audio/' + firstClip['Clip ID'] + '.wav';
-        let secondAudioPath = '../audio/' + secondClip['Clip ID'] + '.wav';
+        let firstAudioPath = '../audio/' + firstClip['Clip ID'] + '.WAV';
+        let secondAudioPath = '../audio/' + secondClip['Clip ID'] + '.WAV';
 
         // update data into template
         firstAudio.stimulus = firstAudioPath;
@@ -134,8 +134,8 @@ function generatePracticeTrials(audio_trials, response_trials) {
     for (let i = 0; i < audio_trials.length; i++){
         let [firstAudio, secondAudio] = audio_trials[i];
         let trial_num = (i+1).toString();
-        let firstAudioPath = '../practice/' + 'trial' + trial_num + '_clip1' + '.wav';
-        let secondAudioPath = '../practice/' + 'trial' + trial_num + '_clip2' + '.wav';
+        let firstAudioPath = '../practice/' + 'trial' + trial_num + '_clip1' + '.WAV';
+        let secondAudioPath = '../practice/' + 'trial' + trial_num + '_clip2' + '.WAV';
 
         firstAudio.stimulus = firstAudioPath;
         firstAudio.prompt = firstPrompt;
