@@ -1,0 +1,107 @@
+---
+title: "Replication of Pitch variability cues perceptions of Singlish: A perceptually-guided approach to sociophonetic variation by Tan and Sumner (2024, UPenn Working Papers in Linguistic)"
+author: "Jonathan WuWong"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+format:
+  html:
+    toc: true
+    toc_depth: 3
+---
+
+<!-- Replication reports should all use this template to standardize reporting across projects.  These reports will be public supplementary materials that accompany the summary report(s) of the aggregate results. -->
+
+## Introduction
+
+
+
+Integrating an understanding of the social world into any linguistic investigation is essential for addressing the broader goal of understanding how language functions. While sociolinguists have long emphasized the importance of considering the socioindexical information embedded in language, much of this work has focused on variation in production patterns. The study of the perceptual aspects of sociolinguistic phenomena has only recently undergone substantial development. Furthermore, most sociolinguistic perception studies have focused on speech perception, often implicitly prioritizing single variables as the primary object of analysis.
+
+Although this framework has advanced our understanding of sociolinguistic behavior, Tan and Sumner (2024) further develop this line of investigation by proposing a method to uncover multiple possible sociolinguistic variables across a diverse set of speech samples. In their study, listeners were asked to complete pairwise comparisons of speech clips from a variety of speakers, selecting which clip sounded more like “Singlish.” Their findings suggest that multiple features within utterances correlate with perceptions of Singlish. By identifying features that reliably correlate with higher Singlish ratings, this investigation moves beyond a narrow focus on individual variables. While this approach sacrifices some experimental control, it marks a significant step toward understanding sociolinguistic perception as a process that unfolds over longer, more complex, and diverse speech utterances.
+
+The goal of this replication is to reconfirm listeners’ ability to draw on features found in diverse speech samples to make inferences about a specific social category. By modifying the social category, speaker set, and relevant sociolinguistic variables, this replication reinforces not only the viability of such methodologies for investigating social perception in language, but also the pluralistic feature-based nature of sociolinguistic processing.
+
+## Methods
+
+
+The methodology for this replication follows the structure of Tan and Sumner’s original study. In each trial (20 trials per block across 6 blocks), participants will hear two audio clips of spoken English presented back-to-back, separated by 500 milliseconds of silence. After each pair, participants will choose which clip sounded more like a speaker from a specific social category by pressing “L” or “S” to indicate the first or second clip. Each trial will be followed by a 2-second pause.
+
+Each of the 40 total stimuli will be played once per block, with randomized ordering. After completing the trials, participants will fill out a language background, demographic, and social attitude survey.
+
+This replication differs from the original in terms of both the speech clips and the target social category. The speakers in this study will be Cantonese L1 English speakers living in the Boston area. Listeners will be asked to judge which clip sounds more like someone born in Boston. Participants will be recruited from Massachusetts to ensure familiarity with the local accent. While the original study treated the speeded choice task as exploratory, this replication draws on extensive literature on both Cantonese contact effects in English and features of the Boston accent. The focus is not only on identifying features that cue Boston origin, but also on understanding how the presence—and co-occurrence—of contact and dialectal features influence the categorization of speakers as native Bostonians.
+### Power Analysis
+
+Using Tan & Sumner's original analysis, we calculated the effect size to be ~0.0315. Having used logistic regression model with 4 predictors, to achieve 80%, 90% and 95% power, we would need a sample of 379, 489, and 589 respectively. In terms of feasibility, these samples seem quite large, so the smallest sample size may be the most possible. 
+
+
+
+### Planned Sample
+
+Planned sample size and/or termination rule, sampling frame, known demographics if any, preselection rules if any.
+
+### Materials
+
+All materials - can quote directly from original article - just put the text in quotations and note that this was followed precisely.  Or, quote directly and just point out exceptions to what was described in the original article.
+
+### Procedure	
+
+Can quote directly from original article - just put the text in quotations and note that this was followed precisely.  Or, quote directly and just point out exceptions to what was described in the original article.
+
+### Analysis Plan
+
+Can also quote directly, though it is less often spelled out effectively for an analysis strategy section.  The key is to report an analysis strategy that is as close to the original - data cleaning rules, data exclusion rules, covariates, etc. - as possible.  
+
+**Clarify key analysis of interest here**  You can also pre-specify additional analyses you plan to do.
+
+### Differences from Original Study
+
+Explicitly describe known differences in sample, setting, procedure, and analysis plan from original study.  The goal, of course, is to minimize those differences, but differences will inevitably occur.  Also, note whether such differences are anticipated to make a difference based on claims in the original article or subsequent published research on the conditions for obtaining the effect.
+
+### Methods Addendum (Post Data Collection)
+
+You can comment this section out prior to final report with data collection.
+
+#### Actual Sample
+  Sample size, demographics, data exclusions based on rules spelled out in analysis plan
+
+#### Differences from pre-data collection methods plan
+  Any differences from what was described as the original plan, or “none”.
+
+
+## Results
+
+
+### Data preparation
+
+Data preparation following the analysis plan.
+	
+```{r include=F}
+### Data Preparation
+
+#### Load Relevant Libraries and Functions
+
+#### Import data
+
+#### Data exclusion / filtering
+
+#### Prepare data for analysis - create columns etc.
+```
+
+### Confirmatory analysis
+
+The analyses as specified in the analysis plan.  
+
+*Side-by-side graph with original graph is ideal here*
+
+### Exploratory analyses
+
+Any follow-up analyses desired (not required).  
+
+## Discussion
+
+### Summary of Replication Attempt
+
+Open the discussion section with a paragraph summarizing the primary result from the confirmatory analysis and the assessment of whether it replicated, partially replicated, or failed to replicate the original result.  
+
+### Commentary
+
+Add open-ended commentary (if any) reflecting (a) insights from follow-up exploratory analysis, (b) assessment of the meaning of the replication (or not) - e.g., for a failure to replicate, are the differences between original and present study ones that definitely, plausibly, or are unlikely to have been moderators of the result, and (c) discussion of any objections or challenges raised by the current and original authors about the replication attempt.  None of these need to be long.
