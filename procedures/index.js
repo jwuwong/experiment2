@@ -154,7 +154,7 @@ var practiceinstructions = {
         <p>In each trial, two audio clips will play one after another. You will hear a variety of sentences and phrases spoken by different talkers.</p>
         <p>Each audio clip will only be played once and you will not be able to replay them.</p>
         <p><strong>Your task is to decide which clip sounds more like the speaker was born in Boston.</strong></p>
-        <p>You might hear some clips that sound similar to each other, but please do your best to respond as quickly as possible.</p>
+        <p>These clips come from real people so they might not all sound like your typical Bostonian, but just make your best guess as quickly as possible.</p>
         <p>Please place your left index finger on the "S" key and your right index finger on the "L" key.</p>
         <p><img src="../procedures/keyboard.png" width="500" style="margin-top:-10px"></p>
         <p>If the <strong>first clip</strong> sounds more like someone who was born in Boston, please <strong>press S</strong>.</p>
@@ -185,7 +185,7 @@ var realinstructions = {
         <p>In each trial, two audio clips will play one after another. You will hear a variety of sentences and phrases spoken by different talkers.</p>
         <p>Each audio clip will only be played once and you will not be able to replay them.</p>
         <p><strong>Your task is to decide which clip sounds more like someone who was born in Boston.</strong></p>
-        <p>You might hear some clips that sound similar to each other, but please do your best to respond as quickly as possible.</p>
+        <p>These clips come from real people so they might not all sound like your typical Bostonian, but please do your best to respond as quickly as possible.</p>
         <p>Please place your left index finger on the "S" key and your right index finger on the "L" key.</p>
         <p><img src="../procedures/keyboard.png" width="500" style="margin-top:-10px"></p>
         <p>If the <strong>first clip</strong> sounds more like someone who was born in Boston, please <strong>press S</strong>.</p>
