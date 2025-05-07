@@ -2,7 +2,7 @@
 var jsPsych = initJsPsych({
   show_progress_bar: true,
   on_finish: function () {
-    //jsPsych.data.displayData();
+    jsPsych.data.displayData();
     window.location = "https://jwuwong.github.io/boston/procedures/thanks.html";
     proliferate.submit({ "trials": jsPsych.data.get().values() });
   },
