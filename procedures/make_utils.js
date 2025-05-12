@@ -70,16 +70,16 @@ function generateBlankTrials(num_trials, audio_array, response_array, audio_temp
 function generateTrials(trial_ord, audio_trials, response_trials) {
     let firstPrompt = `       
         <center>
-            <div class="visual-play">Clip 1<p>Press "S"</p></div>
-            <div class="visual">Clip 2<p>Press "L"</p></div>
+            <div class="visual-play">Clip 1</div>
+            <div class="visual">Clip 2</div>
         </center>
-        <p style="text-align:center">Which clip sounds more like someone who was <b>born in Boston?</b></p>`; // visual stimuli for clip 1, tbd
+        <p style="text-align:center">Listening to clips</p>`; // visual stimuli for clip 1, tbd
     let secondPrompt = `            
         <center>
-            <div class="visual">Clip 1<p>Press "S"</p></div>
-            <div class="visual-play">Clip 2<p>Press "L"</p></div>
+            <div class="visual-play">Clip 1</div>
+            <div class="visual">Clip 2</div>
         </center>
-        <p style="text-align:center">Which clip sounds more like someone who was <b>born in Boston?</b></p>`; // visual stimuli for clip 2, tbd
+        <p style="text-align:center">Listening to clips</p>`;  // visual stimuli for clip 2, tbd
 
     for (let i = 0; i < trial_ord.length; i++) {
         let [firstClip, secondClip] = trial_ord[i];

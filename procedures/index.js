@@ -2,7 +2,7 @@
 var jsPsych = initJsPsych({
   show_progress_bar: true,
   on_finish: function () {
-    jsPsych.data.displayData();
+    //jsPsych.data.displayData();
     window.location = "https://jwuwong.github.io/boston/procedures/thanks.html";
     proliferate.submit({ "trials": jsPsych.data.get().values() });
   },
@@ -11,6 +11,32 @@ var jsPsych = initJsPsych({
 
 /* create timeline */
 var timeline = [];
+
+
+/* Add a counter variable to track consecutive no-responses */
+var consecutive_no_responses = 0;
+const MAX_CONSECUTIVE_NO_RESPONSES = 5;
+
+/* Create a function to check if we should terminate the experiment */
+function checkNoResponseTermination() {
+  if (consecutive_no_responses >= MAX_CONSECUTIVE_NO_RESPONSES) {
+    // End the experiment with a message
+    jsPsych.endExperiment('The experiment has ended because you did not respond to multiple trials in a row.');
+  }
+}
+
+/* Create a handler function for trials */
+function handleTrialResponse(data) {
+  // If no response was given (null or undefined)
+  if (data.response === null || typeof data.response === 'undefined') {
+    consecutive_no_responses++;
+    checkNoResponseTermination();
+  } else {
+    // Reset the counter if they did respond
+    consecutive_no_responses = 0;
+  }
+}
+
 
 const sounds = [ // These are just the practice trial sounds! REAL trial sounds are in the audio folder
   '../practice/trial1_clip1.WAV',
@@ -140,8 +166,9 @@ const soundcheck = {
   type: jsPsychCloze,
   text: `<center><BR><BR><audio controls src="../soundcheck.wav"></audio></center><BR><BR>Listen carefully to the audio clip above. Type the <b>last word</b> that was said into the blank below and press "Continue".<BR><BR>% friends %`,
   check_answers: true,
+  case_sensitivity: false,
   button_text: 'Continue',
-  mistake_fn: function () { alert("Wrong answer. Please make sure your audio is working properly and try again.") }
+  mistake_fn: function () { alert("Wrong answer. Please make sure your audio is working properly and try again. Make sure you're using lowercase") }
 };
 timeline.push(soundcheck);
 
@@ -169,12 +196,16 @@ var practiceinstructions = {
 };
 timeline.push(practiceinstructions);
 
-/* practice trials */
+/* Practice trials */
 for (let i = 0; i < practice_trial_audio_objects.length; i++){
   timeline.push(practice_trial_audio_objects[i][0]);
   timeline.push(practice_trial_audio_objects[i][1]);
+  
+  // Add on_finish handler to the practice response object
+  practice_trial_response_objects[i].on_finish = handleTrialResponse;
+  
   timeline.push(practice_trial_response_objects[i]);
-} 
+}
 
 /* REAL trial instructions */
 var realinstructions = {
@@ -205,6 +236,10 @@ timeline.push(realinstructions);
 for (i = 0; i < (NUM_TRIALS * NUM_BLOCKS); i++) { // for every trial
   timeline.push(all_trial_audio_objects[i][0]); // first audio obj
   timeline.push(all_trial_audio_objects[i][1]); // second audio obj
+  
+  // Add on_finish handler to the response object
+  all_trial_response_objects[i].on_finish = handleTrialResponse;
+  
   timeline.push(all_trial_response_objects[i]); // response
 }
 
