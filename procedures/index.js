@@ -93,7 +93,7 @@ timeline.push(checkBrowser);
 var instructions = {
   type: jsPsychHtmlButtonResponse,
   stimulus: `
-        <div class="text" id="instruction">
+        <div class="text" id="instruction" >
             <img src="../images/stanford_logo.png" alt="stanford logo" width="180" height="80">
             <p><b>Only complete this study if you are a Massachussets resident who is 18 years old or older.</b></p>
             <p>Please share this link with other people you know who live in the area, but <u>do not participate in this study more than once</u>.
@@ -167,81 +167,118 @@ const soundcheck = {
   text: `<center><BR><BR><audio controls src="../soundcheck.wav"></audio></center><BR><BR>Listen carefully to the audio clip above. Type the <b>last word</b> that was said into the blank below and press "Continue".<BR><BR>% friends %`,
   check_answers: true,
   case_sensitivity: false,
-  button_text: 'Continue',
+  button_text: 'Check',
   mistake_fn: function () { alert("Wrong answer. Please make sure your audio is working properly and try again. Make sure you're using lowercase") }
 };
 timeline.push(soundcheck);
 
-/* practice trial instructions*/
-var practiceinstructions = {
-  type: jsPsychHtmlButtonResponse,
-  stimulus: `
-  <center>
+/* practice trial instructions */
+var practiceinstructions_page1 = {
+    type: jsPsychHtmlButtonResponse,
+    stimulus: `
+    <center>
+      <div class="instruction-box">
         <p>You will now begin the practice trials.</p>
         <p>In each trial, two audio clips will play one after another. You will hear a variety of sentences and phrases spoken by different talkers.</p>
         <p>Each audio clip will only be played once and you will not be able to replay them.</p>
         <p><strong>Your task is to decide which clip sounds more like the speaker was born in Boston.</strong></p>
-        <p><strong>These clips come from a range of different people so they might not all sound like your typical Bostonian, but just make your best guess as quickly as possible.</strong></p>
+        <p><strong>These clips come from a range of different people so they might not all sound like your typical Bostonian, but just make your best guess as quickly as possible.</strong></p>        
+  </center>
+        `,
+    choices: ["Continue"],
+    button_html: `<button class="continue-btn">%choice%</button>`,
+};
+
+var practiceinstructions_page2 = {
+    type: jsPsychHtmlButtonResponse,
+    stimulus: `
+    <center>   
+      <div class="instruction-box">   
         <p>Please place your left index finger on the "S" key and your right index finger on the "L" key.</p>
         <p><img src="../procedures/keyboard.png" width="500" style="margin-top:-10px"></p>
         <p>If the <strong>first clip</strong> sounds more like someone who was born in Boston, please <strong>press S</strong>.</p>
         <p>If the <strong>second clip</strong> sounds more like someone who was born in Boston, please <strong>press L</strong>.</p>
         <p><b>Respond as quickly as possible when both clips have finished playing.</b></p>
         <p>This is a timed task. If you do not respond in time, the next question will appear automatically.</p>
-        <p><b>Please answer as quickly and accurately as possible.</b></p> 
-  </center>
+        <p><b>Please answer as quickly and accurately as possible.</b></p>
+    </center>
         `,
-  choices: ["Continue"],
-  button_html: `<button class="continue-btn">%choice%</button>`,
+    choices: ["Continue"],
+    button_html: `<button class="continue-btn">%choice%</button>`,
 };
-timeline.push(practiceinstructions);
 
+timeline.push(practiceinstructions_page1);
+timeline.push(practiceinstructions_page2);
 /* Practice trials */
-for (let i = 0; i < practice_trial_audio_objects.length; i++){
-  timeline.push(practice_trial_audio_objects[i][0]);
-  timeline.push(practice_trial_audio_objects[i][1]);
-  
-  // Add on_finish handler to the practice response object
-  practice_trial_response_objects[i].on_finish = handleTrialResponse;
-  
-  timeline.push(practice_trial_response_objects[i]);
+for (let i = 0; i < practice_trial_audio_objects.length; i++) {
+    timeline.push(practice_trial_audio_objects[i][0]);
+    timeline.push(practice_trial_audio_objects[i][1]);
+
+    // Dynamically set the stimulus for response trials
+    practice_trial_response_objects[i].stimulus = `
+        <center>
+            <div id="clip1" class="visual">Clip 1<p>Press "S"</p></div>
+            <div id="clip2" class="visual">Clip 2<p>Press "L"</p></div>
+        </center>
+        <p style="text-align:center">Which clip sounds more like someone who was born in Boston?</p>`;
+    timeline.push(practice_trial_response_objects[i]);
 }
 
+
 /* REAL trial instructions */
-var realinstructions = {
-  type: jsPsychHtmlButtonResponse,
-  stimulus: `
-  <center>
+var realinstructions_page1 = {
+    type: jsPsychHtmlButtonResponse,
+    stimulus: `
+    <center>
+      <div class="instruction-box">
         <p>You will now begin the experiment.</p>
         <p>In each trial, two audio clips will play one after another. You will hear a variety of sentences and phrases spoken by different talkers.</p>
         <p>Each audio clip will only be played once and you will not be able to replay them.</p>
         <p><strong>Your task is to decide which clip sounds more like someone who was born in Boston.</strong></p>
         <p><strong>These clips come from a range of different people so they might not all sound like your typical Bostonian, but please do your best to respond as quickly as possible.</strong></p>
+    </center>
+        `,
+    choices: ["Continue"],
+    button_html: `<button class="continue-btn">%choice%</button>`,
+};
+
+var realinstructions_page2 = {
+    type: jsPsychHtmlButtonResponse,
+    stimulus: `
+    <center>
+      <div class="instruction-box">
         <p>Please place your left index finger on the "S" key and your right index finger on the "L" key.</p>
         <p><img src="../procedures/keyboard.png" width="500" style="margin-top:-10px"></p>
         <p>If the <strong>first clip</strong> sounds more like someone who was born in Boston, please <strong>press S</strong>.</p>
         <p>If the <strong>second clip</strong> sounds more like someone who was born in Boston, please <strong>press L</strong>.</p>
         <p><b>Respond as quickly as possible when both clips have finished playing.</b></p>
         <p>This is a timed task. If you do not respond in time, the next question will appear automatically.</p>
-        <p><b>Please answer as quickly and accurately as possible.</b></p> 
-  </center>
+        <p><b>Please answer as quickly and accurately as possible.</b></p>
+    </center>
         `,
-  choices: ["Continue"],
-  button_html: `<button class="continue-btn">%choice%</button>`,
+    choices: ["Continue"],
+    button_html: `<button class="continue-btn">%choice%</button>`,
 };
-timeline.push(realinstructions);
+
+timeline.push(realinstructions_page1);
+timeline.push(realinstructions_page2);
 
 
-/* REAL TRIALS */
-for (i = 0; i < (NUM_TRIALS * NUM_BLOCKS); i++) { // for every trial
-  timeline.push(all_trial_audio_objects[i][0]); // first audio obj
-  timeline.push(all_trial_audio_objects[i][1]); // second audio obj
-  
-  // Add on_finish handler to the response object
-  all_trial_response_objects[i].on_finish = handleTrialResponse;
-  
-  timeline.push(all_trial_response_objects[i]); // response
+/* Real trials */
+for (let i = 0; i < all_trial_audio_objects.length; i++) {
+    timeline.push(all_trial_audio_objects[i][0]);
+    timeline.push(all_trial_audio_objects[i][1]);
+
+    // Dynamically set the stimulus for response trials
+    all_trial_response_objects[i].stimulus = `
+        <center>
+            <div id="clip1" class="visual">Clip 1<p>Press "S"</p></div>
+            <div id="clip2" class="visual">Clip 2<p>Press "L"</p></div>
+        </center>
+        <p style="text-align:center">Which clip sounds more like someone who was born in Boston?</p>`;
+    timeline.push(all_trial_response_objects[i]);
 }
+
 
 
 /* survey 1: demographic questions */

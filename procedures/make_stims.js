@@ -36,42 +36,36 @@ let response_data = {
 let response_temp = {
     type: jsPsychHtmlKeyboardResponse,
     choices: ['s', 'l'],
-    stimulus: `
-      <center>
-        <div id="clip1" class="visual">Clip 1<p>Press "S"</p></div>
-        <div id="clip2" class="visual">Clip 2<p>Press "L"</p></div>
-      </center>
-      <p style="text-align:center">Which clip sounds more like someone who was <b>born in Boston?</b></p>
-    `,
-    trial_duration: 2000, // still limits overall trial length
-    response_ends_trial: false, // wait to manually end trial
+    stimulus: '', // Initially blank
+    trial_duration: 2000, // Limits overall trial length
+    response_ends_trial: false, // Wait to manually end trial
     post_trial_gap: 0,
     data: {},
     on_load: function () {
-      const listener = (e) => {
-        if (e.key === 's' || e.key === 'l') {
-          // Highlight
-          if (e.key === 's') {
-            document.getElementById('clip1').classList.add('selected');
-          } else if (e.key === 'l') {
-            document.getElementById('clip2').classList.add('selected');
-          }
-  
-          // Remove listener so only one response counts
-          document.removeEventListener('keydown', listener);
-  
-          // Record the response and delay trial end
-          jsPsych.pluginAPI.setTimeout(() => {
-            jsPsych.finishTrial({
-              key_press: jsPsych.pluginAPI.convertKeyCharacterToKeyCode(e.key)
-            });
-          },); // 300ms delay for visual feedback
-        }
-      };
-  
-      document.addEventListener('keydown', listener);
+        const listener = (e) => {
+            if (e.key === 's' || e.key === 'l') {
+                // Highlight
+                if (e.key === 's') {
+                    document.getElementById('clip1').classList.add('selected');
+                } else if (e.key === 'l') {
+                    document.getElementById('clip2').classList.add('selected');
+                }
+
+                // Remove listener so only one response counts
+                document.removeEventListener('keydown', listener);
+
+                // Record the response and delay trial end
+                jsPsych.pluginAPI.setTimeout(() => {
+                    jsPsych.finishTrial({
+                        key_press: jsPsych.pluginAPI.convertKeyCharacterToKeyCode(e.key)
+                    });
+                }, 300); // 300ms delay for visual feedback
+            }
+        };
+
+        document.addEventListener('keydown', listener);
     }
-  }
+}
   
   
 

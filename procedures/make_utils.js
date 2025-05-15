@@ -67,81 +67,73 @@ function generateBlankTrials(num_trials, audio_array, response_array, audio_temp
 }
 
 // create trials for audio and response trials that are both arrays of empty templates
-function generateTrials(trial_ord, audio_trials, response_trials) {
-    let firstPrompt = `       
-        <center>
-            <div class="visual-play">Clip 1</div>
-            <div class="visual">Clip 2</div>
-        </center>
-        <p style="text-align:center">Listening to clips</p>`; // visual stimuli for clip 1, tbd
-    let secondPrompt = `            
-        <center>
-            <div class="visual-play">Clip 1</div>
-            <div class="visual">Clip 2</div>
-        </center>
-        <p style="text-align:center">Listening to clips</p>`;  // visual stimuli for clip 2, tbd
-
-    for (let i = 0; i < trial_ord.length; i++) {
-        let [firstClip, secondClip] = trial_ord[i];
-        // console.log("first clip", firstClip);
-        let [firstAudio, secondAudio] = audio_trials[i]; // blank template to fill
-        let response = response_trials[i]; // tbd
-
-        // stich together audio path for stimulus
-        let firstAudioPath = '../audio/' + firstClip['Clip ID'] + '.WAV';
-        let secondAudioPath = '../audio/' + secondClip['Clip ID'] + '.WAV';
-
-        // update data into template
-        firstAudio.stimulus = firstAudioPath;
-        firstAudio.prompt = firstPrompt;
-        firstAudio.trial_duration = parseFloat(firstClip['Duration (s)']) * 1000 + 500;
-        //console.log(firstAudio.trial_duration);
-        firstAudio.data.ID = firstClip['Clip ID'];
-        firstAudio.data.talker = firstClip['Speaker ID'];
-        firstAudio.data.gender = firstClip['Gender'];
-        firstAudio.data.order = 1;
-        firstAudio.data.duration = firstClip['Duration (s)'];
-        firstAudio.data.speech_rate = firstClip['Speech rate (words per s)'];
-        firstAudio.data.transcript = firstClip['Transcription'];
-
-        secondAudio.stimulus = secondAudioPath;
-        secondAudio.prompt = secondPrompt;
-        secondAudio.trial_duration = parseFloat(secondClip['Duration (s)']) * 1000;
-        secondAudio.data.ID = secondClip['Clip ID'];
-        secondAudio.data.talker = secondClip['Speaker ID'];
-        secondAudio.data.gender = secondClip['Gender'];
-        secondAudio.data.order = 2;
-        secondAudio.data.duration = secondClip['Duration (s)'];
-        secondAudio.data.speech_rate = secondClip['Speech rate (words per s)'];
-        secondAudio.data.transcript = secondClip['Transcription'];
-    }
-}
-
 function generatePracticeTrials(audio_trials, response_trials) {
-    let firstPrompt = `       
+    let firstPrompt = `
         <center>
-            <div class="visual-play">Clip 1<p>Press "S"</p></div>
-            <div class="visual">Clip 2<p>Press "L"</p></div>
+            <div id="clip1" class="visual-play">Clip 1</div>
+            <div class="visual">Clip 2</div>
         </center>
-        <p style="text-align:center">Which clip sounds more like someone who was <b>born in Boston?</b></p>`; // visual stimuli for clip 1, tbd
-    let secondPrompt = `            
-        <center>
-            <div class="visual">Clip 1<p>Press "S"</p></div>
-            <div class="visual-play">Clip 2<p>Press "L"</p></div>
-        </center>
-        <p style="text-align:center">Which clip sounds more like someone who was <b>born in Boston?</b></p>`; // visual stimuli for clip 2, tbd
+        <p style="text-align:center">Listening to clips</p>`; // initial prompt for first clip
 
-    for (let i = 0; i < audio_trials.length; i++){
+    let secondPrompt = `
+        <center>
+            <div class="visual">Clip 1</div>
+            <div id="clip2" class="visual-play">Clip 2</div>
+        </center>
+        <p style="text-align:center">Listening to clips</p>`; // initial prompt for second clip
+
+
+
+    for (let i = 0; i < audio_trials.length; i++) {
         let [firstAudio, secondAudio] = audio_trials[i];
-        let trial_num = (i+1).toString();
+        let trial_num = (i + 1).toString();
         let firstAudioPath = '../practice/' + 'trial' + trial_num + '_clip1' + '.WAV';
         let secondAudioPath = '../practice/' + 'trial' + trial_num + '_clip2' + '.WAV';
 
         firstAudio.stimulus = firstAudioPath;
         firstAudio.prompt = firstPrompt;
         firstAudio.trial_duration = 4000;
+
         secondAudio.stimulus = secondAudioPath;
         secondAudio.prompt = secondPrompt;
         secondAudio.trial_duration = 4000;
+
+       
+    }
+}
+
+function generateTrials(trial_ord, audio_trials, response_trials) {
+    let firstPrompt = `
+        <center>
+            <div id="clip1" class="visual-play">Clip 1</div>
+            <div class="visual">Clip 2</div>
+        </center>
+        <p style="text-align:center">Listening to clips</p>`; // initial prompt for first clip
+
+    let secondPrompt = `
+        <center>
+            <div class="visual">Clip 1</div>
+            <div id="clip2" class="visual-play">Clip 2</div>
+        </center>
+        <p style="text-align:center">Listening to clips</p>`; // initial prompt for second clip
+
+
+    for (let i = 0; i < trial_ord.length; i++) {
+        let [firstClip, secondClip] = trial_ord[i];
+        let [firstAudio, secondAudio] = audio_trials[i]; // blank template to fill
+        let response = response_trials[i]; // tbd
+
+        let firstAudioPath = '../audio/' + firstClip['Clip ID'] + '.WAV';
+        let secondAudioPath = '../audio/' + secondClip['Clip ID'] + '.WAV';
+
+        firstAudio.stimulus = firstAudioPath;
+        firstAudio.prompt = firstPrompt;
+        firstAudio.trial_duration = parseFloat(firstClip['Duration (s)']) * 1000 + 500;
+
+        secondAudio.stimulus = secondAudioPath;
+        secondAudio.prompt = secondPrompt;
+        secondAudio.trial_duration = parseFloat(secondClip['Duration (s)']) * 1000;
+
+
     }
 }

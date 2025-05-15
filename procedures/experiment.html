@@ -3,11 +3,11 @@
 
 <head>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Source+Serif+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel='stylesheet'>
     <style>
       /* General Styles */
       body {
-        font-family: 'Inter', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         background-color: #f7f7f7;
         margin: 0;
         padding: 0;
@@ -25,7 +25,7 @@
       }
   
       h1, h2 {
-        font-family: 'Source Serif Pro', serif;
+        font-family: 'Montserrat', sans-serif;
         color: #333;
         text-align: center;
         font-weight: 600;
@@ -108,28 +108,40 @@
         animation: fadeInUp 0.6s forwards;
       }
   
-      @keyframes fadeInUp {
-        to {
-          opacity: 1;
-          transform: translateY(0);
+        .instruction-box {
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%;
+            border: 2px solid #000080;  /* Dark blue border */
+            border-radius: 8px;  /* Rounded edges */
+            background-color: #fdfdfd;  /* Light azure background */
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);  /* Shadow for depth */
         }
-      }
 
-      .visual {
-      display: inline-block;
-      width: 150px;
-      margin: 0 20px;
-      padding: 20px;
-      border: 2px solid transparent;
-      text-align: center;
-      font-weight: bold;
-      font-size: 18px;
-    }
+        .visual {
+            display: inline-block;
+            width: 150px;
+            margin: 0 20px;
+            padding: 20px;
+            border: 2px solid transparent;
+            border-radius: 8px;  /* Rounded edges */
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
 
-    .selected {
-      border: 6px solid #acffa5;
-      background-color: #e6ffe6;
-    }
+        .visual.selected {
+            border: 6px solid #acffa5;
+            background-color: #e6ffe6;
+        }
+
+             .continue-btn {
+            transition: all 0.3s ease;
+        }
+
+        .continue-btn:hover {
+            background-color: #6fb2f9d6;
+        }
 
     </style>
 
