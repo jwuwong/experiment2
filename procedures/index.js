@@ -569,21 +569,21 @@ var futurestudies = {
 };
 timeline.push(futurestudies);
 
-/* payment information */
-var payment = {
+/* future study information */
+var future = {
   type: jsPsychSurveyText,
   questions: [
     {
       prompt: `
             <div class="text" id="trial">
-            <p>Please provide your email address in the field below for participant reimbursement purposes.</p>
+            <p>Please provide your email address in the field below to be contacted for future studies.</p>
             </div>
             `,
-      name: 'payment'
+      name: 'future'
     }
   ]
 };
-timeline.push(payment);
+timeline.push(future);
 
 const save_data = {
     type: jsPsychPipe,

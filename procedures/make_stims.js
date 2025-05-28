@@ -44,40 +44,58 @@ let response_temp = {
             </center>
             <p style="text-align:center">Which clip sounds more like someone who was born in Boston?</p>`;
     },
-    trial_duration: 2000,
-    response_ends_trial: false,
+    trial_duration: 2000,  // Ends the trial automatically at 2s if no response
+    response_ends_trial: false,  // We'll control trial ending ourselves
     post_trial_gap: 1000,
     data: {},
 
     on_start: function(trial) {
-        jsPsych.pluginAPI.getKeyboardResponse({
+        let responded = false;
+
+        const keyboardListener = jsPsych.pluginAPI.getKeyboardResponse({
             callback_function: function(info) {
-                let key = info.key;
+                if (responded) return;  // Prevent multiple responses
+                responded = true;
+
+                const key = info.key;
+
+                // Highlight selected clip
                 if (key === 's') {
                     document.getElementById('clip1').classList.add('selected');
                 } else if (key === 'l') {
                     document.getElementById('clip2').classList.add('selected');
                 }
 
-                // Save response manually
-                jsPsych.data.get().addToLast({response: key});
+                // Record the response manually
+                jsPsych.data.get().addToLast({
+                    response: key,
+                    rt: info.rt
+                });
+
+                // Wait 300ms to show feedback, then end trial
+                jsPsych.pluginAPI.setTimeout(function() {
+                    jsPsych.finishTrial();
+                }, 300);
             },
             valid_responses: ['s', 'l'],
             rt_method: 'performance',
             persist: false,
             allow_held_key: false
         });
+
+        // Also cancel key listening when trial ends naturally (after 2000ms)
+        trial.on_load = function() {
+            jsPsych.pluginAPI.setTimeout(function() {
+                if (!responded) {
+                    jsPsych.pluginAPI.cancelKeyboardResponse(keyboardListener);
+                }
+            }, 2000);
+        };
     },
 
     on_finish: function(data) {
         const response = data.response;
-        if (response === 's') {
-            data.selected_clip = 1;
-        } else if (response === 'l') {
-            data.selected_clip = 2;
-        } else {
-            data.selected_clip = null;
-        }
+        data.selected_clip = response === 's' ? 1 : response === 'l' ? 2 : null;
 
         if (response === null) {
             consecutive_no_responses++;
@@ -87,6 +105,7 @@ let response_temp = {
         }
     }
 };
+
 
   
 
