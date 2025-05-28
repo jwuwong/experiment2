@@ -45,7 +45,7 @@ let response_temp = {
             <p style="text-align:center">Which clip sounds more like someone who was born in Boston?</p>`;
     },
     trial_duration: 2000,
-    response_ends_trial: true, // Let jsPsych handle the response
+    response_ends_trial: false, // Let jsPsych handle the response
     post_trial_gap: 1000,
     data: {}, // This will be filled with trial info in generateTrials
     on_response: function(data) {

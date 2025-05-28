@@ -7,10 +7,10 @@ var stimuliData = [
     "Clip ID": "M1_01",
     "Duration (s)": "1.480896",
     "# of IPs": "1",
-    "# of words": "11",
+    "# of words": "5",
     "Speech rate (words per s)": "5.043558001",
     "Link": "https://youtu.be/-jbJeIZ0mJY?t=108",
-    "Transcription": "I said what is this"
+    "Transcription": "You kind of get spoiled."
   },
   {
     "Speaker ID": "M1",
@@ -23,7 +23,7 @@ var stimuliData = [
     "# of words": "7",
     "Speech rate (words per s)": "4.539559014",
     "Link": "https://youtu.be/-jbJeIZ0mJY?t=108",
-    "Transcription": "So you you don't have to like"
+    "Transcription": "It's a really nice place to live."
   },
   {
     "Speaker ID": "M1",
@@ -33,10 +33,10 @@ var stimuliData = [
     "Clip ID": "M1_03",
     "Duration (s)": "1.220375",
     "# of IPs": "1",
-    "# of words": "11",
+    "# of words": "4",
     "Speech rate (words per s)": "5.087881591",
     "Link": "https://youtu.be/-jbJeIZ0mJY?t=108",
-    "Transcription": "It was not terrible because at that point of my life"
+    "Transcription": "Being in medical field."
   },
   {
     "Speaker ID": "M1",
@@ -46,10 +46,10 @@ var stimuliData = [
     "Clip ID": "M1_04",
     "Duration (s)": "0.999906",
     "# of IPs": "1",
-    "# of words": "8",
-    "Speech rate (words per s)": "3.530450132",
+    "# of words": "2",
+    "Speech rate (words per s)": "2.000188035",
     "Link": "https://youtu.be/-jbJeIZ0mJY?t=108",
-    "Transcription": "She travelled to Hong Kong with her family"
+    "Transcription": "Parallel ways."
   },
   {
     "Speaker ID": "M2",
@@ -60,9 +60,9 @@ var stimuliData = [
     "Duration (s)": "3.0",
     "# of IPs": "1",
     "# of words": "8",
-    "Speech rate (words per s)": "3.02699",
+    "Speech rate (words per s)": "2.667",
     "Link": "https://youtu.be/zRZu05R_eD8?t=402",
-    "Transcription": "I think the dinner how much was it"
+    "Transcription": "The airport is basically a one-story building."
   },
   {
     "Speaker ID": "M2",
@@ -72,10 +72,10 @@ var stimuliData = [
     "Clip ID": "M2_02",
     "Duration (s)": "1.039885",
     "# of IPs": "1",
-    "# of words": "7",
-    "Speech rate (words per s)": "1.039885",
+    "# of words": "4",
+    "Speech rate (words per s)": "3.846",
     "Link": "https://youtu.be/zRZu05R_eD8?t=550",
-    "Transcription": "When did you first start doing content"
+    "Transcription": "So that was great."
   },
   {
     "Speaker ID": "M2",
@@ -85,10 +85,10 @@ var stimuliData = [
     "Clip ID": "M2_03",
     "Duration (s)": "0.928833",
     "# of IPs": "1",
-    "# of words": "11",
-    "Speech rate (words per s)": "0.928833",
+    "# of words": "5",
+    "Speech rate (words per s)": "5.382",
     "Link": "https://youtu.be/P5kKKe_-qJ8?t=1138",
-    "Transcription": "After this the moment the podcast end we are heading there"
+    "Transcription": "I just wanted to get up."
   },
   {
     "Speaker ID": "M2",
@@ -98,10 +98,10 @@ var stimuliData = [
     "Clip ID": "M2_04",
     "Duration (s)": "2.180729",
     "# of IPs": "1",
-    "# of words": "14",
-    "Speech rate (words per s)": "2.180729",
+    "# of words": "6",
+    "Speech rate (words per s)": "2.751",
     "Link": "https://youtu.be/P5kKKe_-qJ8?t=1826",
-    "Transcription": "Then I told them you know what never mind I'm not interested any more"
+    "Transcription": "People just focus on making money."
   },
   {
     "Speaker ID": "M3",
@@ -111,10 +111,10 @@ var stimuliData = [
     "Clip ID": "M3_01",
     "Duration (s)": "1.659469",
     "# of IPs": "1",
-    "# of words": "6",
-    "Speech rate (words per s)": "2.410606669",
+    "# of words": "4",
+    "Speech rate (words per s)": "2.411",
     "Link": "",
-    "Transcription": "I self-identify as a historian"
+    "Transcription": "To further my education."
   },
   {
     "Speaker ID": "M3",
@@ -124,10 +124,10 @@ var stimuliData = [
     "Clip ID": "M3_02",
     "Duration (s)": "1.70975",
     "# of IPs": "1",
-    "# of words": "9",
-    "Speech rate (words per s)": "3.775167785",
+    "# of words": "5",
+    "Speech rate (words per s)": "2.924",
     "Link": "",
-    "Transcription": "That's what I am first and foremost a historian"
+    "Transcription": "And then on Sunday morning"
   },
   {
     "Speaker ID": "M3",
@@ -137,10 +137,10 @@ var stimuliData = [
     "Clip ID": "M3_03",
     "Duration (s)": "1.483458",
     "# of IPs": "1",
-    "# of words": "7",
-    "Speech rate (words per s)": "3.134796238",
+    "# of words": "5",
+    "Speech rate (words per s)": "3.371",
     "Link": "",
-    "Transcription": "But I've left that life behind me"
+    "Transcription": "Not too far away from here."
   },
   {
     "Speaker ID": "M3",
@@ -150,10 +150,10 @@ var stimuliData = [
     "Clip ID": "M3_04",
     "Duration (s)": "2.564635",
     "# of IPs": "1",
-    "# of words": "6",
-    "Speech rate (words per s)": "3.351955307",
+    "# of words": "9",
+    "Speech rate (words per s)": "3.508",
     "Link": "",
-    "Transcription": "I hurt my knee quite badly"
+    "Transcription": "They have to learn about what they're talking about."
   },
   {
     "Speaker ID": "M4",
@@ -163,10 +163,10 @@ var stimuliData = [
     "Clip ID": "M4_01",
     "Duration (s)": "2.112052",
     "# of IPs": "1",
-    "# of words": "8",
-    "Speech rate (words per s)": "4.096262161",
+    "# of words": "6",
+    "Speech rate (words per s)": "2.841",
     "Link": "",
-    "Transcription": "Did you manage to fulfil them right now"
+    "Transcription": "The main source is from class."
   },
   {
     "Speaker ID": "M4",
@@ -176,10 +176,10 @@ var stimuliData = [
     "Clip ID": "M4_02",
     "Duration (s)": "1.785187",
     "# of IPs": "1",
-    "# of words": "8",
-    "Speech rate (words per s)": "4.104669061",
+    "# of words": "6",
+    "Speech rate (words per s)": "3.361",
     "Link": "",
-    "Transcription": "I took the ATM card and I didn't"
+    "Transcription": "I'm still struggling to be honest."
   },
   {
     "Speaker ID": "M4",
@@ -189,10 +189,10 @@ var stimuliData = [
     "Clip ID": "M4_03",
     "Duration (s)": "2.137188",
     "# of IPs": "1",
-    "# of words": "5",
-    "Speech rate (words per s)": "3.298153034",
+    "# of words": "4",
+    "Speech rate (words per s)": "1.872",
     "Link": "",
-    "Transcription": "Be a son to him"
+    "Transcription": "They didn't really respond."
   },
   {
     "Speaker ID": "M4",
@@ -202,10 +202,10 @@ var stimuliData = [
     "Clip ID": "M4_04",
     "Duration (s)": "2.538281",
     "# of IPs": "1",
-    "# of words": "7",
-    "Speech rate (words per s)": "3.990877993",
+    "# of words": "6",
+    "Speech rate (words per s)": "2.364",
     "Link": "",
-    "Transcription": "I message him in IG with my"
+    "Transcription": "The most intimate group of friends."
   },
   {
     "Speaker ID": "M5",
@@ -215,10 +215,10 @@ var stimuliData = [
     "Clip ID": "M5_01",
     "Duration (s)": "2.002865",
     "# of IPs": "1",
-    "# of words": "7",
-    "Speech rate (words per s)": "3.53713997",
+    "# of words": "6",
+    "Speech rate (words per s)": "2.994",
     "Link": "https://youtu.be/1CFCXDiJH5g?t=287",
-    "Transcription": "It's better to be factual about it"
+    "Transcription": "All of us were very young, so..."
   },
   {
     "Speaker ID": "M5",
@@ -228,10 +228,10 @@ var stimuliData = [
     "Clip ID": "M5_02",
     "Duration (s)": "1.560854",
     "# of IPs": "1",
-    "# of words": "8",
-    "Speech rate (words per s)": "3.846153846",
+    "# of words": "5",
+    "Speech rate (words per s)": "3.204",
     "Link": "",
-    "Transcription": "You walk out of the situation rather than"
+    "Transcription": "In December, it was cold."
   },
   {
     "Speaker ID": "M5",
@@ -241,10 +241,10 @@ var stimuliData = [
     "Clip ID": "M5_03",
     "Duration (s)": "1.118844",
     "# of IPs": "1",
-    "# of words": "9",
-    "Speech rate (words per s)": "4.603580563",
+    "# of words": "4",
+    "Speech rate (words per s)": "3.576",
     "Link": "",
-    "Transcription": "They say that it's not a good thing to"
+    "Transcription": "I said, what is this?"
   },
   {
     "Speaker ID": "M5",
@@ -255,9 +255,9 @@ var stimuliData = [
     "Duration (s)": "2.679688",
     "# of IPs": "1",
     "# of words": "7",
-    "Speech rate (words per s)": "3.347680536",
+    "Speech rate (words per s)": "2.612",
     "Link": "",
-    "Transcription": "Just talking about how why some people"
+    "Transcription": "We have a very enjoyable life, nothing."
   },
   {
     "Speaker ID": "F1",
@@ -267,10 +267,10 @@ var stimuliData = [
     "Clip ID": "F1_01",
     "Duration (s)": "2.72926",
     "# of IPs": "1",
-    "# of words": "10",
-    "Speech rate (words per s)": "4.312203536",
+    "# of words": "5",
+    "Speech rate (words per s)": "1.832",
     "Link": "https://youtu.be/BsLVsJNv4wc?t=2308",
-    "Transcription": "That person was asking me a question and I replied"
+    "Transcription": "Because of the limited space."
   },
   {
     "Speaker ID": "F1",
@@ -280,10 +280,10 @@ var stimuliData = [
     "Clip ID": "F1_02",
     "Duration (s)": "2.456333",
     "# of IPs": "1",
-    "# of words": "7",
-    "Speech rate (words per s)": "4.419191919",
+    "# of words": "6",
+    "Speech rate (words per s)": "2.442",
     "Link": "https://youtu.be/BsLVsJNv4wc?t=2371",
-    "Transcription": "I didn't mean it that way and"
+    "Transcription": "I end up going to high school."
   },
   {
     "Speaker ID": "F1",
@@ -294,9 +294,9 @@ var stimuliData = [
     "Duration (s)": "2.034542",
     "# of IPs": "1",
     "# of words": "7",
-    "Speech rate (words per s)": "2.999143102",
+    "Speech rate (words per s)": "3.440",
     "Link": "https://youtu.be/BsLVsJNv4wc?t=2308",
-    "Transcription": "Certificate of sorts right a Youtube plaque"
+    "Transcription": "No, actually I was the only one."
   },
   {
     "Speaker ID": "F1",
@@ -306,10 +306,10 @@ var stimuliData = [
     "Clip ID": "F1_04",
     "Duration (s)": "3.175875",
     "# of IPs": "1",
-    "# of words": "9",
-    "Speech rate (words per s)": "3.68852459",
+    "# of words": "10",
+    "Speech rate (words per s)": "3.149",
     "Link": "",
-    "Transcription": "Believe that you cannot feel anything while you're doing"
+    "Transcription": "But majority of the time people offered to pick me up."
   },
   {
     "Speaker ID": "F2",
@@ -319,10 +319,10 @@ var stimuliData = [
     "Clip ID": "F2_01",
     "Duration (s)": "3.200677",
     "# of IPs": "1",
-    "# of words": "8",
-    "Speech rate (words per s)": "4.303388919",
+    "# of words": "4",
+    "Speech rate (words per s)": "1.250",
     "Link": "https://youtu.be/ZqG4tyevNwU?t=1326",
-    "Transcription": "I guess with every small step it helps"
+    "Transcription": "It's head-to-tail restaurant."
   },
   {
     "Speaker ID": "F2",
@@ -332,10 +332,10 @@ var stimuliData = [
     "Clip ID": "F2_02",
     "Duration (s)": "2.902938",
     "# of IPs": "1",
-    "# of words": "9",
-    "Speech rate (words per s)": "4.172461752",
+    "# of words": "12",
+    "Speech rate (words per s)": "4.134",
     "Link": "",
-    "Transcription": "Buy each other roses and give each other cards"
+    "Transcription": "They buy a whole pig and then they eat their way through it."
   },
   {
     "Speaker ID": "F2",
@@ -345,10 +345,10 @@ var stimuliData = [
     "Clip ID": "F2_03",
     "Duration (s)": "1.372927",
     "# of IPs": "1",
-    "# of words": "13",
-    "Speech rate (words per s)": "5.323505324",
+    "# of words": "7",
+    "Speech rate (words per s)": "5.098",
     "Link": "https://youtu.be/ZqG4tyevNwU?t=1437",
-    "Transcription": "If let's say like you plug in your stuff into the switch right"
+    "Transcription": "And they charge lots and lots of money."
   },
   {
     "Speaker ID": "F2",
@@ -358,10 +358,10 @@ var stimuliData = [
     "Clip ID": "F2_04",
     "Duration (s)": "4.716052",
     "# of IPs": "1",
-    "# of words": "4",
-    "Speech rate (words per s)": "2.372479241",
+    "# of words": "11",
+    "Speech rate (words per s)": "2.332",
     "Link": "https://youtu.be/ZqG4tyevNwU?t=1437",
-    "Transcription": "Probably some household goods"
+    "Transcription": "And then upstairs in her apartment, she would make rice wine."
   },
   {
     "Speaker ID": "F3",
@@ -371,10 +371,10 @@ var stimuliData = [
     "Clip ID": "F3_01",
     "Duration (s)": "4.267563",
     "# of IPs": "1",
-    "# of words": "7",
-    "Speech rate (words per s)": "3.688092729",
+    "# of words": "8",
+    "Speech rate (words per s)": "1.875",
     "Link": "https://youtu.be/ZqG4tyevNwU?t=1437",
-    "Transcription": "Regular products may cost like eleven dollars"
+    "Transcription": "My parents, my two sisters, and my two brothers."
   },
   {
     "Speaker ID": "F3",
@@ -384,10 +384,10 @@ var stimuliData = [
     "Clip ID": "F3_02",
     "Duration (s)": "4.438833",
     "# of IPs": "1",
-    "# of words": "11",
-    "Speech rate (words per s)": "4.833040422",
+    "# of words": "10",
+    "Speech rate (words per s)": "2.253",
     "Link": "",
-    "Transcription": "I mean honestly I'll say first it's so hard for us"
+    "Transcription": "So it wasn't residential on both sides of the street..."
   },
   {
     "Speaker ID": "F3",
@@ -397,10 +397,10 @@ var stimuliData = [
     "Clip ID": "F3_03",
     "Duration (s)": "1.738271",
     "# of IPs": "1",
-    "# of words": "9",
-    "Speech rate (words per s)": "4.746835443",
+    "# of words": "5",
+    "Speech rate (words per s)": "2.877",
     "Link": "",
-    "Transcription": "A lot of people put their stuff up there"
+    "Transcription": "At least one family had moved."
   },
   {
     "Speaker ID": "F3",
@@ -411,9 +411,9 @@ var stimuliData = [
     "Duration (s)": "1.651802",
     "# of IPs": "1",
     "# of words": "8",
-    "Speech rate (words per s)": "4.810583283",
+    "Speech rate (words per s)": "4.843",
     "Link": "",
-    "Transcription": "It can go up to like four times"
+    "Transcription": "There were a lot of children in the area."
   },
   {
     "Speaker ID": "F4",
@@ -423,10 +423,10 @@ var stimuliData = [
     "Clip ID": "F4_01",
     "Duration (s)": "1.835479",
     "# of IPs": "1",
-    "# of words": "9",
-    "Speech rate (words per s)": "1.835479",
+    "# of words": "5",
+    "Speech rate (words per s)": "2.724",
     "Link": "",
-    "Transcription": "Are on the same level I think that's ok"
+    "Transcription": "Probably right before I turn six."
   },
   {
     "Speaker ID": "F4",
@@ -436,10 +436,10 @@ var stimuliData = [
     "Clip ID": "F4_02",
     "Duration (s)": "2.916635",
     "# of IPs": "1",
-    "# of words": "10",
-    "Speech rate (words per s)": "2.916635",
+    "# of words": "6",
+    "Speech rate (words per s)": "2.058",
     "Link": "",
-    "Transcription": "Really really like trying to show support to the person"
+    "Transcription": "Yeah, a little bit, like elementary school."
   },
   {
     "Speaker ID": "F4",
@@ -449,10 +449,10 @@ var stimuliData = [
     "Clip ID": "F4_03",
     "Duration (s)": "3.670938",
     "# of IPs": "1",
-    "# of words": "14",
-    "Speech rate (words per s)": "3.670938",
+    "# of words": "12",
+    "Speech rate (words per s)": "3.269",
     "Link": "",
-    "Transcription": "I don't think they catch feelings but they just become more attached to them"
+    "Transcription": "Yeah, it was an apartment building. It was like a one-bedroom"
   },
   {
     "Speaker ID": "F4",
@@ -462,10 +462,10 @@ var stimuliData = [
     "Clip ID": "F4_04",
     "Duration (s)": "1.514",
     "# of IPs": "1",
-    "# of words": "7",
-    "Speech rate (words per s)": "0.719448",
+    "# of words": "5",
+    "Speech rate (words per s)": "3.303",
     "Link": "",
-    "Transcription": "Slowly put the fish in the water"
+    "Transcription": "It was hard for my mom."
   },
   {
     "Speaker ID": "F5",
@@ -475,10 +475,10 @@ var stimuliData = [
     "Clip ID": "F5_01",
     "Duration (s)": "1.144573",
     "# of IPs": "1",
-    "# of words": "9",
-    "Speech rate (words per s)": "1.144573",
+    "# of words": "4",
+    "Speech rate (words per s)": "3.495",
     "Link": "https://youtu.be/aFLgw8VpkPw?t=849",
-    "Transcription": "But people have been telling me things about Junior"
+    "Transcription": "He worked very hard."
   },
   {
     "Speaker ID": "F5",
@@ -488,10 +488,10 @@ var stimuliData = [
     "Clip ID": "F5_02",
     "Duration (s)": "2.006958",
     "# of IPs": "1",
-    "# of words": "6",
-    "Speech rate (words per s)": "2.006958",
+    "# of words": "5",
+    "Speech rate (words per s)": "2.491",
     "Link": "https://youtu.be/aFLgw8VpkPw?t=849",
-    "Transcription": "I don't want to believe this"
+    "Transcription": "We sort of like stay together."
   },
   {
     "Speaker ID": "F5",
@@ -501,10 +501,10 @@ var stimuliData = [
     "Clip ID": "F5_03",
     "Duration (s)": "3.162094",
     "# of IPs": "1",
-    "# of words": "5",
-    "Speech rate (words per s)": "3.162094",
+    "# of words": "8",
+    "Speech rate (words per s)": "2.530",
     "Link": "",
-    "Transcription": "It was just through message"
+    "Transcription": "It was a totally new experience to me."
   },
   {
     "Speaker ID": "F5",
@@ -514,9 +514,9 @@ var stimuliData = [
     "Clip ID": "F5_04",
     "Duration (s)": "0.83549",
     "# of IPs": "1",
-    "# of words": "11",
-    "Speech rate (words per s)": "0.83549",
+    "# of words": "3",
+    "Speech rate (words per s)": "3.592",
     "Link": "",
-    "Transcription": "As long as you tell me that we are still together"
+    "Transcription": "Oh my god."
   }
 ];

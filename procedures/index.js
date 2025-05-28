@@ -9,6 +9,9 @@ var jsPsych = initJsPsych({
   default_iti: 250
 });
 
+ const subject_id = jsPsych.randomization.randomID(10);
+ const filename = `${subject_id}.csv`;
+            
 /* create timeline */
 var timeline = [];
 
@@ -594,6 +597,15 @@ var payment = {
 };
 timeline.push(payment);
 
+const save_data = {
+    type: jsPsychPipe,
+    action: "save",
+    experiment_id: "Y3jdmRtKbrN7", // Your experiment ID
+    filename: filename,
+    data_string: ()=>jsPsych.data.get().csv()
+};
+timeline.push(save_data);
+
 /* thank you */
 const thankyou = {
   type: jsPsychHtmlButtonResponse,
@@ -607,7 +619,11 @@ const thankyou = {
   choices: ["Submit"],
   button_html: `<button class="submit-btn">%choice%</button>`
 };
+timeline.push(save_data);
 timeline.push(thankyou);
+
+
+
 
 /* start the experiment */
 jsPsych.run(timeline);
