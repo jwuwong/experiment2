@@ -45,34 +45,41 @@ let response_temp = {
             <p style="text-align:center">Which clip sounds more like someone who was born in Boston?</p>`;
     },
     trial_duration: 2000,
-    response_ends_trial: true, // Changed to true to work with on_response
+    response_ends_trial: false,
     post_trial_gap: 1000,
-    data: {}, // This will be filled with trial info in generateTrials
-    on_key_press: function(data) {
-        // This function runs when a key is pressed but doesn't end the trial
-        if (data === 's') {
-            document.getElementById('clip1').classList.add('selected');
-        } else if (data === 'l') {
-            document.getElementById('clip2').classList.add('selected');
-        }
-        
-        // We'll let the trial end naturally after the visual feedback
-        jsPsych.pluginAPI.setTimeout(function() {
-            // This doesn't end the trial, just adds a delay
-        }, 300);
+    data: {},
+
+    on_start: function(trial) {
+        jsPsych.pluginAPI.getKeyboardResponse({
+            callback_function: function(info) {
+                let key = info.key;
+                if (key === 's') {
+                    document.getElementById('clip1').classList.add('selected');
+                } else if (key === 'l') {
+                    document.getElementById('clip2').classList.add('selected');
+                }
+
+                // Save response manually
+                jsPsych.data.get().addToLast({response: key});
+            },
+            valid_responses: ['s', 'l'],
+            rt_method: 'performance',
+            persist: false,
+            allow_held_key: false
+        });
     },
+
     on_finish: function(data) {
-        // Add which clip was selected (1 or 2)
-        if (data.response === 's') {
+        const response = data.response;
+        if (response === 's') {
             data.selected_clip = 1;
-        } else if (data.response === 'l') {
+        } else if (response === 'l') {
             data.selected_clip = 2;
         } else {
-            data.selected_clip = null; // No response
+            data.selected_clip = null;
         }
-        
-        // Handle consecutive no responses
-        if (data.response === null) {
+
+        if (response === null) {
             consecutive_no_responses++;
             checkNoResponseTermination();
         } else {
@@ -80,6 +87,7 @@ let response_temp = {
         }
     }
 };
+
   
 
 // Create random test orders
