@@ -221,6 +221,7 @@ for (let i = 0; i < practice_trial_audio_objects.length; i++) {
             <div id="clip2" class="visual">Clip 2<p>Press "L"</p></div>
         </center>
         <p style="text-align:center">Which clip sounds more like someone who was born in Boston?</p>`;
+    all_trial_response_objects[i].on_finish = handleTrialResponse;
     timeline.push(practice_trial_response_objects[i]);
 }
 
@@ -276,6 +277,7 @@ for (let i = 0; i < all_trial_audio_objects.length; i++) {
             <div id="clip2" class="visual">Clip 2<p>Press "L"</p></div>
         </center>
         <p style="text-align:center">Which clip sounds more like someone who was born in Boston?</p>`;
+    all_trial_response_objects[i].on_finish = handleTrialResponse;
     timeline.push(all_trial_response_objects[i]);
 }
 
