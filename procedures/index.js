@@ -105,7 +105,7 @@ var instructions = {
             <p>Each pair of audio clips will be played once in consecutive order. Your task is to decide which one of the clips sounds like the speaker was born in Boston.</p>
             <p>Please ensure that you use earphones or headphones for the duration of this experiment.</p>
             <p>This experiment should be completed on a <b><u>desktop or laptop</u></b> using the <b><u>Google Chrome browser</u></b>.</p>
-            <p>The experiment will take approximately 30 minutes. You will be compensated as advertised on Prolific for your time.</p>
+            <p>The experiment will take approximately 20 minutes. You will be compensated as advertised on Prolific for your time.</p>
         </div>
       `,
   choices: ["Continue"],
@@ -134,7 +134,7 @@ var legalinfo = {
         human partners. We cannot and do not guarantee or promise that you will receive any benefits from this study.</p>
         <p>PAYMENTS: You will receive payment in the amount advertised on Prolific. If you do not complete this study, you will receive prorated payment based on the time that you have
         spent. Additionally, you may be eligible for bonus payments as described in the instructions.</p>
-        <p> PARTICIPANT’S RIGHTS: If you have read this form and have decided to participate in this project, please understand your participation is voluntary and you have the right
+        <p> PARTICIPANTS RIGHTS: If you have read this form and have decided to participate in this project, please understand your participation is voluntary and you have the right
         to withdraw your consent or discontinue participation at any time without penalty or loss of benefits to which you are otherwise entitled. The alternative
         is not to participate. You have the right to refuse to answer particular questions. The results of this research study may be presented at scientific or professional meetings or
         published in scientific journals. Your individual privacy will be maintained in all published and written data resulting from the study. In accordance with scientific norms, the data
