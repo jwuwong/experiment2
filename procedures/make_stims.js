@@ -36,36 +36,50 @@ let response_data = {
 let response_temp = {
     type: jsPsychHtmlKeyboardResponse,
     choices: ['s', 'l'],
-    stimulus: '', // Initially blank
-    trial_duration: 2000, // Limits overall trial length
-    response_ends_trial: false, // Wait to manually end trial
-    post_trial_gap: 0,
-    data: {},
-    on_load: function () {
-        const listener = (e) => {
-            if (e.key === 's' || e.key === 'l') {
-                // Highlight
-                if (e.key === 's') {
-                    document.getElementById('clip1').classList.add('selected');
-                } else if (e.key === 'l') {
-                    document.getElementById('clip2').classList.add('selected');
-                }
-
-                // Remove listener so only one response counts
-                document.removeEventListener('keydown', listener);
-
-                // Record the response and delay trial end
-                jsPsych.pluginAPI.setTimeout(() => {
-                    jsPsych.finishTrial({
-                        key_press: jsPsych.pluginAPI.convertKeyCharacterToKeyCode(e.key)
-                    });
-                }, 300); // 300ms delay for visual feedback
-            }
-        };
-
-        document.addEventListener('keydown', listener);
+    stimulus: function() {
+        return `
+            <center>
+                <div id="clip1" class="visual">Clip 1<p>Press "S"</p></div>
+                <div id="clip2" class="visual">Clip 2<p>Press "L"</p></div>
+            </center>
+            <p style="text-align:center">Which clip sounds more like someone who was born in Boston?</p>`;
+    },
+    trial_duration: 2000,
+    response_ends_trial: true, // Let jsPsych handle the response
+    post_trial_gap: 1000,
+    data: {}, // This will be filled with trial info in generateTrials
+    on_response: function(data) {
+        // Add visual highlight when key is pressed
+        if (data.response === 's') {
+            document.getElementById('clip1').classList.add('selected');
+        } else if (data.response === 'l') {
+            document.getElementById('clip2').classList.add('selected');
+        }
+        
+        // Add a small delay before ending the trial to see the highlight
+        jsPsych.pluginAPI.setTimeout(function() {
+            jsPsych.finishTrial();
+        }, 300);
+    },
+    on_finish: function(data) {
+        // Add which clip was selected (1 or 2)
+        if (data.response === 's') {
+            data.selected_clip = 1;
+        } else if (data.response === 'l') {
+            data.selected_clip = 2;
+        } else {
+            data.selected_clip = null; // No response
+        }
+        
+        // Handle consecutive no responses
+        if (data.response === null) {
+            consecutive_no_responses++;
+            checkNoResponseTermination();
+        } else {
+            consecutive_no_responses = 0;
+        }
     }
-}
+};
   
   
 
