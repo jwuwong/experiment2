@@ -86,19 +86,43 @@ function generatePracticeTrials(audio_trials, response_trials) {
 
     for (let i = 0; i < audio_trials.length; i++) {
         let [firstAudio, secondAudio] = audio_trials[i];
+        let response = response_trials[i];
         let trial_num = (i + 1).toString();
         let firstAudioPath = '../practice/' + 'trial' + trial_num + '_clip1' + '.WAV';
         let secondAudioPath = '../practice/' + 'trial' + trial_num + '_clip2' + '.WAV';
 
+        // First practice audio
         firstAudio.stimulus = firstAudioPath;
         firstAudio.prompt = firstPrompt;
         firstAudio.trial_duration = 4000;
+        
+        // Capture practice data for first clip
+        firstAudio.data.ID = 'practice_trial' + trial_num + '_clip1';
+        firstAudio.data.talker = 'practice_speaker'; // or specific if you have it
+        firstAudio.data.gender = 'unknown'; // or specific if you have it
+        firstAudio.data.order = 1;
+        firstAudio.data.duration = 4; // approximate since trial_duration is 4000ms
+        firstAudio.data.speech_rate = 'unknown';
+        firstAudio.data.transcript = 'practice_transcript'; // or specific if you have it
 
+        // Second practice audio
         secondAudio.stimulus = secondAudioPath;
         secondAudio.prompt = secondPrompt;
         secondAudio.trial_duration = 4000;
+        
+        // Capture practice data for second clip
+        secondAudio.data.ID = 'practice_trial' + trial_num + '_clip2';
+        secondAudio.data.talker = 'practice_speaker'; // or specific if you have it
+        secondAudio.data.gender = 'unknown'; // or specific if you have it
+        secondAudio.data.order = 2;
+        secondAudio.data.duration = 4; // approximate since trial_duration is 4000ms
+        secondAudio.data.speech_rate = 'unknown';
+        secondAudio.data.transcript = 'practice_transcript'; // or specific if you have it
 
-       
+        // Add practice trial information to response data
+        response.data.clip1_id = 'practice_trial' + trial_num + '_clip1';
+        response.data.clip2_id = 'practice_trial' + trial_num + '_clip2';
+        response.data.trial_type = 'practice';
     }
 }
 
@@ -126,14 +150,42 @@ function generateTrials(trial_ord, audio_trials, response_trials) {
         let firstAudioPath = '../audio/' + firstClip['Clip ID'] + '.WAV';
         let secondAudioPath = '../audio/' + secondClip['Clip ID'] + '.WAV';
 
+        // First audio clip
         firstAudio.stimulus = firstAudioPath;
         firstAudio.prompt = firstPrompt;
         firstAudio.trial_duration = parseFloat(firstClip['Duration (s)']) * 1000 + 500;
+        
+        // Capture first clip data
+        firstAudio.data.ID = firstClip['Clip ID'];
+        firstAudio.data.talker = firstClip['Speaker ID'];
+        firstAudio.data.gender = firstClip['Gender'];
+        firstAudio.data.order = 1;
+        firstAudio.data.duration = firstClip['Duration (s)'];
+        firstAudio.data.speech_rate = firstClip['Speech rate (words per s)'];
+        firstAudio.data.transcript = firstClip['Transcription'];
 
+        // Second audio clip
         secondAudio.stimulus = secondAudioPath;
         secondAudio.prompt = secondPrompt;
         secondAudio.trial_duration = parseFloat(secondClip['Duration (s)']) * 1000;
+        
+        // Capture second clip data
+        secondAudio.data.ID = secondClip['Clip ID'];
+        secondAudio.data.talker = secondClip['Speaker ID'];
+        secondAudio.data.gender = secondClip['Gender'];
+        secondAudio.data.order = 2;
+        secondAudio.data.duration = secondClip['Duration (s)'];
+        secondAudio.data.speech_rate = secondClip['Speech rate (words per s)'];
+        secondAudio.data.transcript = secondClip['Transcription'];
 
-
+        // Add trial pair information to response data
+        response.data.clip1_id = firstClip['Clip ID'];
+        response.data.clip2_id = secondClip['Clip ID'];
+        response.data.clip1_speaker = firstClip['Speaker ID'];
+        response.data.clip2_speaker = secondClip['Speaker ID'];
+        response.data.clip1_gender = firstClip['Gender'];
+        response.data.clip2_gender = secondClip['Gender'];
+        response.data.clip1_transcript = firstClip['Transcription'];
+        response.data.clip2_transcript = secondClip['Transcription'];
     }
 }
