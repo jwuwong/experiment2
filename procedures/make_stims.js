@@ -45,20 +45,20 @@ let response_temp = {
             <p style="text-align:center">Which clip sounds more like someone who was born in Boston?</p>`;
     },
     trial_duration: 2000,
-    response_ends_trial: false, // Let jsPsych handle the response
+    response_ends_trial: true, // Changed to true to work with on_response
     post_trial_gap: 1000,
     data: {}, // This will be filled with trial info in generateTrials
-    on_response: function(data) {
-        // Add visual highlight when key is pressed
-        if (data.response === 's') {
+    on_key_press: function(data) {
+        // This function runs when a key is pressed but doesn't end the trial
+        if (data === 's') {
             document.getElementById('clip1').classList.add('selected');
-        } else if (data.response === 'l') {
+        } else if (data === 'l') {
             document.getElementById('clip2').classList.add('selected');
         }
         
-        // Add a small delay before ending the trial to see the highlight
+        // We'll let the trial end naturally after the visual feedback
         jsPsych.pluginAPI.setTimeout(function() {
-            jsPsych.finishTrial();
+            // This doesn't end the trial, just adds a delay
         }, 300);
     },
     on_finish: function(data) {
@@ -80,7 +80,6 @@ let response_temp = {
         }
     }
 };
-  
   
 
 // Create random test orders
