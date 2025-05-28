@@ -600,7 +600,7 @@ const thankyou = {
   stimulus: `
         <div class="text" id="trial">
             <p>Thank you for completing the experiment!</p>
-            <p>We will contact you soon to arrange for participant reimbursement.</p>
+            <p>Here is the study link for completion: https://app.prolific.com/submissions/complete?cc=C10MFI6S</p>
             <p>Please click the "Submit" button to submit your responses and complete the study.</p>
         </div>
       `,
