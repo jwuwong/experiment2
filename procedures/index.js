@@ -16,6 +16,7 @@ var jsPsych = initJsPsych({
 var timeline = [];
 
 
+
 /* Add a counter variable to track consecutive no-responses */
 var consecutive_no_responses = 0;
 const MAX_CONSECUTIVE_NO_RESPONSES = 5;
@@ -50,6 +51,24 @@ const sounds = [ // These are just the practice trial sounds! REAL trial sounds 
   '../practice/trial3_clip2.WAV'
 ];
 
+
+
+/* Real trials */
+// Create the counterbalanced blocks
+const blocks = makeCounterbalancedBlocks(
+    stimuliData, 
+    20, 
+    audio_temp,        // your audio_temp
+    response_temp,     // your response_temp  
+    audio_data,        // your audio_data
+    response_data      // your response_data
+);
+
+
+
+// Create the preload array from the blocks
+const preload_exp = createPreloadArray(blocks);
+
 // Preloading files are needed to present the stimuli accurately.
 const preload_practice = {
   type: jsPsychPreload,
@@ -62,6 +81,8 @@ var preload_trial = {
   audio: preload_exp,
   max_load_time: 120000 // 2 minutes
 }
+
+
 
 timeline.push(preload_practice);
 timeline.push(preload_trial);
@@ -200,6 +221,8 @@ var practiceinstructions_page2 = {
 
 timeline.push(practiceinstructions_page1);
 timeline.push(practiceinstructions_page2);
+
+
 /* Practice trials */
 for (let i = 0; i < practice_trial_audio_objects.length; i++) {
     timeline.push(practice_trial_audio_objects[i][0]);
@@ -212,7 +235,7 @@ for (let i = 0; i < practice_trial_audio_objects.length; i++) {
             <div id="clip2" class="visual">Clip 2<p>Press "L"</p></div>
         </center>
         <p style="text-align:center">Which clip sounds more like someone who was born in Boston?</p>`;
-    all_trial_response_objects[i].on_finish = handleTrialResponse;
+    practice_trial_response_objects[i].on_finish = handleTrialResponse; // Fixed: was all_trial_response_objects
     timeline.push(practice_trial_response_objects[i]);
 }
 
@@ -256,23 +279,32 @@ timeline.push(realinstructions_page1);
 timeline.push(realinstructions_page2);
 
 
-/* Real trials */
-for (let i = 0; i < all_trial_audio_objects.length; i++) {
-    timeline.push(all_trial_audio_objects[i][0]);
-    timeline.push(all_trial_audio_objects[i][1]);
-
-    // Dynamically set the stimulus for response trials
-    all_trial_response_objects[i].stimulus = `
-        <center>
-            <div id="clip1" class="visual">Clip 1<p>Press "S"</p></div>
-            <div id="clip2" class="visual">Clip 2<p>Press "L"</p></div>
-        </center>
-        <p style="text-align:center">Which clip sounds more like someone who was born in Boston?</p>`;
-    all_trial_response_objects[i].on_finish = handleTrialResponse;
-    timeline.push(all_trial_response_objects[i]);
+// Then add each block to the timeline
+for (let blockIndex = 0; blockIndex < blocks.length; blockIndex++) {
+    const currentBlock = blocks[blockIndex];
+    
+    // Add all trials from this block
+    for (let trialIndex = 0; trialIndex < currentBlock.length; trialIndex += 3) {
+        // Each "trial" consists of 3 elements: audio1, audio2, response
+        const firstAudio = currentBlock[trialIndex];
+        const secondAudio = currentBlock[trialIndex + 1];
+        const responseTrialObj = currentBlock[trialIndex + 2];
+        
+        // Add the two audio clips
+        timeline.push(firstAudio);
+        timeline.push(secondAudio);
+        
+        // Dynamically set the stimulus for response trials (same as your current code)
+        responseTrialObj.stimulus = `
+            <center>
+                <div id="clip1" class="visual">Clip 1<p>Press "S"</p></div>
+                <div id="clip2" class="visual">Clip 2<p>Press "L"</p></div>
+            </center>
+            <p style="text-align:center">Which clip sounds more like someone who was born in Boston?</p>`;
+        responseTrialObj.on_finish = handleTrialResponse;
+        timeline.push(responseTrialObj);
+    }
 }
-
-
 
 /* survey 1: demographic questions */
 var survey1 = {
@@ -569,7 +601,6 @@ var futurestudies = {
 };
 timeline.push(futurestudies);
 
-
 const save_data = {
     type: jsPsychPipe,
     action: "save",
@@ -577,6 +608,8 @@ const save_data = {
     filename: filename,
     data_string: ()=>jsPsych.data.get().csv()
 };
+
+
 timeline.push(save_data);
 
 /* thank you */
