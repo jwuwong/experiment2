@@ -54,7 +54,7 @@ let response_temp = {
     },
     trial_duration: 2000,
     response_ends_trial: false,
-    post_trial_gap: 2000,
+    post_trial_gap: 1500,
     data: {},
 
     on_start: function(trial) {
