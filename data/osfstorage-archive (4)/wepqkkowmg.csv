@@ -1,0 +1,1084 @@
+"success","timeout","failed_images","failed_audio","failed_video","trial_type","trial_index","time_elapsed","internal_node_id","width","height","webaudio","browser","browser_version","mobile","os","fullscreen","vsync_rate","webcam","microphone","rt","stimulus","response","ID","talker","gender","order","duration","speech_rate","transcript","Order","clip1_id","clip2_id","clip1_speaker","clip2_speaker","clip1_gender","clip2_gender","clip1_transcript","clip2_transcript","block_type","block_number","counterbalance_id","accuracy","question_order"
+"true","false","[]","[]","[]","preload","0","16391","0.0-0.0","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
+"true","false","[]","[]","[]","preload","1","77400","0.0-1.0","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
+"","","","","","browser-check","2","78656","0.0-2.0","1226","640","true","chrome","128.0.0","false","Windows 10","true","61.34","true","true","","","","","","","","","","","","","","","","","","","","","","","",""
+"","","","","","html-button-response","3","143556","0.0-3.0","","","","","","","","","","","","64632","
+        <div class=""text"" id=""instruction"" >
+            <img src=""../images/stanford_logo.png"" alt=""stanford logo"" width=""180"" height=""80"">
+            <p><b>Only complete this study if you are a Massachussets resident who is 18 years old or older.</b></p>
+            <p>Please share this link with other people you know who live in the area, but <u>do not participate in this study more than once</u>.
+            <BR>You will not be compensated more than once.</p> 
+            <p>In this experiment, you will be listening to pairs of audio clips.</p>
+            <p>Each pair of audio clips will be played once in consecutive order. Your task is to decide which one of the clips sounds like the speaker was born in Boston.</p>
+            <p>Please ensure that you use earphones or headphones for the duration of this experiment.</p>
+            <p>This experiment should be completed on a <b><u>desktop or laptop</u></b> using the <b><u>Google Chrome browser</u></b>.</p>
+            <p>The experiment will take approximately 20 minutes. You will be compensated as advertised on Prolific for your time.</p>
+        </div>
+      ","0","","","","","","","","","","","","","","","","","","","","",""
+"","","","","","html-button-response","4","150815","0.0-4.0","","","","","","","","","","","","6993","<p><strong>Thank you for your participation in this study. Please read the protocol below.</strong></p>
+        <p>Protocol Director: Robert Hawkins</P
+        <p>Protocol Title: Communication and social cognition in natural audiovisual contexts IRB# 77226</p>
+        <p>DESCRIPTION: You are invited to participate in a research study about language and communication. 
+        The purpose of the research is to understand how you interact and communicate with other people in naturalistic settings as a fluent English speaker. 
+        This research will be conducted through the Prolific platform, including participants from the US, UK, and Canada. 
+        If you decide to participate in this research, you will play a communication game in a group with one or more partners.</p>
+        <p>TIME INVOLVEMENT: The task will last the amount of time advertised on Prolific. You are free to withdraw from the study at any time.</p>
+        <p>RISKS AND BENEFITS: You may become frustrated if your partner gets distracted, or experience discomfort if other participants in your group 
+        send text that is inappropriate for the task. We ask you to please be respectful of other participants you might be
+        interacting with to mitigate these risks. You may also experience discomfort when being asked to discuss or challenge emotionally salient political beliefs. Study data will be
+        stored securely, in compliance with Stanford University standards, minimizing the risk of confidentiality breach. This study advances our scientific understanding of how people
+        communication and collaborate in naturalistic settings. This study may lead to further
+        insights about what can go wrong in teamwork, suggest potential interventions to
+        overcome these barriers, and help to develop assistive technologies that collaborate with
+        human partners. We cannot and do not guarantee or promise that you will receive any benefits from this study.</p>
+        <p>PAYMENTS: You will receive payment in the amount advertised on Prolific. If you do not complete this study, you will receive prorated payment based on the time that you have
+        spent. Additionally, you may be eligible for bonus payments as described in the instructions.</p>
+        <p> PARTICIPANTS RIGHTS: If you have read this form and have decided to participate in this project, please understand your participation is voluntary and you have the right
+        to withdraw your consent or discontinue participation at any time without penalty or loss of benefits to which you are otherwise entitled. The alternative
+        is not to participate. You have the right to refuse to answer particular questions. The results of this research study may be presented at scientific or professional meetings or
+        published in scientific journals. Your individual privacy will be maintained in all published and written data resulting from the study. In accordance with scientific norms, the data
+        from this study may be used or shared with other researchers for future research (after removing personally identifying information) without additional consent from you.</p>
+        <p>CONTACT INFORMATION: Questions: If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Robert Hawkins (rdhawkins@stanford.edu, 217-549-6923).</p>
+        <p>Independent Contact: If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, please contact the Stanford Institutional Review Board (IRB) to
+        speak to someone independent of the research team at 650-723-2480 or toll free at 1-866-680-2906, or email at irbnonmed@stanford.edu. You can also write to the Stanford IRB, Stanford University, 1705 El Camino Real, Palo Alto, CA 94306. Please save or print a
+        copy of this page for your records.</p>
+        <p>If you agree to participate in this research, press the <strong>CONTINUE</strong> button to begin.</p> 
+      ","0","","","","","","","","","","","","","","","","","","","","",""
+"","","","","","cloze","5","207274","0.0-5.0","","","","","","","","","","","","","","[""friends""]","","","","","","","","","","","","","","","","","","","","",""
+"","","","","","html-button-response","6","236108","0.0-6.0","","","","","","","","","","","","28570","
+    <center>
+      <div class=""instruction-box"">
+        <p>You will now begin the practice trials.</p>
+        <p>In each trial, two audio clips will play one after another. You will hear a variety of sentences and phrases spoken by different talkers.</p>
+        <p>Each audio clip will only be played once and you will not be able to replay them.</p>
+        <p><strong>Your task is to decide which clip sounds more like the speaker was born in Boston.</strong></p>
+        <p><strong>These clips come from a range of different people so they might not all sound like your typical Bostonian, but just make your best guess as quickly as possible.</strong></p>        
+  </center>
+        ","0","","","","","","","","","","","","","","","","","","","","",""
+"","","","","","html-button-response","7","289309","0.0-7.0","","","","","","","","","","","","52940","
+    <center>   
+      <div class=""instruction-box"">   
+        <p>Please place your left index finger on the ""S"" key and your right index finger on the ""L"" key.</p>
+        <p><img src=""../procedures/keyboard.png"" width=""500"" style=""margin-top:-10px""></p>
+        <p>If the <strong>first clip</strong> sounds more like someone who was born in Boston, please <strong>press S</strong>.</p>
+        <p>If the <strong>second clip</strong> sounds more like someone who was born in Boston, please <strong>press L</strong>.</p>
+        <p><b>Respond as quickly as possible when both clips have finished playing.</b></p>
+        <p>This is a timed task. If you do not respond in time, the next question will appear automatically.</p>
+        <p><b>Please answer as quickly and accurately as possible.</b></p>
+    </center>
+        ","0","","","","","","","","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","8","293586","0.0-8.0","","","","","","","","","","","","null","../practice/trial1_clip1.WAV","null","practice_trial1_clip1","practice_speaker","unknown","1","4","unknown","practice_transcript","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","9","297595","0.0-9.0","","","","","","","","","","","","null","../practice/trial1_clip2.WAV","l","practice_trial1_clip2","practice_speaker","unknown","2","4","unknown","practice_transcript","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","10","299613","0.0-10.0","","","","","","","","","","","","293","
+        <center>
+            <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+            <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+        </center>
+        <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","1","practice_trial1_clip1","practice_trial1_clip2","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","11","305131","0.0-11.0","","","","","","","","","","","","null","../practice/trial2_clip1.WAV","null","practice_trial2_clip1","practice_speaker","unknown","1","4","unknown","practice_transcript","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","12","309148","0.0-12.0","","","","","","","","","","","","null","../practice/trial2_clip2.WAV","s","practice_trial2_clip2","practice_speaker","unknown","2","4","unknown","practice_transcript","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","13","311162","0.0-13.0","","","","","","","","","","","","764","
+        <center>
+            <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+            <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+        </center>
+        <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","2","practice_trial2_clip1","practice_trial2_clip2","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","14","316669","0.0-14.0","","","","","","","","","","","","null","../practice/trial3_clip1.WAV","null","practice_trial3_clip1","practice_speaker","unknown","1","4","unknown","practice_transcript","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","15","320678","0.0-15.0","","","","","","","","","","","","null","../practice/trial3_clip2.WAV","l","practice_trial3_clip2","practice_speaker","unknown","2","4","unknown","practice_transcript","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","16","322688","0.0-16.0","","","","","","","","","","","","385","
+        <center>
+            <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+            <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+        </center>
+        <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","3","practice_trial3_clip1","practice_trial3_clip2","","","","","","","","","","",""
+"","","","","","html-button-response","17","349025","0.0-17.0","","","","","","","","","","","","24822","
+    <center>
+      <div class=""instruction-box"">
+        <p>You will now begin the experiment.</p>
+        <p>In each trial, two audio clips will play one after another. You will hear a variety of sentences and phrases spoken by different talkers.</p>
+        <p>Each audio clip will only be played once and you will not be able to replay them.</p>
+        <p><strong>Your task is to decide which clip sounds more like someone who was born in Boston.</strong></p>
+        <p><strong>These clips come from a range of different people so they might not all sound like your typical Bostonian, but please do your best to respond as quickly as possible.</strong></p>
+    </center>
+        ","0","","","","","","","","","","","","","","","","","","","","",""
+"","","","","","html-button-response","18","354774","0.0-18.0","","","","","","","","","","","","5486","
+    <center>
+      <div class=""instruction-box"">
+        <p>Please place your left index finger on the ""S"" key and your right index finger on the ""L"" key.</p>
+        <p><img src=""../procedures/keyboard.png"" width=""500"" style=""margin-top:-10px""></p>
+        <p>If the <strong>first clip</strong> sounds more like someone who was born in Boston, please <strong>press S</strong>.</p>
+        <p>If the <strong>second clip</strong> sounds more like someone who was born in Boston, please <strong>press L</strong>.</p>
+        <p><b>Respond as quickly as possible when both clips have finished playing.</b></p>
+        <p>This is a timed task. If you do not respond in time, the next question will appear automatically.</p>
+        <p><b>Please answer as quickly and accurately as possible.</b></p>
+    </center>
+        ","0","","","","","","","","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","19","359207","0.0-19.0","","","","","","","","","","","","null","../audio/F4_03.WAV","null","F4_03","F4","female","1","3.670938","2.724","Yeah, it was an apartment building. It was like a one-bedroom","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","20","361396","0.0-20.0","","","","","","","","","","","","null","../audio/M2_04.WAV","s","M2_04","M2","male","2","2.180729","2.751","People just focus on making money.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","21","363403","0.0-21.0","","","","","","","","","","","","385","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","1","F4_03","M2_04","F4","M2","female","male","Yeah, it was an apartment building. It was like a one-bedroom","People just focus on making money.","long","1","1","",""
+"","","","","","audio-keyboard-response","22","368599","0.0-22.0","","","","","","","","","","","","null","../audio/F1_04.WAV","null","F1_04","F1","female","1","3.175875","3.149","but majority of the time people offer to pick me up.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","23","371166","0.0-23.0","","","","","","","","","","","","null","../audio/M3_04.WAV","l","M3_04","M3","male","2","2.564635","3.508","You had to learn about what they're talking about.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","24","373175","0.0-24.0","","","","","","","","","","","","379","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","2","F1_04","M3_04","F1","M3","female","male","but majority of the time people offer to pick me up.","You had to learn about what they're talking about.","long","1","1","",""
+"","","","","","audio-keyboard-response","25","376992","0.0-25.0","","","","","","","","","","","","null","../audio/M4_04.WAV","null","M4_04","M4","male","1","1.785187","3.361","I'm still struggling to be honest.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","26","380404","0.0-26.0","","","","","","","","","","","","null","../audio/F5_04.WAV","s","F5_04","F5","female","2","3.404396","2.056","After half a year, I start full-time.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","27","382417","0.0-27.0","","","","","","","","","","","","371","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","3","M4_04","F5_04","M4","F5","male","female","I'm still struggling to be honest.","After half a year, I start full-time.","long","1","1","",""
+"","","","","","audio-keyboard-response","28","388412","0.0-28.0","","","","","","","","","","","","null","../audio/F4_04.WAV","null","F4_04","F4","female","1","3.988719","3.509","So when I got in, I knew that I can take the train, it was easy to commute.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","29","390552","0.0-29.0","","","","","","","","","","","","null","../audio/M4_03.WAV","l","M4_03","M4","male","2","2.137188","1.872","they didn't really respond","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","30","392560","0.0-30.0","","","","","","","","","","","","400","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","4","F4_04","M4_03","F4","M4","female","male","So when I got in, I knew that I can take the train, it was easy to commute.","they didn't really respond","long","1","1","",""
+"","","","","","audio-keyboard-response","31","396134","0.0-31.0","","","","","","","","","","","","null","../audio/M5_04.WAV","null","M5_04","M5","male","1","1.560854","3.204","and the summer was cold.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","32","399166","0.0-32.0","","","","","","","","","","","","null","../audio/M2_03.WAV","l","M2_03","M2","male","2","3.026990","2.643","The airport is basically a one-story building.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","33","401175","0.0-33.0","","","","","","","","","","","","440","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","5","M5_04","M2_03","M5","M2","male","male","and the summer was cold.","The airport is basically a one-story building.","long","1","1","",""
+"","","","","","audio-keyboard-response","34","404696","0.0-34.0","","","","","","","","","","","","null","../audio/M1_04.WAV","null","M1_04","M1","male","1","1.508312","4.640","It's a really nice place to live.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","35","406783","0.0-35.0","","","","","","","","","","","","null","../audio/F2_03.WAV","s","F2_03","F2","female","2","2.078781","4.811","But it was illegal at that time, and I didn't know that.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","36","408797","0.0-36.0","","","","","","","","","","","","508","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","6","M1_04","F2_03","M1","F2","male","female","It's a really nice place to live.","But it was illegal at that time, and I didn't know that.","long","1","1","",""
+"","","","","","audio-keyboard-response","37","414185","0.0-37.0","","","","","","","","","","","","null","../audio/M3_03.WAV","null","M3_03","M3","male","1","3.378094","3.553","Probably you heard on the radio or on the news, they are downsizing.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","38","418306","0.0-38.0","","","","","","","","","","","","null","../audio/F3_04.WAV","s","F3_04","F3","female","2","4.115500","2.430","they would also know just because it's easier to identify families.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","39","420308","0.0-39.0","","","","","","","","","","","","610","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","7","M3_03","F3_04","M3","F3","male","female","Probably you heard on the radio or on the news, they are downsizing.","they would also know just because it's easier to identify families.","long","1","1","",""
+"","","","","","audio-keyboard-response","40","424785","0.0-40.0","","","","","","","","","","","","null","../audio/F1_03.WAV","null","F1_03","F1","female","1","2.456333","2.442","I end up going to high school.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","41","427950","0.0-41.0","","","","","","","","","","","","null","../audio/F5_03.WAV","l","F5_03","F5","female","2","3.162094","2.530","It was a totally new experience to me.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","42","429958","0.0-42.0","","","","","","","","","","","","889","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","8","F1_03","F5_03","F1","F5","female","female","I end up going to high school.","It was a totally new experience to me.","long","1","1","",""
+"","","","","","audio-keyboard-response","43","433464","0.0-43.0","","","","","","","","","","","","null","../audio/M1_03.WAV","null","M1_03","M1","male","1","1.480896","2.701","you kind of get spoiled.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","44","436369","0.0-44.0","","","","","","","","","","","","null","../audio/F2_04.WAV","s","F2_04","F2","female","2","2.902938","4.134","They buy a whole pig and then they eat their way through it.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","45","438377","0.0-45.0","","","","","","","","","","","","325","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","9","M1_03","F2_04","M1","F2","male","female","you kind of get spoiled.","They buy a whole pig and then they eat their way through it.","long","1","1","",""
+"","","","","","audio-keyboard-response","46","443340","0.0-46.0","","","","","","","","","","","","null","../audio/F3_03.WAV","null","F3_03","F3","female","1","2.959219","2.028","So initially my father said no.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","47","447727","0.0-47.0","","","","","","","","","","","","null","../audio/M5_03.WAV","s","M5_03","M5","male","2","4.375990","1.829","So we start transporting, moving kids outside of the neighborhood.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","48","449733","0.0-48.0","","","","","","","","","","","","451","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","10","F3_03","M5_03","F3","M5","female","male","So initially my father said no.","So we start transporting, moving kids outside of the neighborhood.","long","1","1","",""
+"","","","","","audio-keyboard-response","49","454701","0.0-49.0","","","","","","","","","","","","null","../audio/F3_03.WAV","null","F3_03","F3","female","1","2.959219","2.028","So initially my father said no.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","50","457605","0.0-50.0","","","","","","","","","","","","null","../audio/F2_04.WAV","l","F2_04","F2","female","2","2.902938","4.134","They buy a whole pig and then they eat their way through it.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","51","459618","0.0-51.0","","","","","","","","","","","","560","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","11","F3_03","F2_04","F3","F2","female","female","So initially my father said no.","They buy a whole pig and then they eat their way through it.","long","1","1","",""
+"","","","","","audio-keyboard-response","52","463205","0.0-52.0","","","","","","","","","","","","null","../audio/M5_04.WAV","null","M5_04","M5","male","1","1.560854","3.204","and the summer was cold.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","53","467195","0.0-53.0","","","","","","","","","","","","null","../audio/F4_04.WAV","s","F4_04","F4","female","2","3.988719","3.509","So when I got in, I knew that I can take the train, it was easy to commute.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","54","469202","0.0-54.0","","","","","","","","","","","","500","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","12","M5_04","F4_04","M5","F4","male","female","and the summer was cold.","So when I got in, I knew that I can take the train, it was easy to commute.","long","1","1","",""
+"","","","","","audio-keyboard-response","55","473005","0.0-55.0","","","","","","","","","","","","null","../audio/M4_04.WAV","null","M4_04","M4","male","1","1.785187","3.361","I'm still struggling to be honest.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","56","474515","0.0-56.0","","","","","","","","","","","","null","../audio/M1_04.WAV","s","M1_04","M1","male","2","1.508312","4.640","It's a really nice place to live.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","57","476521","0.0-57.0","","","","","","","","","","","","437","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","13","M4_04","M1_04","M4","M1","male","male","I'm still struggling to be honest.","It's a really nice place to live.","long","1","1","",""
+"","","","","","audio-keyboard-response","58","480020","0.0-58.0","","","","","","","","","","","","null","../audio/M1_03.WAV","null","M1_03","M1","male","1","1.480896","2.701","you kind of get spoiled.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","59","484397","0.0-59.0","","","","","","","","","","","","null","../audio/M5_03.WAV","s","M5_03","M5","male","2","4.375990","1.829","So we start transporting, moving kids outside of the neighborhood.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","60","486408","0.0-60.0","","","","","","","","","","","","399","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","14","M1_03","M5_03","M1","M5","male","male","you kind of get spoiled.","So we start transporting, moving kids outside of the neighborhood.","long","1","1","",""
+"","","","","","audio-keyboard-response","61","491591","0.0-61.0","","","","","","","","","","","","null","../audio/F5_03.WAV","null","F5_03","F5","female","1","3.162094","2.530","It was a totally new experience to me.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","62","494973","0.0-62.0","","","","","","","","","","","","null","../audio/M3_03.WAV","l","M3_03","M3","male","2","3.378094","3.553","Probably you heard on the radio or on the news, they are downsizing.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","63","496976","0.0-63.0","","","","","","","","","","","","373","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","15","F5_03","M3_03","F5","M3","female","male","It was a totally new experience to me.","Probably you heard on the radio or on the news, they are downsizing.","long","1","1","",""
+"","","","","","audio-keyboard-response","64","501449","0.0-64.0","","","","","","","","","","","","null","../audio/F1_03.WAV","null","F1_03","F1","female","1","2.456333","2.442","I end up going to high school.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","65","503536","0.0-65.0","","","","","","","","","","","","null","../audio/F2_03.WAV","s","F2_03","F2","female","2","2.078781","4.811","But it was illegal at that time, and I didn't know that.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","66","505553","0.0-66.0","","","","","","","","","","","","663","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","16","F1_03","F2_03","F1","F2","female","female","I end up going to high school.","But it was illegal at that time, and I didn't know that.","long","1","1","",""
+"","","","","","audio-keyboard-response","67","510598","0.0-67.0","","","","","","","","","","","","null","../audio/M2_03.WAV","null","M2_03","M2","male","1","3.026990","2.643","The airport is basically a one-story building.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","68","513775","0.0-68.0","","","","","","","","","","","","null","../audio/F1_04.WAV","s","F1_04","F1","female","2","3.175875","3.149","but majority of the time people offer to pick me up.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","69","515792","0.0-69.0","","","","","","","","","","","","573","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","17","M2_03","F1_04","M2","F1","male","female","The airport is basically a one-story building.","but majority of the time people offer to pick me up.","long","1","1","",""
+"","","","","","audio-keyboard-response","70","521482","0.0-70.0","","","","","","","","","","","","null","../audio/F4_03.WAV","null","F4_03","F4","female","1","3.670938","2.724","Yeah, it was an apartment building. It was like a one-bedroom","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","71","525606","0.0-71.0","","","","","","","","","","","","null","../audio/F3_04.WAV","l","F3_04","F3","female","2","4.115500","2.430","they would also know just because it's easier to identify families.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","72","527614","0.0-72.0","","","","","","","","","","","","612","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","18","F4_03","F3_04","F4","F3","female","female","Yeah, it was an apartment building. It was like a one-bedroom","they would also know just because it's easier to identify families.","long","1","1","",""
+"","","","","","audio-keyboard-response","73","531802","0.0-73.0","","","","","","","","","","","","null","../audio/M2_04.WAV","null","M2_04","M2","male","1","2.180729","2.751","People just focus on making money.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","74","534378","0.0-74.0","","","","","","","","","","","","null","../audio/M3_04.WAV","l","M3_04","M3","male","2","2.564635","3.508","You had to learn about what they're talking about.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","75","536391","0.0-75.0","","","","","","","","","","","","542","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","19","M2_04","M3_04","M2","M3","male","male","People just focus on making money.","You had to learn about what they're talking about.","long","1","1","",""
+"","","","","","audio-keyboard-response","76","540533","0.0-76.0","","","","","","","","","","","","null","../audio/M4_03.WAV","null","M4_03","M4","male","1","2.137188","1.872","they didn't really respond","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","77","543950","0.0-77.0","","","","","","","","","","","","null","../audio/F5_04.WAV","s","F5_04","F5","female","2","3.404396","2.056","After half a year, I start full-time.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","78","545966","0.0-78.0","","","","","","","","","","","","360","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","20","M4_03","F5_04","M4","F5","male","female","they didn't really respond","After half a year, I start full-time.","long","1","1","",""
+"","","","","","audio-keyboard-response","79","550069","0.0-79.0","","","","","","","","","","","","null","../audio/F2_03.WAV","null","F2_03","F2","female","1","2.078781","4.811","But it was illegal at that time, and I didn't know that.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","80","554062","0.0-80.0","","","","","","","","","","","","null","../audio/F4_04.WAV","l","F4_04","F4","female","2","3.988719","3.509","So when I got in, I knew that I can take the train, it was easy to commute.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","81","556072","0.0-81.0","","","","","","","","","","","","866","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","1","F2_03","F4_04","F2","F4","female","female","But it was illegal at that time, and I didn't know that.","So when I got in, I knew that I can take the train, it was easy to commute.","long","2","1","",""
+"","","","","","audio-keyboard-response","82","559573","0.0-82.0","","","","","","","","","","","","null","../audio/M1_03.WAV","null","M1_03","M1","male","1","1.480896","2.701","you kind of get spoiled.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","83","563245","0.0-83.0","","","","","","","","","","","","null","../audio/F4_03.WAV","s","F4_03","F4","female","2","3.670938","2.724","Yeah, it was an apartment building. It was like a one-bedroom","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","84","565249","0.0-84.0","","","","","","","","","","","","506","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","2","M1_03","F4_03","M1","F4","male","female","you kind of get spoiled.","Yeah, it was an apartment building. It was like a one-bedroom","long","2","1","",""
+"","","","","","audio-keyboard-response","85","570420","0.0-85.0","","","","","","","","","","","","null","../audio/F5_03.WAV","null","F5_03","F5","female","1","3.162094","2.530","It was a totally new experience to me.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","86","574804","0.0-86.0","","","","","","","","","","","","null","../audio/M5_03.WAV","s","M5_03","M5","male","2","4.375990","1.829","So we start transporting, moving kids outside of the neighborhood.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","87","576816","0.0-87.0","","","","","","","","","","","","735","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","3","F5_03","M5_03","F5","M5","female","male","It was a totally new experience to me.","So we start transporting, moving kids outside of the neighborhood.","long","2","1","",""
+"","","","","","audio-keyboard-response","88","581301","0.0-88.0","","","","","","","","","","","","null","../audio/F1_03.WAV","null","F1_03","F1","female","1","2.456333","2.442","I end up going to high school.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","89","582866","0.0-89.0","","","","","","","","","","","","null","../audio/M5_04.WAV","s","M5_04","M5","male","2","1.560854","3.204","and the summer was cold.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","90","584877","0.0-90.0","","","","","","","","","","","","991","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","4","F1_03","M5_04","F1","M5","female","male","I end up going to high school.","and the summer was cold.","long","2","1","",""
+"","","","","","audio-keyboard-response","91","589850","0.0-91.0","","","","","","","","","","","","null","../audio/F3_03.WAV","null","F3_03","F3","female","1","2.959219","2.028","So initially my father said no.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","92","592431","0.0-92.0","","","","","","","","","","","","null","../audio/M3_04.WAV","l","M3_04","M3","male","2","2.564635","3.508","You had to learn about what they're talking about.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","93","594444","0.0-93.0","","","","","","","","","","","","392","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","5","F3_03","M3_04","F3","M3","female","male","So initially my father said no.","You had to learn about what they're talking about.","long","2","1","",""
+"","","","","","audio-keyboard-response","94","600569","0.0-94.0","","","","","","","","","","","","null","../audio/F3_04.WAV","null","F3_04","F3","female","1","4.115500","2.430","they would also know just because it's easier to identify families.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","95","602355","0.0-95.0","","","","","","","","","","","","null","../audio/M4_04.WAV","s","M4_04","M4","male","2","1.785187","3.361","I'm still struggling to be honest.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","96","604368","0.0-96.0","","","","","","","","","","","","387","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","6","F3_04","M4_04","F3","M4","female","male","they would also know just because it's easier to identify families.","I'm still struggling to be honest.","long","2","1","",""
+"","","","","","audio-keyboard-response","97","608576","0.0-97.0","","","","","","","","","","","","null","../audio/M2_04.WAV","null","M2_04","M2","male","1","2.180729","2.751","People just focus on making money.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","98","610101","0.0-98.0","","","","","","","","","","","","null","../audio/M1_04.WAV","s","M1_04","M1","male","2","1.508312","4.640","It's a really nice place to live.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","99","612109","0.0-99.0","","","","","","","","","","","","346","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","7","M2_04","M1_04","M2","M1","male","male","People just focus on making money.","It's a really nice place to live.","long","2","1","",""
+"","","","","","audio-keyboard-response","100","617307","0.0-100.0","","","","","","","","","","","","null","../audio/F1_04.WAV","null","F1_04","F1","female","1","3.175875","3.149","but majority of the time people offer to pick me up.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","101","619449","0.0-101.0","","","","","","","","","","","","null","../audio/M4_03.WAV","s","M4_03","M4","male","2","2.137188","1.872","they didn't really respond","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","102","621455","0.0-102.0","","","","","","","","","","","","399","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","8","F1_04","M4_03","F1","M4","female","male","but majority of the time people offer to pick me up.","they didn't really respond","long","2","1","",""
+"","","","","","audio-keyboard-response","103","626887","0.0-103.0","","","","","","","","","","","","null","../audio/F5_04.WAV","null","F5_04","F5","female","1","3.404396","2.056","After half a year, I start full-time.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","104","630270","0.0-104.0","","","","","","","","","","","","null","../audio/M3_03.WAV","l","M3_03","M3","male","2","3.378094","3.553","Probably you heard on the radio or on the news, they are downsizing.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","105","632274","0.0-105.0","","","","","","","","","","","","708","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","9","F5_04","M3_03","F5","M3","female","male","After half a year, I start full-time.","Probably you heard on the radio or on the news, they are downsizing.","long","2","1","",""
+"","","","","","audio-keyboard-response","106","637331","0.0-106.0","","","","","","","","","","","","null","../audio/M2_03.WAV","null","M2_03","M2","male","1","3.026990","2.643","The airport is basically a one-story building.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","107","640236","0.0-107.0","","","","","","","","","","","","null","../audio/F2_04.WAV","s","F2_04","F2","female","2","2.902938","4.134","They buy a whole pig and then they eat their way through it.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","108","642246","0.0-108.0","","","","","","","","","","","","365","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","10","M2_03","F2_04","M2","F2","male","female","The airport is basically a one-story building.","They buy a whole pig and then they eat their way through it.","long","2","1","",""
+"","","","","","audio-keyboard-response","109","646346","0.0-109.0","","","","","","","","","","","","null","../audio/F2_03.WAV","null","F2_03","F2","female","1","2.078781","4.811","But it was illegal at that time, and I didn't know that.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","110","648485","0.0-110.0","","","","","","","","","","","","null","../audio/M4_03.WAV","l","M4_03","M4","male","2","2.137188","1.872","they didn't really respond","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","111","650500","0.0-111.0","","","","","","","","","","","","352","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","11","F2_03","M4_03","F2","M4","female","male","But it was illegal at that time, and I didn't know that.","they didn't really respond","long","2","1","",""
+"","","","","","audio-keyboard-response","112","654981","0.0-112.0","","","","","","","","","","","","null","../audio/F1_03.WAV","null","F1_03","F1","female","1","2.456333","2.442","I end up going to high school.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","113","656543","0.0-113.0","","","","","","","","","","","","null","../audio/M5_04.WAV","s","M5_04","M5","male","2","1.560854","3.204","and the summer was cold.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","114","658551","0.0-114.0","","","","","","","","","","","","683","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","12","F1_03","M5_04","F1","M5","female","male","I end up going to high school.","and the summer was cold.","long","2","1","",""
+"","","","","","audio-keyboard-response","115","662339","0.0-115.0","","","","","","","","","","","","null","../audio/M4_04.WAV","null","M4_04","M4","male","1","1.785187","3.361","I'm still struggling to be honest.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","116","666468","0.0-116.0","","","","","","","","","","","","null","../audio/F3_04.WAV","l","F3_04","F3","female","2","4.115500","2.430","they would also know just because it's easier to identify families.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","117","668473","0.0-117.0","","","","","","","","","","","","576","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","13","M4_04","F3_04","M4","F3","male","female","I'm still struggling to be honest.","they would also know just because it's easier to identify families.","long","2","1","",""
+"","","","","","audio-keyboard-response","118","673655","0.0-118.0","","","","","","","","","","","","null","../audio/F5_03.WAV","null","F5_03","F5","female","1","3.162094","2.530","It was a totally new experience to me.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","119","676685","0.0-119.0","","","","","","","","","","","","null","../audio/M2_03.WAV","l","M2_03","M2","male","2","3.026990","2.643","The airport is basically a one-story building.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","120","678700","0.0-120.0","","","","","","","","","","","","334","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","14","F5_03","M2_03","F5","M2","female","male","It was a totally new experience to me.","The airport is basically a one-story building.","long","2","1","",""
+"","","","","","audio-keyboard-response","121","684083","0.0-121.0","","","","","","","","","","","","null","../audio/M3_03.WAV","null","M3_03","M3","male","1","3.378094","3.553","Probably you heard on the radio or on the news, they are downsizing.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","122","687756","0.0-122.0","","","","","","","","","","","","null","../audio/F4_03.WAV","s","F4_03","F4","female","2","3.670938","2.724","Yeah, it was an apartment building. It was like a one-bedroom","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","123","689767","0.0-123.0","","","","","","","","","","","","534","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","15","M3_03","F4_03","M3","F4","male","female","Probably you heard on the radio or on the news, they are downsizing.","Yeah, it was an apartment building. It was like a one-bedroom","long","2","1","",""
+"","","","","","audio-keyboard-response","124","694345","0.0-124.0","","","","","","","","","","","","null","../audio/M3_04.WAV","null","M3_04","M3","male","1","2.564635","3.508","You had to learn about what they're talking about.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","125","697255","0.0-125.0","","","","","","","","","","","","null","../audio/F2_04.WAV","s","F2_04","F2","female","2","2.902938","4.134","They buy a whole pig and then they eat their way through it.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","126","699269","0.0-126.0","","","","","","","","","","","","415","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","16","M3_04","F2_04","M3","F2","male","female","You had to learn about what they're talking about.","They buy a whole pig and then they eat their way through it.","long","2","1","",""
+"","","","","","audio-keyboard-response","127","703471","0.0-127.0","","","","","","","","","","","","null","../audio/M2_04.WAV","null","M2_04","M2","male","1","2.180729","2.751","People just focus on making money.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","128","706890","0.0-128.0","","","","","","","","","","","","null","../audio/F5_04.WAV","s","F5_04","F5","female","2","3.404396","2.056","After half a year, I start full-time.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","129","708903","0.0-129.0","","","","","","","","","","","","325","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","17","M2_04","F5_04","M2","F5","male","female","People just focus on making money.","After half a year, I start full-time.","long","2","1","",""
+"","","","","","audio-keyboard-response","130","714905","0.0-130.0","","","","","","","","","","","","null","../audio/F4_04.WAV","null","F4_04","F4","female","1","3.988719","3.509","So when I got in, I knew that I can take the train, it was easy to commute.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","131","718085","0.0-131.0","","","","","","","","","","","","null","../audio/F1_04.WAV","l","F1_04","F1","female","2","3.175875","3.149","but majority of the time people offer to pick me up.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","132","720097","0.0-132.0","","","","","","","","","","","","350","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","18","F4_04","F1_04","F4","F1","female","female","So when I got in, I knew that I can take the train, it was easy to commute.","but majority of the time people offer to pick me up.","long","2","1","",""
+"","","","","","audio-keyboard-response","133","723599","0.0-133.0","","","","","","","","","","","","null","../audio/M1_03.WAV","null","M1_03","M1","male","1","1.480896","2.701","you kind of get spoiled.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","134","727979","0.0-134.0","","","","","","","","","","","","null","../audio/M5_03.WAV","s","M5_03","M5","male","2","4.375990","1.829","So we start transporting, moving kids outside of the neighborhood.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","135","729985","0.0-135.0","","","","","","","","","","","","535","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","19","M1_03","M5_03","M1","M5","male","male","you kind of get spoiled.","So we start transporting, moving kids outside of the neighborhood.","long","2","1","",""
+"","","","","","audio-keyboard-response","136","733503","0.0-136.0","","","","","","","","","","","","null","../audio/M1_04.WAV","null","M1_04","M1","male","1","1.508312","4.640","It's a really nice place to live.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","137","736466","0.0-137.0","","","","","","","","","","","","null","../audio/F3_03.WAV","l","F3_03","F3","female","2","2.959219","2.028","So initially my father said no.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","138","738473","0.0-138.0","","","","","","","","","","","","730","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","20","M1_04","F3_03","M1","F3","male","female","It's a really nice place to live.","So initially my father said no.","long","2","1","",""
+"","","","","","audio-keyboard-response","139","743640","0.0-139.0","","","","","","","","","","","","null","../audio/F5_03.WAV","null","F5_03","F5","female","1","3.162094","2.530","It was a totally new experience to me.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","140","746546","0.0-140.0","","","","","","","","","","","","null","../audio/F2_04.WAV","l","F2_04","F2","female","2","2.902938","4.134","They buy a whole pig and then they eat their way through it.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","141","748562","0.0-141.0","","","","","","","","","","","","528","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","1","F5_03","F2_04","F5","F2","female","female","It was a totally new experience to me.","They buy a whole pig and then they eat their way through it.","long","3","1","",""
+"","","","","","audio-keyboard-response","142","753987","0.0-142.0","","","","","","","","","","","","null","../audio/F5_04.WAV","null","F5_04","F5","female","1","3.404396","2.056","After half a year, I start full-time.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","143","758365","0.0-143.0","","","","","","","","","","","","null","../audio/M5_03.WAV","s","M5_03","M5","male","2","4.375990","1.829","So we start transporting, moving kids outside of the neighborhood.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","144","760372","0.0-144.0","","","","","","","","","","","","405","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","2","F5_04","M5_03","F5","M5","female","male","After half a year, I start full-time.","So we start transporting, moving kids outside of the neighborhood.","long","3","1","",""
+"","","","","","audio-keyboard-response","145","765770","0.0-145.0","","","","","","","","","","","","null","../audio/M3_03.WAV","null","M3_03","M3","male","1","3.378094","3.553","Probably you heard on the radio or on the news, they are downsizing.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","146","768735","0.0-146.0","","","","","","","","","","","","null","../audio/F3_03.WAV","s","F3_03","F3","female","2","2.959219","2.028","So initially my father said no.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","147","770746","0.0-147.0","","","","","","","","","","","","416","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","3","M3_03","F3_03","M3","F3","male","female","Probably you heard on the radio or on the news, they are downsizing.","So initially my father said no.","long","3","1","",""
+"","","","","","audio-keyboard-response","148","774549","0.0-148.0","","","","","","","","","","","","null","../audio/M4_04.WAV","null","M4_04","M4","male","1","1.785187","3.361","I'm still struggling to be honest.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","149","776062","0.0-149.0","","","","","","","","","","","","null","../audio/M1_04.WAV","s","M1_04","M1","male","2","1.508312","4.640","It's a really nice place to live.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","150","778071","0.0-150.0","","","","","","","","","","","","468","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","4","M4_04","M1_04","M4","M1","male","male","I'm still struggling to be honest.","It's a really nice place to live.","long","3","1","",""
+"","","","","","audio-keyboard-response","151","782647","0.0-151.0","","","","","","","","","","","","null","../audio/M3_04.WAV","null","M3_04","M3","male","1","2.564635","3.508","You had to learn about what they're talking about.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","152","784733","0.0-152.0","","","","","","","","","","","","null","../audio/F2_03.WAV","s","F2_03","F2","female","2","2.078781","4.811","But it was illegal at that time, and I didn't know that.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","153","786743","0.0-153.0","","","","","","","","","","","","500","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","5","M3_04","F2_03","M3","F2","male","female","You had to learn about what they're talking about.","But it was illegal at that time, and I didn't know that.","long","3","1","",""
+"","","","","","audio-keyboard-response","154","791935","0.0-154.0","","","","","","","","","","","","null","../audio/F1_04.WAV","null","F1_04","F1","female","1","3.175875","3.149","but majority of the time people offer to pick me up.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","155","794965","0.0-155.0","","","","","","","","","","","","null","../audio/M2_03.WAV","l","M2_03","M2","male","2","3.026990","2.643","The airport is basically a one-story building.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","156","796977","0.0-156.0","","","","","","","","","","","","351","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","6","F1_04","M2_03","F1","M2","female","male","but majority of the time people offer to pick me up.","The airport is basically a one-story building.","long","3","1","",""
+"","","","","","audio-keyboard-response","157","803102","0.0-157.0","","","","","","","","","","","","null","../audio/F3_04.WAV","null","F3_04","F3","female","1","4.115500","2.430","they would also know just because it's easier to identify families.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","158","805252","0.0-158.0","","","","","","","","","","","","null","../audio/M4_03.WAV","l","M4_03","M4","male","2","2.137188","1.872","they didn't really respond","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","159","807255","0.0-159.0","","","","","","","","","","","","336","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","7","F3_04","M4_03","F3","M4","female","male","they would also know just because it's easier to identify families.","they didn't really respond","long","3","1","",""
+"","","","","","audio-keyboard-response","160","810759","0.0-160.0","","","","","","","","","","","","null","../audio/M1_03.WAV","null","M1_03","M1","male","1","1.480896","2.701","you kind of get spoiled.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","161","812945","0.0-161.0","","","","","","","","","","","","null","../audio/M2_04.WAV","l","M2_04","M2","male","2","2.180729","2.751","People just focus on making money.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","162","814959","0.0-162.0","","","","","","","","","","","","539","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","8","M1_03","M2_04","M1","M2","male","male","you kind of get spoiled.","People just focus on making money.","long","3","1","",""
+"","","","","","audio-keyboard-response","163","818526","0.0-163.0","","","","","","","","","","","","null","../audio/M5_04.WAV","null","M5_04","M5","male","1","1.560854","3.204","and the summer was cold.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","164","820985","0.0-164.0","","","","","","","","","","","","null","../audio/F1_03.WAV","l","F1_03","F1","female","2","2.456333","2.442","I end up going to high school.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","165","822994","0.0-165.0","","","","","","","","","","","","526","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","9","M5_04","F1_03","M5","F1","male","female","and the summer was cold.","I end up going to high school.","long","3","1","",""
+"","","","","","audio-keyboard-response","166","828676","0.0-166.0","","","","","","","","","","","","null","../audio/F4_03.WAV","null","F4_03","F4","female","1","3.670938","2.724","Yeah, it was an apartment building. It was like a one-bedroom","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","167","832665","0.0-167.0","","","","","","","","","","","","null","../audio/F4_04.WAV","null","F4_04","F4","female","2","3.988719","3.509","So when I got in, I knew that I can take the train, it was easy to commute.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","168","834675","0.0-168.0","","","","","","","","","","","","null","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","null","","","","","","","","10","F4_03","F4_04","F4","F4","female","female","Yeah, it was an apartment building. It was like a one-bedroom","So when I got in, I knew that I can take the train, it was easy to commute.","long","3","1","",""
+"","","","","","audio-keyboard-response","169","840075","0.0-169.0","","","","","","","","","","","","null","../audio/M3_03.WAV","null","M3_03","M3","male","1","3.378094","3.553","Probably you heard on the radio or on the news, they are downsizing.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","170","841586","0.0-170.0","","","","","","","","","","","","null","../audio/M1_04.WAV","s","M1_04","M1","male","2","1.508312","4.640","It's a really nice place to live.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","171","843599","0.0-171.0","","","","","","","","","","","","339","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","11","M3_03","M1_04","M3","M1","male","male","Probably you heard on the radio or on the news, they are downsizing.","It's a really nice place to live.","long","3","1","",""
+"","","","","","audio-keyboard-response","172","848169","0.0-172.0","","","","","","","","","","","","null","../audio/M3_04.WAV","null","M3_04","M3","male","1","2.564635","3.508","You had to learn about what they're talking about.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","173","851075","0.0-173.0","","","","","","","","","","","","null","../audio/F2_04.WAV","s","F2_04","F2","female","2","2.902938","4.134","They buy a whole pig and then they eat their way through it.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","174","853082","0.0-174.0","","","","","","","","","","","","432","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","12","M3_04","F2_04","M3","F2","male","female","You had to learn about what they're talking about.","They buy a whole pig and then they eat their way through it.","long","3","1","",""
+"","","","","","audio-keyboard-response","175","856576","0.0-175.0","","","","","","","","","","","","null","../audio/M1_03.WAV","null","M1_03","M1","male","1","1.480896","2.701","you kind of get spoiled.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","176","860576","0.0-176.0","","","","","","","","","","","","null","../audio/F4_04.WAV","s","F4_04","F4","female","2","3.988719","3.509","So when I got in, I knew that I can take the train, it was easy to commute.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","177","862582","0.0-177.0","","","","","","","","","","","","454","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","13","M1_03","F4_04","M1","F4","male","female","you kind of get spoiled.","So when I got in, I knew that I can take the train, it was easy to commute.","long","3","1","",""
+"","","","","","audio-keyboard-response","178","868002","0.0-178.0","","","","","","","","","","","","null","../audio/F5_04.WAV","null","F5_04","F5","female","1","3.404396","2.056","After half a year, I start full-time.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","179","872389","0.0-179.0","","","","","","","","","","","","null","../audio/M5_03.WAV","s","M5_03","M5","male","2","4.375990","1.829","So we start transporting, moving kids outside of the neighborhood.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","180","874397","0.0-180.0","","","","","","","","","","","","440","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","14","F5_04","M5_03","F5","M5","female","male","After half a year, I start full-time.","So we start transporting, moving kids outside of the neighborhood.","long","3","1","",""
+"","","","","","audio-keyboard-response","181","877973","0.0-181.0","","","","","","","","","","","","null","../audio/M5_04.WAV","null","M5_04","M5","male","1","1.560854","3.204","and the summer was cold.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","182","880436","0.0-182.0","","","","","","","","","","","","null","../audio/F1_03.WAV","l","F1_03","F1","female","2","2.456333","2.442","I end up going to high school.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","183","882444","0.0-183.0","","","","","","","","","","","","399","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","15","M5_04","F1_03","M5","F1","male","female","and the summer was cold.","I end up going to high school.","long","3","1","",""
+"","","","","","audio-keyboard-response","184","886238","0.0-184.0","","","","","","","","","","","","null","../audio/M4_04.WAV","null","M4_04","M4","male","1","1.785187","3.361","I'm still struggling to be honest.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","185","889272","0.0-185.0","","","","","","","","","","","","null","../audio/M2_03.WAV","l","M2_03","M2","male","2","3.026990","2.643","The airport is basically a one-story building.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","186","891283","0.0-186.0","","","","","","","","","","","","317","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","16","M4_04","M2_03","M4","M2","male","male","I'm still struggling to be honest.","The airport is basically a one-story building.","long","3","1","",""
+"","","","","","audio-keyboard-response","187","896965","0.0-187.0","","","","","","","","","","","","null","../audio/F4_03.WAV","null","F4_03","F4","female","1","3.670938","2.724","Yeah, it was an apartment building. It was like a one-bedroom","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","188","899105","0.0-188.0","","","","","","","","","","","","null","../audio/M4_03.WAV","l","M4_03","M4","male","2","2.137188","1.872","they didn't really respond","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","189","901112","0.0-189.0","","","","","","","","","","","","490","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","17","F4_03","M4_03","F4","M4","female","male","Yeah, it was an apartment building. It was like a one-bedroom","they didn't really respond","long","3","1","",""
+"","","","","","audio-keyboard-response","190","906293","0.0-190.0","","","","","","","","","","","","null","../audio/F5_03.WAV","null","F5_03","F5","female","1","3.162094","2.530","It was a totally new experience to me.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","191","909477","0.0-191.0","","","","","","","","","","","","null","../audio/F1_04.WAV","l","F1_04","F1","female","2","3.175875","3.149","but majority of the time people offer to pick me up.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","192","911490","0.0-192.0","","","","","","","","","","","","277","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","18","F5_03","F1_04","F5","F1","female","female","It was a totally new experience to me.","but majority of the time people offer to pick me up.","long","3","1","",""
+"","","","","","audio-keyboard-response","193","916471","0.0-193.0","","","","","","","","","","","","null","../audio/F3_03.WAV","null","F3_03","F3","female","1","2.959219","2.028","So initially my father said no.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","194","920592","0.0-194.0","","","","","","","","","","","","null","../audio/F3_04.WAV","s","F3_04","F3","female","2","4.115500","2.430","they would also know just because it's easier to identify families.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","195","922600","0.0-195.0","","","","","","","","","","","","574","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","19","F3_03","F3_04","F3","F3","female","female","So initially my father said no.","they would also know just because it's easier to identify families.","long","3","1","",""
+"","","","","","audio-keyboard-response","196","926784","0.0-196.0","","","","","","","","","","","","null","../audio/M2_04.WAV","null","M2_04","M2","male","1","2.180729","2.751","People just focus on making money.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","197","928866","0.0-197.0","","","","","","","","","","","","null","../audio/F2_03.WAV","s","F2_03","F2","female","2","2.078781","4.811","But it was illegal at that time, and I didn't know that.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","198","930881","0.0-198.0","","","","","","","","","","","","468","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","20","M2_04","F2_03","M2","F2","male","female","People just focus on making money.","But it was illegal at that time, and I didn't know that.","long","3","1","",""
+"","","","","","audio-keyboard-response","199","933734","0.0-199.0","","","","","","","","","","","","null","../audio/F5_01.WAV","null","F5_01","F5","female","1","0.835490","3.592","Oh my god.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","200","935494","0.0-200.0","","","","","","","","","","","","null","../audio/F5_02.WAV","s","F5_02","F5","female","2","1.750198","2.286","My father also, you know,","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","201","937501","0.0-201.0","","","","","","","","","","","","512","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","1","F5_01","F5_02","F5","F5","female","female","Oh my god.","My father also, you know,","short","4","1","",""
+"","","","","","audio-keyboard-response","202","942053","0.0-202.0","","","","","","","","","","","","null","../audio/M4_02.WAV","null","M4_02","M4","male","1","2.538281","2.364","the most intimate group of friends,","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","203","944977","0.0-203.0","","","","","","","","","","","","null","../audio/F4_02.WAV","s","F4_02","F4","female","2","2.916635","2.058","Yeah, a little bit, like elementary school.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","204","946985","0.0-204.0","","","","","","","","","","","","358","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","2","M4_02","F4_02","M4","F4","male","female","the most intimate group of friends,","Yeah, a little bit, like elementary school.","short","4","1","",""
+"","","","","","audio-keyboard-response","205","950911","0.0-205.0","","","","","","","","","","","","null","../audio/F2_02.WAV","null","F2_02","F2","female","1","1.902969","2.627","And so my mother also","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","206","951810","0.0-206.0","","","","","","","","","","","","null","../audio/M4_01.WAV","s","M4_01","M4","male","2","0.883969","3.393","yeah last fall","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","207","953822","0.0-207.0","","","","","","","","","","","","360","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","3","F2_02","M4_01","F2","M4","female","male","And so my mother also","yeah last fall","short","4","1","",""
+"","","","","","audio-keyboard-response","208","957679","0.0-208.0","","","","","","","","","","","","null","../audio/F4_01.WAV","null","F4_01","F4","female","1","1.835479","2.724","Probably right before I turned six.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","209","958681","0.0-209.0","","","","","","","","","","","","null","../audio/M1_02.WAV","s","M1_02","M1","male","2","0.999906","2.000","parallel ways.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","210","960682","0.0-210.0","","","","","","","","","","","","384","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","4","F4_01","M1_02","F4","M1","female","male","Probably right before I turned six.","parallel ways.","short","4","1","",""
+"","","","","","audio-keyboard-response","211","963726","0.0-211.0","","","","","","","","","","","","null","../audio/M2_01.WAV","null","M2_01","M2","male","1","1.025729","3.900","being in the squallor.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","212","964895","0.0-212.0","","","","","","","","","","","","null","../audio/F3_02.WAV","s","F3_02","F3","female","2","1.165760","2.574","as homeless people.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","213","966899","0.0-213.0","","","","","","","","","","","","315","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","5","M2_01","F3_02","M2","F3","male","female","being in the squallor.","as homeless people.","short","4","1","",""
+"","","","","","audio-keyboard-response","214","970770","0.0-214.0","","","","","","","","","","","","null","../audio/M5_01.WAV","null","M5_01","M5","male","1","1.863625","3.755","half an hour, probably fourty five minutes away.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","215","973065","0.0-215.0","","","","","","","","","","","","null","../audio/F1_02.WAV","l","F1_02","F1","female","2","2.286385","2.187","clothes or fashion for that matter.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","216","975070","0.0-216.0","","","","","","","","","","","","323","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","6","M5_01","F1_02","M5","F1","male","female","half an hour, probably fourty five minutes away.","clothes or fashion for that matter.","short","4","1","",""
+"","","","","","audio-keyboard-response","217","979306","0.0-217.0","","","","","","","","","","","","null","../audio/M5_02.WAV","null","M5_02","M5","male","1","2.229229","2.244","Because back in the seventies,","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","218","980963","0.0-218.0","","","","","","","","","","","","null","../audio/F2_01.WAV","s","F2_01","F2","female","2","1.654760","3.021","and then upstairs in her apartment,","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","219","982966","0.0-219.0","","","","","","","","","","","","429","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","7","M5_02","F2_01","M5","F2","male","female","Because back in the seventies,","and then upstairs in her apartment,","short","4","1","",""
+"","","","","","audio-keyboard-response","220","987711","0.0-220.0","","","","","","","","","","","","null","../audio/F1_01.WAV","null","F1_01","F1","female","1","2.729260","1.832","because of the limited space.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","221","991985","0.0-221.0","","","","","","","","","","","","null","../audio/F3_01.WAV","s","F3_01","F3","female","2","4.267563","1.875","my parents, my two sisters, and my two brothers.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","222","993993","0.0-222.0","","","","","","","","","","","","597","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","8","F1_01","F3_01","F1","F3","female","female","because of the limited space.","my parents, my two sisters, and my two brothers.","short","4","1","",""
+"","","","","","audio-keyboard-response","223","997235","0.0-223.0","","","","","","","","","","","","null","../audio/M1_01.WAV","null","M1_01","M1","male","1","1.220375","4.095","being in the medical field,","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","224","998955","0.0-224.0","","","","","","","","","","","","null","../audio/M3_02.WAV","s","M3_02","M3","male","2","1.709750","2.924","And then on Sunday morning","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","225","1000963","0.0-225.0","","","","","","","","","","","","397","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","9","M1_01","M3_02","M1","M3","male","male","being in the medical field,","And then on Sunday morning","short","4","1","",""
+"","","","","","audio-keyboard-response","226","1004642","0.0-226.0","","","","","","","","","","","","null","../audio/M3_01.WAV","null","M3_01","M3","male","1","1.659469","2.411","to further my education.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","227","1007323","0.0-227.0","","","","","","","","","","","","null","../audio/M2_02.WAV","l","M2_02","M2","male","2","2.665333","3.001","But later on, when I traveled quite a bit,","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","228","1009333","0.0-228.0","","","","","","","","","","","","338","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","10","M3_01","M2_02","M3","M2","male","male","to further my education.","But later on, when I traveled quite a bit,","short","4","1","",""
+"","","","","","audio-keyboard-response","229","1012362","0.0-229.0","","","","","","","","","","","","null","../audio/M1_02.WAV","null","M1_02","M1","male","1","0.999906","2.000","parallel ways.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","230","1014652","0.0-230.0","","","","","","","","","","","","null","../audio/F1_02.WAV","s","F1_02","F1","female","2","2.286385","2.187","clothes or fashion for that matter.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","231","1016659","0.0-231.0","","","","","","","","","","","","329","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","11","M1_02","F1_02","M1","F1","male","female","parallel ways.","clothes or fashion for that matter.","short","4","1","",""
+"","","","","","audio-keyboard-response","232","1020555","0.0-232.0","","","","","","","","","","","","null","../audio/M5_01.WAV","null","M5_01","M5","male","1","1.863625","3.755","half an hour, probably fourty five minutes away.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","233","1022394","0.0-233.0","","","","","","","","","","","","null","../audio/F4_01.WAV","s","F4_01","F4","female","2","1.835479","2.724","Probably right before I turned six.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","234","1024402","0.0-234.0","","","","","","","","","","","","411","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","12","M5_01","F4_01","M5","F4","male","female","half an hour, probably fourty five minutes away.","Probably right before I turned six.","short","4","1","",""
+"","","","","","audio-keyboard-response","235","1027654","0.0-235.0","","","","","","","","","","","","null","../audio/M1_01.WAV","null","M1_01","M1","male","1","1.220375","4.095","being in the medical field,","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","236","1029885","0.0-236.0","","","","","","","","","","","","null","../audio/M5_02.WAV","l","M5_02","M5","male","2","2.229229","2.244","Because back in the seventies,","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","237","1031894","0.0-237.0","","","","","","","","","","","","261","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","13","M1_01","M5_02","M1","M5","male","male","being in the medical field,","Because back in the seventies,","short","4","1","",""
+"","","","","","audio-keyboard-response","238","1036828","0.0-238.0","","","","","","","","","","","","null","../audio/F4_02.WAV","null","F4_02","F4","female","1","2.916635","2.058","Yeah, a little bit, like elementary school.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","239","1037666","0.0-239.0","","","","","","","","","","","","null","../audio/F5_01.WAV","l","F5_01","F5","female","2","0.835490","3.592","Oh my god.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","240","1039678","0.0-240.0","","","","","","","","","","","","548","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","14","F4_02","F5_01","F4","F5","female","female","Yeah, a little bit, like elementary school.","Oh my god.","short","4","1","",""
+"","","","","","audio-keyboard-response","241","1044370","0.0-241.0","","","","","","","","","","","","null","../audio/M2_02.WAV","null","M2_02","M2","male","1","2.665333","3.001","But later on, when I traveled quite a bit,","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","242","1046034","0.0-242.0","","","","","","","","","","","","null","../audio/M3_01.WAV","s","M3_01","M3","male","2","1.659469","2.411","to further my education.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","243","1048043","0.0-243.0","","","","","","","","","","","","348","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","15","M2_02","M3_01","M2","M3","male","male","But later on, when I traveled quite a bit,","to further my education.","short","4","1","",""
+"","","","","","audio-keyboard-response","244","1050934","0.0-244.0","","","","","","","","","","","","null","../audio/M4_01.WAV","null","M4_01","M4","male","1","0.883969","3.393","yeah last fall","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","245","1053666","0.0-245.0","","","","","","","","","","","","null","../audio/F1_01.WAV","l","F1_01","F1","female","2","2.729260","1.832","because of the limited space.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","246","1055681","0.0-246.0","","","","","","","","","","","","491","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","16","M4_01","F1_01","M4","F1","male","female","yeah last fall","because of the limited space.","short","4","1","",""
+"","","","","","audio-keyboard-response","247","1058711","0.0-247.0","","","","","","","","","","","","null","../audio/M2_01.WAV","null","M2_01","M2","male","1","1.025729","3.900","being in the squallor.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","248","1061258","0.0-248.0","","","","","","","","","","","","null","../audio/M4_02.WAV","l","M4_02","M4","male","2","2.538281","2.364","the most intimate group of friends,","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","249","1063269","0.0-249.0","","","","","","","","","","","","256","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","17","M2_01","M4_02","M2","M4","male","male","being in the squallor.","the most intimate group of friends,","short","4","1","",""
+"","","","","","audio-keyboard-response","250","1066940","0.0-250.0","","","","","","","","","","","","null","../audio/F2_01.WAV","null","F2_01","F2","female","1","1.654760","3.021","and then upstairs in her apartment,","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","251","1071222","0.0-251.0","","","","","","","","","","","","null","../audio/F3_01.WAV","l","F3_01","F3","female","2","4.267563","1.875","my parents, my two sisters, and my two brothers.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","252","1073233","0.0-252.0","","","","","","","","","","","","401","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","18","F2_01","F3_01","F2","F3","female","female","and then upstairs in her apartment,","my parents, my two sisters, and my two brothers.","short","4","1","",""
+"","","","","","audio-keyboard-response","253","1077006","0.0-253.0","","","","","","","","","","","","null","../audio/F5_02.WAV","null","F5_02","F5","female","1","1.750198","2.286","My father also, you know,","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","254","1078726","0.0-254.0","","","","","","","","","","","","null","../audio/M3_02.WAV","l","M3_02","M3","male","2","1.709750","2.924","And then on Sunday morning","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","255","1080730","0.0-255.0","","","","","","","","","","","","611","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","19","F5_02","M3_02","F5","M3","female","male","My father also, you know,","And then on Sunday morning","short","4","1","",""
+"","","","","","audio-keyboard-response","256","1084639","0.0-256.0","","","","","","","","","","","","null","../audio/F2_02.WAV","null","F2_02","F2","female","1","1.902969","2.627","And so my mother also","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","257","1085815","0.0-257.0","","","","","","","","","","","","null","../audio/F3_02.WAV","s","F3_02","F3","female","2","1.165760","2.574","as homeless people.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","258","1087828","0.0-258.0","","","","","","","","","","","","446","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","20","F2_02","F3_02","F2","F3","female","female","And so my mother also","as homeless people.","short","4","1","",""
+"","","","","","audio-keyboard-response","259","1092505","0.0-259.0","","","","","","","","","","","","null","../audio/M2_02.WAV","null","M2_02","M2","male","1","2.665333","3.001","But later on, when I traveled quite a bit,","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","260","1094266","0.0-260.0","","","","","","","","","","","","null","../audio/F5_02.WAV","s","F5_02","F5","female","2","1.750198","2.286","My father also, you know,","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","261","1096270","0.0-261.0","","","","","","","","","","","","487","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","1","M2_02","F5_02","M2","F5","male","female","But later on, when I traveled quite a bit,","My father also, you know,","short","5","1","",""
+"","","","","","audio-keyboard-response","262","1099127","0.0-262.0","","","","","","","","","","","","null","../audio/F5_01.WAV","null","F5_01","F5","female","1","0.835490","3.592","Oh my god.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","263","1101416","0.0-263.0","","","","","","","","","","","","null","../audio/F1_02.WAV","s","F1_02","F1","female","2","2.286385","2.187","clothes or fashion for that matter.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","264","1103433","0.0-264.0","","","","","","","","","","","","545","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","2","F5_01","F1_02","F5","F1","female","female","Oh my god.","clothes or fashion for that matter.","short","5","1","",""
+"","","","","","audio-keyboard-response","265","1107988","0.0-265.0","","","","","","","","","","","","null","../audio/M4_02.WAV","null","M4_02","M4","male","1","2.538281","2.364","the most intimate group of friends,","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","266","1109015","0.0-266.0","","","","","","","","","","","","null","../audio/M2_01.WAV","s","M2_01","M2","male","2","1.025729","3.900","being in the squallor.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","267","1111025","0.0-267.0","","","","","","","","","","","","546","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","3","M4_02","M2_01","M4","M2","male","male","the most intimate group of friends,","being in the squallor.","short","5","1","",""
+"","","","","","audio-keyboard-response","268","1114741","0.0-268.0","","","","","","","","","","","","null","../audio/M3_02.WAV","null","M3_02","M3","male","1","1.709750","2.924","And then on Sunday morning","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","269","1115635","0.0-269.0","","","","","","","","","","","","null","../audio/M4_01.WAV","s","M4_01","M4","male","2","0.883969","3.393","yeah last fall","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","270","1117647","0.0-270.0","","","","","","","","","","","","336","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","4","M3_02","M4_01","M3","M4","male","male","And then on Sunday morning","yeah last fall","short","5","1","",""
+"","","","","","audio-keyboard-response","271","1121907","0.0-271.0","","","","","","","","","","","","null","../audio/M5_02.WAV","null","M5_02","M5","male","1","2.229229","2.244","Because back in the seventies,","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","272","1123746","0.0-272.0","","","","","","","","","","","","null","../audio/F4_01.WAV","s","F4_01","F4","female","2","1.835479","2.724","Probably right before I turned six.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","273","1125759","0.0-273.0","","","","","","","","","","","","423","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","5","M5_02","F4_01","M5","F4","male","female","Because back in the seventies,","Probably right before I turned six.","short","5","1","",""
+"","","","","","audio-keyboard-response","274","1129441","0.0-274.0","","","","","","","","","","","","null","../audio/M3_01.WAV","null","M3_01","M3","male","1","1.659469","2.411","to further my education.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","275","1130445","0.0-275.0","","","","","","","","","","","","null","../audio/M1_02.WAV","s","M1_02","M1","male","2","0.999906","2.000","parallel ways.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","276","1132458","0.0-276.0","","","","","","","","","","","","337","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","6","M3_01","M1_02","M3","M1","male","male","to further my education.","parallel ways.","short","5","1","",""
+"","","","","","audio-keyboard-response","277","1137197","0.0-277.0","","","","","","","","","","","","null","../audio/F1_01.WAV","null","F1_01","F1","female","1","2.729260","1.832","because of the limited space.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","278","1139066","0.0-278.0","","","","","","","","","","","","null","../audio/M5_01.WAV","s","M5_01","M5","male","2","1.863625","3.755","half an hour, probably fourty five minutes away.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","279","1141079","0.0-279.0","","","","","","","","","","","","380","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","7","F1_01","M5_01","F1","M5","female","male","because of the limited space.","half an hour, probably fourty five minutes away.","short","5","1","",""
+"","","","","","audio-keyboard-response","280","1146000","0.0-280.0","","","","","","","","","","","","null","../audio/F4_02.WAV","null","F4_02","F4","female","1","2.916635","2.058","Yeah, a little bit, like elementary school.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","281","1150275","0.0-281.0","","","","","","","","","","","","null","../audio/F3_01.WAV","l","F3_01","F3","female","2","4.267563","1.875","my parents, my two sisters, and my two brothers.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","282","1152279","0.0-282.0","","","","","","","","","","","","462","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","8","F4_02","F3_01","F4","F3","female","female","Yeah, a little bit, like elementary school.","my parents, my two sisters, and my two brothers.","short","5","1","",""
+"","","","","","audio-keyboard-response","283","1156206","0.0-283.0","","","","","","","","","","","","null","../audio/F2_02.WAV","null","F2_02","F2","female","1","1.902969","2.627","And so my mother also","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","284","1157375","0.0-284.0","","","","","","","","","","","","null","../audio/F3_02.WAV","s","F3_02","F3","female","2","1.165760","2.574","as homeless people.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","285","1159378","0.0-285.0","","","","","","","","","","","","641","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","9","F2_02","F3_02","F2","F3","female","female","And so my mother also","as homeless people.","short","5","1","",""
+"","","","","","audio-keyboard-response","286","1162621","0.0-286.0","","","","","","","","","","","","null","../audio/M1_01.WAV","null","M1_01","M1","male","1","1.220375","4.095","being in the medical field,","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","287","1164278","0.0-287.0","","","","","","","","","","","","null","../audio/F2_01.WAV","s","F2_01","F2","female","2","1.654760","3.021","and then upstairs in her apartment,","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","288","1166288","0.0-288.0","","","","","","","","","","","","471","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","10","M1_01","F2_01","M1","F2","male","female","being in the medical field,","and then upstairs in her apartment,","short","5","1","",""
+"","","","","","audio-keyboard-response","289","1170840","0.0-289.0","","","","","","","","","","","","null","../audio/M4_02.WAV","null","M4_02","M4","male","1","2.538281","2.364","the most intimate group of friends,","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","290","1171726","0.0-290.0","","","","","","","","","","","","null","../audio/M4_01.WAV","s","M4_01","M4","male","2","0.883969","3.393","yeah last fall","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","291","1173728","0.0-291.0","","","","","","","","","","","","414","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","11","M4_02","M4_01","M4","M4","male","male","the most intimate group of friends,","yeah last fall","short","5","1","",""
+"","","","","","audio-keyboard-response","292","1176953","0.0-292.0","","","","","","","","","","","","null","../audio/M1_01.WAV","null","M1_01","M1","male","1","1.220375","4.095","being in the medical field,","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","293","1178611","0.0-293.0","","","","","","","","","","","","null","../audio/F2_01.WAV","s","F2_01","F2","female","2","1.654760","3.021","and then upstairs in her apartment,","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","294","1180625","0.0-294.0","","","","","","","","","","","","537","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","12","M1_01","F2_01","M1","F2","male","female","being in the medical field,","and then upstairs in her apartment,","short","5","1","",""
+"","","","","","audio-keyboard-response","295","1184916","0.0-295.0","","","","","","","","","","","","null","../audio/F1_02.WAV","null","F1_02","F1","female","1","2.286385","2.187","clothes or fashion for that matter.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","296","1186675","0.0-296.0","","","","","","","","","","","","null","../audio/F5_02.WAV","s","F5_02","F5","female","2","1.750198","2.286","My father also, you know,","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","297","1188691","0.0-297.0","","","","","","","","","","","","540","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","13","F1_02","F5_02","F1","F5","female","female","clothes or fashion for that matter.","My father also, you know,","short","5","1","",""
+"","","","","","audio-keyboard-response","298","1193369","0.0-298.0","","","","","","","","","","","","null","../audio/M2_02.WAV","null","M2_02","M2","male","1","2.665333","3.001","But later on, when I traveled quite a bit,","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","299","1194545","0.0-299.0","","","","","","","","","","","","null","../audio/F3_02.WAV","l","F3_02","F3","female","2","1.165760","2.574","as homeless people.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","300","1196548","0.0-300.0","","","","","","","","","","","","464","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","14","M2_02","F3_02","M2","F3","male","female","But later on, when I traveled quite a bit,","as homeless people.","short","5","1","",""
+"","","","","","audio-keyboard-response","301","1199400","0.0-301.0","","","","","","","","","","","","null","../audio/F5_01.WAV","null","F5_01","F5","female","1","0.835490","3.592","Oh my god.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","302","1200405","0.0-302.0","","","","","","","","","","","","null","../audio/M1_02.WAV","s","M1_02","M1","male","2","0.999906","2.000","parallel ways.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","303","1202415","0.0-303.0","","","","","","","","","","","","334","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","15","F5_01","M1_02","F5","M1","female","male","Oh my god.","parallel ways.","short","5","1","",""
+"","","","","","audio-keyboard-response","304","1206665","0.0-304.0","","","","","","","","","","","","null","../audio/M5_02.WAV","null","M5_02","M5","male","1","2.229229","2.244","Because back in the seventies,","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","305","1208575","0.0-305.0","","","","","","","","","","","","null","../audio/F2_02.WAV","s","F2_02","F2","female","2","1.902969","2.627","And so my mother also","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","306","1210589","0.0-306.0","","","","","","","","","","","","507","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","16","M5_02","F2_02","M5","F2","male","female","Because back in the seventies,","And so my mother also","short","5","1","",""
+"","","","","","audio-keyboard-response","307","1215321","0.0-307.0","","","","","","","","","","","","null","../audio/F1_01.WAV","null","F1_01","F1","female","1","2.729260","1.832","because of the limited space.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","308","1217165","0.0-308.0","","","","","","","","","","","","null","../audio/F4_01.WAV","s","F4_01","F4","female","2","1.835479","2.724","Probably right before I turned six.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","309","1219172","0.0-309.0","","","","","","","","","","","","358","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","17","F1_01","F4_01","F1","F4","female","female","because of the limited space.","Probably right before I turned six.","short","5","1","",""
+"","","","","","audio-keyboard-response","310","1223047","0.0-310.0","","","","","","","","","","","","null","../audio/M5_01.WAV","null","M5_01","M5","male","1","1.863625","3.755","half an hour, probably fourty five minutes away.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","311","1224075","0.0-311.0","","","","","","","","","","","","null","../audio/M2_01.WAV","l","M2_01","M2","male","2","1.025729","3.900","being in the squallor.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","312","1226078","0.0-312.0","","","","","","","","","","","","565","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","18","M5_01","M2_01","M5","M2","male","male","half an hour, probably fourty five minutes away.","being in the squallor.","short","5","1","",""
+"","","","","","audio-keyboard-response","313","1232367","0.0-313.0","","","","","","","","","","","","null","../audio/F3_01.WAV","null","F3_01","F3","female","1","4.267563","1.875","my parents, my two sisters, and my two brothers.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","314","1235285","0.0-314.0","","","","","","","","","","","","null","../audio/F4_02.WAV","s","F4_02","F4","female","2","2.916635","2.058","Yeah, a little bit, like elementary school.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","315","1237300","0.0-315.0","","","","","","","","","","","","655","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","19","F3_01","F4_02","F3","F4","female","female","my parents, my two sisters, and my two brothers.","Yeah, a little bit, like elementary school.","short","5","1","",""
+"","","","","","audio-keyboard-response","316","1240982","0.0-316.0","","","","","","","","","","","","null","../audio/M3_01.WAV","null","M3_01","M3","male","1","1.659469","2.411","to further my education.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","317","1242695","0.0-317.0","","","","","","","","","","","","null","../audio/M3_02.WAV","s","M3_02","M3","male","2","1.709750","2.924","And then on Sunday morning","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","318","1244700","0.0-318.0","","","","","","","","","","","","635","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","20","M3_01","M3_02","M3","M3","male","male","to further my education.","And then on Sunday morning","short","5","1","",""
+"","","","","","audio-keyboard-response","319","1248544","0.0-319.0","","","","","","","","","","","","null","../audio/F4_01.WAV","null","F4_01","F4","female","1","1.835479","2.724","Probably right before I turned six.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","320","1250775","0.0-320.0","","","","","","","","","","","","null","../audio/M5_02.WAV","l","M5_02","M5","male","2","2.229229","2.244","Because back in the seventies,","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","321","1252783","0.0-321.0","","","","","","","","","","","","532","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","1","F4_01","M5_02","F4","M5","female","male","Probably right before I turned six.","Because back in the seventies,","short","6","1","",""
+"","","","","","audio-keyboard-response","322","1257714","0.0-322.0","","","","","","","","","","","","null","../audio/F4_02.WAV","null","F4_02","F4","female","1","2.916635","2.058","Yeah, a little bit, like elementary school.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","323","1258555","0.0-323.0","","","","","","","","","","","","null","../audio/F5_01.WAV","l","F5_01","F5","female","2","0.835490","3.592","Oh my god.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","324","1260567","0.0-324.0","","","","","","","","","","","","879","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","2","F4_02","F5_01","F4","F5","female","female","Yeah, a little bit, like elementary school.","Oh my god.","short","6","1","",""
+"","","","","","audio-keyboard-response","325","1264253","0.0-325.0","","","","","","","","","","","","null","../audio/M3_01.WAV","null","M3_01","M3","male","1","1.659469","2.411","to further my education.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","326","1266131","0.0-326.0","","","","","","","","","","","","null","../audio/M5_01.WAV","s","M5_01","M5","male","2","1.863625","3.755","half an hour, probably fourty five minutes away.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","327","1268138","0.0-327.0","","","","","","","","","","","","379","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","3","M3_01","M5_01","M3","M5","male","male","to further my education.","half an hour, probably fourty five minutes away.","short","6","1","",""
+"","","","","","audio-keyboard-response","328","1272896","0.0-328.0","","","","","","","","","","","","null","../audio/F1_01.WAV","null","F1_01","F1","female","1","2.729260","1.832","because of the limited space.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","329","1274611","0.0-329.0","","","","","","","","","","","","null","../audio/M3_02.WAV","s","M3_02","M3","male","2","1.709750","2.924","And then on Sunday morning","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","330","1276617","0.0-330.0","","","","","","","","","","","","469","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","4","F1_01","M3_02","F1","M3","female","male","because of the limited space.","And then on Sunday morning","short","6","1","",""
+"","","","","","audio-keyboard-response","331","1279864","0.0-331.0","","","","","","","","","","","","null","../audio/M1_01.WAV","null","M1_01","M1","male","1","1.220375","4.095","being in the medical field,","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","332","1284134","0.0-332.0","","","","","","","","","","","","null","../audio/F3_01.WAV","l","F3_01","F3","female","2","4.267563","1.875","my parents, my two sisters, and my two brothers.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","333","1286137","0.0-333.0","","","","","","","","","","","","346","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","5","M1_01","F3_01","M1","F3","male","female","being in the medical field,","my parents, my two sisters, and my two brothers.","short","6","1","",""
+"","","","","","audio-keyboard-response","334","1289905","0.0-334.0","","","","","","","","","","","","null","../audio/F5_02.WAV","null","F5_02","F5","female","1","1.750198","2.286","My father also, you know,","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","335","1290795","0.0-335.0","","","","","","","","","","","","null","../audio/M4_01.WAV","s","M4_01","M4","male","2","0.883969","3.393","yeah last fall","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","336","1292799","0.0-336.0","","","","","","","","","","","","519","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","6","F5_02","M4_01","F5","M4","female","male","My father also, you know,","yeah last fall","short","6","1","",""
+"","","","","","audio-keyboard-response","337","1297481","0.0-337.0","","","","","","","","","","","","null","../audio/M2_02.WAV","null","M2_02","M2","male","1","2.665333","3.001","But later on, when I traveled quite a bit,","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","338","1299386","0.0-338.0","","","","","","","","","","","","null","../audio/F2_02.WAV","s","F2_02","F2","female","2","1.902969","2.627","And so my mother also","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","339","1301391","0.0-339.0","","","","","","","","","","","","482","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","7","M2_02","F2_02","M2","F2","male","female","But later on, when I traveled quite a bit,","And so my mother also","short","6","1","",""
+"","","","","","audio-keyboard-response","340","1304417","0.0-340.0","","","","","","","","","","","","null","../audio/M1_02.WAV","null","M1_02","M1","male","1","0.999906","2.000","parallel ways.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","341","1305585","0.0-341.0","","","","","","","","","","","","null","../audio/F3_02.WAV","l","F3_02","F3","female","2","1.165760","2.574","as homeless people.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","342","1307588","0.0-342.0","","","","","","","","","","","","479","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","8","M1_02","F3_02","M1","F3","male","female","parallel ways.","as homeless people.","short","6","1","",""
+"","","","","","audio-keyboard-response","343","1312141","0.0-343.0","","","","","","","","","","","","null","../audio/M4_02.WAV","null","M4_02","M4","male","1","2.538281","2.364","the most intimate group of friends,","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","344","1313179","0.0-344.0","","","","","","","","","","","","null","../audio/M2_01.WAV","s","M2_01","M2","male","2","1.025729","3.900","being in the squallor.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","345","1315187","0.0-345.0","","","","","","","","","","","","506","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","9","M4_02","M2_01","M4","M2","male","male","the most intimate group of friends,","being in the squallor.","short","6","1","",""
+"","","","","","audio-keyboard-response","346","1318857","0.0-346.0","","","","","","","","","","","","null","../audio/F2_01.WAV","null","F2_01","F2","female","1","1.654760","3.021","and then upstairs in her apartment,","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","347","1321145","0.0-347.0","","","","","","","","","","","","null","../audio/F1_02.WAV","s","F1_02","F1","female","2","2.286385","2.187","clothes or fashion for that matter.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","348","1323152","0.0-348.0","","","","","","","","","","","","707","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","10","F2_01","F1_02","F2","F1","female","female","and then upstairs in her apartment,","clothes or fashion for that matter.","short","6","1","",""
+"","","","","","audio-keyboard-response","349","1326189","0.0-349.0","","","","","","","","","","","","null","../audio/M2_01.WAV","null","M2_01","M2","male","1","1.025729","3.900","being in the squallor.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","350","1328743","0.0-350.0","","","","","","","","","","","","null","../audio/M4_02.WAV","l","M4_02","M4","male","2","2.538281","2.364","the most intimate group of friends,","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","351","1330746","0.0-351.0","","","","","","","","","","","","339","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","11","M2_01","M4_02","M2","M4","male","male","being in the squallor.","the most intimate group of friends,","short","6","1","",""
+"","","","","","audio-keyboard-response","352","1333597","0.0-352.0","","","","","","","","","","","","null","../audio/F5_01.WAV","null","F5_01","F5","female","1","0.835490","3.592","Oh my god.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","353","1337874","0.0-353.0","","","","","","","","","","","","null","../audio/F3_01.WAV","l","F3_01","F3","female","2","4.267563","1.875","my parents, my two sisters, and my two brothers.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","354","1339889","0.0-354.0","","","","","","","","","","","","449","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","12","F5_01","F3_01","F5","F3","female","female","Oh my god.","my parents, my two sisters, and my two brothers.","short","6","1","",""
+"","","","","","audio-keyboard-response","355","1343617","0.0-355.0","","","","","","","","","","","","null","../audio/M3_02.WAV","null","M3_02","M3","male","1","1.709750","2.924","And then on Sunday morning","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","356","1345375","0.0-356.0","","","","","","","","","","","","null","../audio/F5_02.WAV","s","F5_02","F5","female","2","1.750198","2.286","My father also, you know,","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","357","1347380","0.0-357.0","","","","","","","","","","","","722","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","13","M3_02","F5_02","M3","F5","male","female","And then on Sunday morning","My father also, you know,","short","6","1","",""
+"","","","","","audio-keyboard-response","358","1351617","0.0-358.0","","","","","","","","","","","","null","../audio/M5_02.WAV","null","M5_02","M5","male","1","2.229229","2.244","Because back in the seventies,","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","359","1353283","0.0-359.0","","","","","","","","","","","","null","../audio/M3_01.WAV","s","M3_01","M3","male","2","1.659469","2.411","to further my education.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","360","1355295","0.0-360.0","","","","","","","","","","","","536","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","14","M5_02","M3_01","M5","M3","male","male","Because back in the seventies,","to further my education.","short","6","1","",""
+"","","","","","audio-keyboard-response","361","1358967","0.0-361.0","","","","","","","","","","","","null","../audio/F2_01.WAV","null","F2_01","F2","female","1","1.654760","3.021","and then upstairs in her apartment,","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","362","1360806","0.0-362.0","","","","","","","","","","","","null","../audio/F4_01.WAV","s","F4_01","F4","female","2","1.835479","2.724","Probably right before I turned six.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","363","1362818","0.0-363.0","","","","","","","","","","","","484","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","15","F2_01","F4_01","F2","F4","female","female","and then upstairs in her apartment,","Probably right before I turned six.","short","6","1","",""
+"","","","","","audio-keyboard-response","364","1366067","0.0-364.0","","","","","","","","","","","","null","../audio/M1_01.WAV","null","M1_01","M1","male","1","1.220375","4.095","being in the medical field,","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","365","1367075","0.0-365.0","","","","","","","","","","","","null","../audio/M1_02.WAV","s","M1_02","M1","male","2","0.999906","2.000","parallel ways.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","366","1369083","0.0-366.0","","","","","","","","","","","","416","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","16","M1_01","M1_02","M1","M1","male","male","being in the medical field,","parallel ways.","short","6","1","",""
+"","","","","","audio-keyboard-response","367","1374010","0.0-367.0","","","","","","","","","","","","null","../audio/F4_02.WAV","null","F4_02","F4","female","1","2.916635","2.058","Yeah, a little bit, like elementary school.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","368","1375876","0.0-368.0","","","","","","","","","","","","null","../audio/M5_01.WAV","s","M5_01","M5","male","2","1.863625","3.755","half an hour, probably fourty five minutes away.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","369","1377887","0.0-369.0","","","","","","","","","","","","537","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","17","F4_02","M5_01","F4","M5","female","male","Yeah, a little bit, like elementary school.","half an hour, probably fourty five minutes away.","short","6","1","",""
+"","","","","","audio-keyboard-response","370","1382196","0.0-370.0","","","","","","","","","","","","null","../audio/F1_02.WAV","null","F1_02","F1","female","1","2.286385","2.187","clothes or fashion for that matter.","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","371","1384928","0.0-371.0","","","","","","","","","","","","null","../audio/F1_01.WAV","l","F1_01","F1","female","2","2.729260","1.832","because of the limited space.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","372","1386936","0.0-372.0","","","","","","","","","","","","480","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","18","F1_02","F1_01","F1","F1","female","female","clothes or fashion for that matter.","because of the limited space.","short","6","1","",""
+"","","","","","audio-keyboard-response","373","1391618","0.0-373.0","","","","","","","","","","","","null","../audio/M2_02.WAV","null","M2_02","M2","male","1","2.665333","3.001","But later on, when I traveled quite a bit,","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","374","1392786","0.0-374.0","","","","","","","","","","","","null","../audio/F3_02.WAV","l","F3_02","F3","female","2","1.165760","2.574","as homeless people.","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","375","1394787","0.0-375.0","","","","","","","","","","","","485","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","l","","","","","","","","19","M2_02","F3_02","M2","F3","male","female","But later on, when I traveled quite a bit,","as homeless people.","short","6","1","",""
+"","","","","","audio-keyboard-response","376","1398698","0.0-376.0","","","","","","","","","","","","null","../audio/F2_02.WAV","null","F2_02","F2","female","1","1.902969","2.627","And so my mother also","","","","","","","","","","","","","",""
+"","","","","","audio-keyboard-response","377","1399586","0.0-377.0","","","","","","","","","","","","null","../audio/M4_01.WAV","s","M4_01","M4","male","2","0.883969","3.393","yeah last fall","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","378","1401596","0.0-378.0","","","","","","","","","","","","528","
+            <center>
+                <div id=""clip1"" class=""visual"">Clip 1<p>Press ""S""</p></div>
+                <div id=""clip2"" class=""visual"">Clip 2<p>Press ""L""</p></div>
+            </center>
+            <p style=""text-align:center"">Which clip sounds more like someone who was born in Boston?</p>","s","","","","","","","","20","F2_02","M4_01","F2","M4","female","male","And so my mother also","yeah last fall","short","6","1","",""
+"","","","","","survey","379","1913848","0.0-379.0","","","","","","","","","","","","510632","","{""P0_Q0"":null,""zipcode_growing_up"":""15868"",""zipcode_teenage_years"":""15868"",""zipcode_adult_years"":""01101"",""zipcode_current"":""01101"",""gender"":""Female"",""age"":""1977"",""race"":[""White""],""income"":145000,""education"":""Postgraduate degree""}","","","","","","","","","","","","","","","","","","","","[]",""
+"","","","","","survey-html-form","380","1976789","0.0-380.0","","","","","","","","","","","","62686","","{""lang1"":""English"",""lang2"":""English"",""lang3"":""English"",""lang4"":""English"",""lang5"":""English""}","","","","","","","","","","","","","","","","","","","","",""
+"","","","","","survey","381","2168718","0.0-381.0","","","","","","","","","","","","191667","","{""family_generations_in_area"":""2"",""boston_accent_opinion"":""Yes"",""boston_accent_area"":""Charlestown""}","","","","","","","","","","","","","","","","","","","","[]",""
+"","","","","","survey","382","2339297","0.0-382.0","","","","","","","","","","","","170272","","{""speak_with"":""Yes"",""immigrant_percentage"":""29"",""Boston_people"":1000,""boston_friends"":""Yes"",""boston_family"":""Yes""}","","","","","","","","","","","","","","","","","","","","[]",""
+"","","","","","survey-html-form","383","2564761","0.0-383.0","","","","","","","","","","","","225211","","{""word1"":""Voice and how they mention letters"",""word2"":""Good at convincing"",""word3"":""loyal to their accent""}","","","","","","","","","","","","","","","","","","","","",""
+"","","","","","survey","384","2681473","0.0-384.0","","","","","","","","","","","","116429","","{""neighborhood_changes_opinion"":""This changes have really affected our neighbohood  to a large extent"",""community_issues"":""Education, Housing, climate change"",""preserve_culture_importance"":""Important""}","","","","","","","","","","","","","","","","","","","","[]",""
+"","","","","","survey-likert","385","2705024","0.0-385.0","","","","","","","","","","","","23295","","{""likert_identity"":4,""likert_badenglish"":1,""likert_disappear"":1,""likert_unity"":3}","","","","","","","","","","","","","","","","","","","","","[1,0,3,2]"
+"","","","","","survey-likert","386","2721811","0.0-386.0","","","","","","","","","","","","16534","","{""Q0"":3}","","","","","","","","","","","","","","","","","","","","","[0]"
+"","","","","","survey","387","2728086","0.0-387.0","","","","","","","","","","","","6016","","{""futurestudies"":""Yes""}","","","","","","","","","","","","","","","","","","","","[]",""
