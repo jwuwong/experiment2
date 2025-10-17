@@ -1,57 +1,5 @@
-// Add a counterbalancing parameter to determine order
-const counterbalanceID = Math.floor(Math.random() * 2); // 0 or 1
-const shortFirst = counterbalanceID === 0; // true = short first, false = long first
-
-function shuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        let j = Math.floor(Math.random() * (i + 1));
-        let temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-    }
-    return array;
-}
-
-function createArray(num) {
-    let arr = [];
-    for (let i = 0; i < num; i++) {
-        arr.push(i);
-    }
-    return arr;
-}
-
-// New function to generate trial order from specific clip set
-function generateTrialOrderFromClipSet(trial_ord, stimuliData, clipSet, num_trials) {
-    let clip_nums = [...clipSet]; // Create a copy of the clip set
-    shuffle(clip_nums);
-    
-    for (let i = 0; i < num_trials; i++) {
-        let clip1 = clip_nums.pop();
-        let clip2 = clip_nums.pop();
-        let trial = [stimuliData[clip1], stimuliData[clip2]];
-        trial_ord.push(trial);
-    }
-    
-    return trial_ord;
-}
-
-// Original function for backward compatibility
-function generateTrialOrder(trial_ord, stimuliData, num_clips, num_trials) {
-    let clip_nums = createArray(num_clips);
-    shuffle(clip_nums);
-    
-    for (let i = 0; i < num_trials; i++) {
-        let clip1 = clip_nums.pop();
-        let clip2 = clip_nums.pop();
-        let trial = [stimuliData[clip1], stimuliData[clip2]];
-        trial_ord.push(trial);
-    }
-    
-    return trial_ord;
-}
-
 // create deep copy of audio templates to generate blank trials
-function generateBlankTrials(num_trials, audio_array, audio_template, audio_data_template) {
+function generateBlankTrials(num_trials, audio_array, response_array, audio_template, response_template, audio_data_template, response_data_template) {
     for (let i = 0; i < num_trials; i++) {
         // for audio; two clips
         let trial_copy = []
@@ -68,11 +16,23 @@ function generateBlankTrials(num_trials, audio_array, audio_template, audio_data
             trial_copy.push(audio_copy);
         }
         audio_array.push(trial_copy);
+
+        // for response (kept for compatibility but not used in timeline)
+        let response_copy = {};
+        for (let key in response_template) {
+            response_copy[key] = response_template[key];
+        }
+        let response_data_copy = {};
+        for (let key in response_data_template) {
+            response_data_copy[key] = response_data_template[key];
+        }
+        response_data_copy.Order = i + 1;
+        response_copy.data = response_data_copy;
+        response_array.push(response_copy);
     }
 }
 
-// Modified generatePracticeTrials function
-function generatePracticeTrials(num_practice_trials, audio_trials, audio_template, audio_data_template) {
+function generatePracticeTrials(audio_trials, response_trials) {
     let firstPrompt = `
         <center>
             <div id="clip1" class="visual-play">Clip 1</div>
@@ -82,27 +42,24 @@ function generatePracticeTrials(num_practice_trials, audio_trials, audio_templat
 
     let secondPrompt = `
         <center>
-            <div id="clip1" class="visual">Clip 1<p>Press "S"</p></div>
-            <div id="clip2" class="visual-play">Clip 2<p>Press "L"</p></div>
+            <div class="visual">Clip 1</div>
+            <div id="clip2" class="visual-play">Clip 2</div>
         </center>
-        <p style="text-align:center">Which clip sounds more like someone who was born in Boston?</p>`;
+        <p style="text-align:center">Which clip sounds more like someone who was born in Boston?</p>
+        <p style="text-align:center">Press "S" for Clip 1 or "L" for Clip 2</p>`;
 
-    // Generate blank trials
-    generateBlankTrials(num_practice_trials, audio_trials, audio_template, audio_data_template);
+    for (let i = 0; i < audio_trials.length; i++) {
+        let [firstAudio, secondAudio] = audio_trials[i];
+        let response = response_trials[i];
+        let trial_num = (i + 1).toString();
+        let firstAudioPath = '../practice/' + 'trial' + trial_num + '_clip1' + '.WAV';
+        let secondAudioPath = '../practice/' + 'trial' + trial_num + '_clip2' + '.WAV';
 
-    for (let trial_num = 0; trial_num < num_practice_trials; trial_num++) {
-        let [firstAudio, secondAudio] = audio_trials[trial_num];
-        
-        let firstAudioPath = '../practice/trial' + trial_num + '_clip1.wav';
-        let secondAudioPath = '../practice/trial' + trial_num + '_clip2.wav';
-
-        // First practice audio
+        // First practice audio - NO responses allowed
         firstAudio.stimulus = firstAudioPath;
         firstAudio.prompt = firstPrompt;
-        firstAudio.trial_duration = 4000;
-        firstAudio.trial_ends_after_audio = true;
-        firstAudio.response_allowed_while_playing = false;
         firstAudio.choices = "NO_KEYS";
+        firstAudio.trial_duration = 4000;
         
         // Capture practice data for first clip
         firstAudio.data.ID = 'practice_trial' + trial_num + '_clip1';
@@ -112,15 +69,12 @@ function generatePracticeTrials(num_practice_trials, audio_trials, audio_templat
         firstAudio.data.duration = 4;
         firstAudio.data.speech_rate = 'unknown';
         firstAudio.data.transcript = 'practice_transcript';
-        firstAudio.data.trial_type = 'practice';
 
-        // Second practice audio - NOW ACCEPTS RESPONSES
+        // Second practice audio - ALLOW responses, RT collection starts here
         secondAudio.stimulus = secondAudioPath;
         secondAudio.prompt = secondPrompt;
-        secondAudio.trial_duration = 4000;
-        secondAudio.trial_ends_after_audio = false; // Don't end when audio ends
-        secondAudio.response_allowed_while_playing = true; // Allow response during audio
-        secondAudio.choices = ['s', 'l'];
+        secondAudio.choices = ['s', 'l'];  // Allow S and L responses
+        secondAudio.trial_duration = 7000;  // 4000ms audio + 3000ms response window
         
         // Capture practice data for second clip
         secondAudio.data.ID = 'practice_trial' + trial_num + '_clip2';
@@ -130,61 +84,44 @@ function generatePracticeTrials(num_practice_trials, audio_trials, audio_templat
         secondAudio.data.duration = 4;
         secondAudio.data.speech_rate = 'unknown';
         secondAudio.data.transcript = 'practice_transcript';
-        secondAudio.data.trial_type = 'practice';
+        
+        // Add practice trial information to second audio data
         secondAudio.data.clip1_id = 'practice_trial' + trial_num + '_clip1';
         secondAudio.data.clip2_id = 'practice_trial' + trial_num + '_clip2';
-
-        // Add on_finish callback to capture response data
-        secondAudio.on_finish = function(data) {
-            const response = data.response;
-            if (response === 's') {
-                data.selected_clip = 1;
-            } else if (response === 'l') {
-                data.selected_clip = 2;
-            } else {
-                data.selected_clip = null;
-            }
-
-            if (response === null) {
-                consecutive_no_responses++;
-                checkNoResponseTermination();
-            } else {
-                consecutive_no_responses = 0;
-            }
-        };
+        secondAudio.data.trial_type = 'practice';
     }
 }
 
-// Modified generateTrials function
-function generateTrials(trial_ord, audio_trials) {
+function generateTrials(trial_ord, audio_trials, response_trials) {
     let firstPrompt = `
         <center>
             <div id="clip1" class="visual-play">Clip 1</div>
             <div class="visual">Clip 2</div>
         </center>
-        <p style="text-align:center">Listening to clips</p>`;
+        <p style="text-align:center">Listening to clips</p>`; // initial prompt for first clip
 
     let secondPrompt = `
         <center>
-            <div id="clip1" class="visual">Clip 1<p>Press "S"</p></div>
-            <div id="clip2" class="visual-play">Clip 2<p>Press "L"</p></div>
+            <div class="visual">Clip 1</div>
+            <div id="clip2" class="visual-play">Clip 2</div>
         </center>
-        <p style="text-align:center">Which clip sounds more like someone who was born in Boston?</p>`;
+        <p style="text-align:center">Which clip sounds more like someone who was born in Boston?</p>
+        <p style="text-align:center">Press "S" for Clip 1 or "L" for Clip 2</p>`; // prompt for second clip with response instructions
+
 
     for (let i = 0; i < trial_ord.length; i++) {
         let [firstClip, secondClip] = trial_ord[i];
-        let [firstAudio, secondAudio] = audio_trials[i];
+        let [firstAudio, secondAudio] = audio_trials[i]; // blank template to fill
+        let response = response_trials[i]; // not used in timeline anymore
 
         let firstAudioPath = '../audio/' + firstClip['Clip ID'] + '.WAV';
         let secondAudioPath = '../audio/' + secondClip['Clip ID'] + '.WAV';
 
-        // First audio clip
+        // First audio clip - NO responses allowed
         firstAudio.stimulus = firstAudioPath;
         firstAudio.prompt = firstPrompt;
+        firstAudio.choices = "NO_KEYS";  // Prevent responses during first clip
         firstAudio.trial_duration = parseFloat(firstClip['Duration (s)']) * 1000 + 500;
-        firstAudio.trial_ends_after_audio = true;
-        firstAudio.response_allowed_while_playing = false;
-        firstAudio.choices = "NO_KEYS";
         
         // Capture first clip data
         firstAudio.data.ID = firstClip['Clip ID'];
@@ -195,13 +132,11 @@ function generateTrials(trial_ord, audio_trials) {
         firstAudio.data.speech_rate = firstClip['Speech rate (words per s)'];
         firstAudio.data.transcript = firstClip['Transcription'];
 
-        // Second audio clip - NOW ACCEPTS RESPONSES
+        // Second audio clip - ALLOW responses, RT collection starts here
         secondAudio.stimulus = secondAudioPath;
         secondAudio.prompt = secondPrompt;
-        secondAudio.trial_duration = parseFloat(secondClip['Duration (s)']) * 1000;
-        secondAudio.trial_ends_after_audio = false; // Don't end when audio ends
-        secondAudio.response_allowed_while_playing = true; // Allow response during audio
-        secondAudio.choices = ['s', 'l'];
+        secondAudio.choices = ['s', 'l'];  // Allow S and L keys
+        secondAudio.trial_duration = parseFloat(secondClip['Duration (s)']) * 1000 + 3000;  // Audio duration + 3s response window
         
         // Capture second clip data
         secondAudio.data.ID = secondClip['Clip ID'];
@@ -211,92 +146,47 @@ function generateTrials(trial_ord, audio_trials) {
         secondAudio.data.duration = secondClip['Duration (s)'];
         secondAudio.data.speech_rate = secondClip['Speech rate (words per s)'];
         secondAudio.data.transcript = secondClip['Transcription'];
+        
+        // Add trial pair information to second audio data
         secondAudio.data.clip1_id = firstClip['Clip ID'];
         secondAudio.data.clip2_id = secondClip['Clip ID'];
-
-        // Add on_finish callback to capture response data
-        secondAudio.on_finish = function(data) {
-            const response = data.response;
-            if (response === 's') {
-                data.selected_clip = 1;
-            } else if (response === 'l') {
-                data.selected_clip = 2;
-            } else {
-                data.selected_clip = null;
-            }
-
-            if (response === null) {
-                consecutive_no_responses++;
-                checkNoResponseTermination();
-            } else {
-                consecutive_no_responses = 0;
-            }
-        };
+        secondAudio.data.clip1_speaker = firstClip['Speaker ID'];
+        secondAudio.data.clip2_speaker = secondClip['Speaker ID'];
+        secondAudio.data.clip1_gender = firstClip['Gender'];
+        secondAudio.data.clip2_gender = secondClip['Gender'];
+        secondAudio.data.clip1_transcript = firstClip['Transcription'];
+        secondAudio.data.clip2_transcript = secondClip['Transcription'];
+        secondAudio.data.trial_type = 'experimental';
     }
 }
 
-// Modified generate6Blocks function
-function generate6Blocks(stimuliData, num_trials_per_block, audio_template, audio_data_template) {
-    const all_blocks = [];
-    const total_clips = stimuliData.length;
+function generateTrialOrderFromClipSet(trial_ord, stimuliData, clipSet, num_trials) {
+    // Filter to only include clips from the specified set
+    const availableClips = stimuliData.filter(clip => clipSet.includes(clip['Clip ID']));
     
-    // Split clips into two sets
-    const shortClipSet = createArray(total_clips / 2);
-    const longClipSet = createArray(total_clips / 2).map(x => x + (total_clips / 2));
+    // Shuffle the available clips
+    const shuffledClips = shuffleArray([...availableClips]);
     
-    // Determine which type goes first based on counterbalancing
-    const firstClipSet = shortFirst ? shortClipSet : longClipSet;
-    const secondClipSet = shortFirst ? longClipSet : shortClipSet;
-    const firstBlockType = shortFirst ? 'short' : 'long';
-    const secondBlockType = shortFirst ? 'long' : 'short';
-    
-    // Generate 3 blocks of first type
-    for (let blockNum = 0; blockNum < 3; blockNum++) {
-        let trial_ord = [];
-        let audio_trials = [];
+    // Generate trials
+    for (let i = 0; i < num_trials; i++) {
+        const firstClipIndex = i * 2;
+        const secondClipIndex = i * 2 + 1;
         
-        // Generate blank trials (only audio, no response trials)
-        generateBlankTrials(num_trials_per_block, audio_trials, audio_template, audio_data_template);
-        
-        // Generate trial order using first clip set
-        generateTrialOrderFromClipSet(trial_ord, stimuliData, firstClipSet, num_trials_per_block);
-        
-        // Fill in the trials
-        generateTrials(trial_ord, audio_trials);
-        
-        // Add block type information to response data (in secondAudio)
-        for (let i = 0; i < audio_trials.length; i++) {
-            audio_trials[i][1].data.block_type = firstBlockType;
-            audio_trials[i][1].data.block_number = blockNum + 1;
-            audio_trials[i][1].data.counterbalance_id = counterbalanceID;
+        if (firstClipIndex >= shuffledClips.length || secondClipIndex >= shuffledClips.length) {
+            console.error('Not enough clips to generate all trials');
+            break;
         }
         
-        all_blocks.push(audio_trials);
+        trial_ord.push([shuffledClips[firstClipIndex], shuffledClips[secondClipIndex]]);
     }
-    
-    // Generate 3 blocks of second type
-    for (let blockNum = 0; blockNum < 3; blockNum++) {
-        let trial_ord = [];
-        let audio_trials = [];
-        
-        // Generate blank trials (only audio, no response trials)
-        generateBlankTrials(num_trials_per_block, audio_trials, audio_template, audio_data_template);
-        
-        // Generate trial order using second clip set
-        generateTrialOrderFromClipSet(trial_ord, stimuliData, secondClipSet, num_trials_per_block);
-        
-        // Fill in the trials
-        generateTrials(trial_ord, audio_trials);
-        
-        // Add block type information to response data (in secondAudio)
-        for (let i = 0; i < audio_trials.length; i++) {
-            audio_trials[i][1].data.block_type = secondBlockType;
-            audio_trials[i][1].data.block_number = blockNum + 4;
-            audio_trials[i][1].data.counterbalance_id = counterbalanceID;
-        }
-        
-        all_blocks.push(audio_trials);
+}
+
+// Shuffle function (Fisher-Yates)
+function shuffleArray(array) {
+    const newArray = [...array];
+    for (let i = newArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
     }
-    
-    return all_blocks;
+    return newArray;
 }
