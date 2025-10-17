@@ -52,8 +52,8 @@ function generatePracticeTrials(audio_trials, response_trials) {
         let [firstAudio, secondAudio] = audio_trials[i];
         let response = response_trials[i];
         let trial_num = (i + 1).toString();
-        let firstAudioPath = '../practice/' + 'trial' + trial_num + '_clip1' + '.WAV';
-        let secondAudioPath = '../practice/' + 'trial' + trial_num + '_clip2' + '.WAV';
+        let firstAudioPath = '../practice/' + 'trial' + trial_num + '_clip1' + '.wav';
+        let secondAudioPath = '../practice/' + 'trial' + trial_num + '_clip2' + '.wav';
 
         // First practice audio - NO responses allowed
         firstAudio.stimulus = firstAudioPath;
@@ -114,8 +114,8 @@ function generateTrials(trial_ord, audio_trials, response_trials) {
         let [firstAudio, secondAudio] = audio_trials[i]; // blank template to fill
         let response = response_trials[i]; // not used in timeline anymore
 
-        let firstAudioPath = '../audio/' + firstClip['Clip ID'] + '.WAV';
-        let secondAudioPath = '../audio/' + secondClip['Clip ID'] + '.WAV';
+        let firstAudioPath = '../audio/' + firstClip['Clip ID'] + '.wav';
+        let secondAudioPath = '../audio/' + secondClip['Clip ID'] + '.wav';
 
         // First audio clip - NO responses allowed
         firstAudio.stimulus = firstAudioPath;
