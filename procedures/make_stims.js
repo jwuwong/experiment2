@@ -48,24 +48,34 @@ let response_temp = {
     data: {}
 }
 
-// Function to extract all audio file paths for preloading
 function createPreloadArray(blocks) {
     let preload_exp = [];
     
     for (let blockIndex = 0; blockIndex < blocks.length; blockIndex++) {
         const currentBlock = blocks[blockIndex];
         
-        // Go through each trial in the block (every 2 items: audio1, audio2)
         for (let trialIndex = 0; trialIndex < currentBlock.length; trialIndex += 2) {
             const firstAudio = currentBlock[trialIndex];
             const secondAudio = currentBlock[trialIndex + 1];
             
-            // Add the stimulus paths to preload array
-            if (firstAudio.stimulus && !preload_exp.includes(firstAudio.stimulus)) {
-                preload_exp.push(firstAudio.stimulus);
+            // Add both .wav and .WAV versions to preload array
+            if (firstAudio.stimulus) {
+                const basePath = firstAudio.stimulus.replace(/\.(wav|WAV)$/i, '');
+                if (!preload_exp.includes(basePath + '.wav')) {
+                    preload_exp.push(basePath + '.wav');
+                }
+                if (!preload_exp.includes(basePath + '.WAV')) {
+                    preload_exp.push(basePath + '.WAV');
+                }
             }
-            if (secondAudio.stimulus && !preload_exp.includes(secondAudio.stimulus)) {
-                preload_exp.push(secondAudio.stimulus);
+            if (secondAudio.stimulus) {
+                const basePath = secondAudio.stimulus.replace(/\.(wav|WAV)$/i, '');
+                if (!preload_exp.includes(basePath + '.wav')) {
+                    preload_exp.push(basePath + '.wav');
+                }
+                if (!preload_exp.includes(basePath + '.WAV')) {
+                    preload_exp.push(basePath + '.WAV');
+                }
             }
         }
     }
@@ -172,3 +182,5 @@ function makeCounterbalancedBlocks(stimuliData, num_trials_per_block, audio_temp
     
     return all_blocks;
 }
+
+

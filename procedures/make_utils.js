@@ -1,3 +1,24 @@
+// Helper function to try both .wav and .WAV extensions
+function getAudioPath(folder, filename) {
+    // Return both possible paths - jsPsych will try them in order
+    return `../${folder}/${filename}.wav`;
+}
+
+// More robust version that returns the path but handles errors gracefully
+function createRobustAudioPath(folder, filename) {
+    // Default to lowercase .wav
+    const primaryPath = `../${folder}/${filename}.wav`;
+    const fallbackPath = `../${folder}/${filename}.WAV`;
+    
+    return {
+        primary: primaryPath,
+        fallback: fallbackPath
+    };
+}
+
+
+
+
 // create deep copy of audio templates to generate blank trials
 function generateBlankTrials(num_trials, audio_array, response_array, audio_template, response_template, audio_data_template, response_data_template) {
     for (let i = 0; i < num_trials; i++) {
@@ -50,14 +71,12 @@ function generatePracticeTrials(audio_trials, response_trials) {
         <p style="text-align:center">Which clip sounds more like someone who was born in Boston?</p>
         <p style="text-align:center">Press "S" for Clip 1 or "L" for Clip 2</p>`;
 
-
-
     for (let i = 0; i < audio_trials.length; i++) {
         let [firstAudio, secondAudio] = audio_trials[i];
         let response = response_trials[i];
         let trial_num = (i + 1).toString();
-        let firstAudioPath = '../practice/' + 'trial' + trial_num + '_clip1' + '.wav';
-        let secondAudioPath = '../practice/' + 'trial' + trial_num + '_clip2' + '.wav';
+        let firstAudioPath = '../practice/trial' + trial_num + '_clip1.wav';
+        let secondAudioPath = '../practice/trial' + trial_num + '_clip2.wav';
 
         // First practice audio - NO responses allowed
         firstAudio.stimulus = firstAudioPath;
@@ -66,6 +85,7 @@ function generatePracticeTrials(audio_trials, response_trials) {
         firstAudio.trial_duration = 4000;
         firstAudio.response_ends_trial = false;
         
+        // Capture practice data for first clip
         firstAudio.data.ID = 'practice_trial' + trial_num + '_clip1';
         firstAudio.data.talker = 'practice_speaker';
         firstAudio.data.gender = 'unknown';
@@ -74,12 +94,28 @@ function generatePracticeTrials(audio_trials, response_trials) {
         firstAudio.data.speech_rate = 'unknown';
         firstAudio.data.transcript = 'practice_transcript';
 
+        // Add error handler for first practice audio that tries uppercase if lowercase fails
+        firstAudio.on_load = function() {
+            const audioElement = document.querySelector('audio');
+            if (audioElement) {
+                audioElement.addEventListener('error', function(e) {
+                    console.warn('Failed to load:', this.src);
+                    // Try uppercase version
+                    if (this.src.endsWith('.wav')) {
+                        const newSrc = this.src.replace('.wav', '.WAV');
+                        console.log('Trying uppercase:', newSrc);
+                        this.src = newSrc;
+                    }
+                }, { once: true });
+            }
+        };
+
         // Second practice audio - ALLOW responses, RT collection starts here
         secondAudio.stimulus = secondAudioPath;
         secondAudio.prompt = secondPrompt;
         secondAudio.choices = ['s', 'l'];
-        secondAudio.trial_duration = 7000;
-        secondAudio.response_ends_trial = false;  // Changed to false!
+        secondAudio.trial_duration = 7000;  // 4000ms audio + 3000ms response window
+        secondAudio.response_ends_trial = false;  // We'll end it manually after feedback
         secondAudio.trial_ends_after_audio = false;
         secondAudio.response_allowed_while_playing = true;
         
@@ -87,6 +123,19 @@ function generatePracticeTrials(audio_trials, response_trials) {
         secondAudio.on_load = function() {
             let responded = false;
             let jsPsych = this.jsPsych || window.jsPsych;
+            
+            // Add error handler for audio file
+            const audioElement = document.querySelector('audio');
+            if (audioElement) {
+                audioElement.addEventListener('error', function(e) {
+                    console.warn('Failed to load:', this.src);
+                    if (this.src.endsWith('.wav')) {
+                        const newSrc = this.src.replace('.wav', '.WAV');
+                        console.log('Trying uppercase:', newSrc);
+                        this.src = newSrc;
+                    }
+                }, { once: true });
+            }
             
             function handleKeyPress(e) {
                 if (responded) return;
@@ -98,17 +147,13 @@ function generatePracticeTrials(audio_trials, response_trials) {
                     // Add visual feedback
                     if (key === 's') {
                         let clip1Element = document.getElementById('clip1');
-                        console.log('Clip 1 element:', clip1Element); // Debug
                         if (clip1Element) {
                             clip1Element.classList.add('selected');
-                            console.log('Added selected class to clip1'); // Debug
                         }
                     } else if (key === 'l') {
                         let clip2Element = document.getElementById('clip2');
-                        console.log('Clip 2 element:', clip2Element); // Debug
                         if (clip2Element) {
                             clip2Element.classList.add('selected');
-                            console.log('Added selected class to clip2'); // Debug
                         }
                     }
                     
@@ -123,12 +168,14 @@ function generatePracticeTrials(audio_trials, response_trials) {
             this.keyPressHandler = handleKeyPress;
         };
 
+        // Cleanup on trial finish
         secondAudio.on_finish = function(data) {
             if (this.keyPressHandler) {
                 document.removeEventListener('keydown', this.keyPressHandler);
             }
         };
         
+        // Capture practice data for second clip
         secondAudio.data.ID = 'practice_trial' + trial_num + '_clip2';
         secondAudio.data.talker = 'practice_speaker';
         secondAudio.data.gender = 'unknown';
@@ -136,6 +183,8 @@ function generatePracticeTrials(audio_trials, response_trials) {
         secondAudio.data.duration = 4;
         secondAudio.data.speech_rate = 'unknown';
         secondAudio.data.transcript = 'practice_transcript';
+        
+        // Add practice trial information to second audio data
         secondAudio.data.clip1_id = 'practice_trial' + trial_num + '_clip1';
         secondAudio.data.clip2_id = 'practice_trial' + trial_num + '_clip2';
         secondAudio.data.trial_type = 'practice';
@@ -174,6 +223,7 @@ function generateTrials(trial_ord, audio_trials, response_trials) {
         firstAudio.trial_duration = parseFloat(firstClip['Duration (s)']) * 1000 + 500;
         firstAudio.response_ends_trial = false;
         
+        // Capture first clip data
         firstAudio.data = {
             ID: firstClip['Clip ID'],
             talker: firstClip['Speaker ID'],
@@ -184,12 +234,28 @@ function generateTrials(trial_ord, audio_trials, response_trials) {
             transcript: firstClip['Transcription']
         };
 
+        // Add error handler for first audio that tries uppercase if lowercase fails
+        firstAudio.on_load = function() {
+            const audioElement = document.querySelector('audio');
+            if (audioElement) {
+                audioElement.addEventListener('error', function(e) {
+                    console.warn('Failed to load:', this.src);
+                    // Try uppercase version
+                    if (this.src.endsWith('.wav')) {
+                        const newSrc = this.src.replace('.wav', '.WAV');
+                        console.log('Trying uppercase:', newSrc);
+                        this.src = newSrc;
+                    }
+                }, { once: true });
+            }
+        };
+
         // Second audio clip - ALLOW responses during clip + extra time after
         secondAudio.stimulus = secondAudioPath;
         secondAudio.prompt = secondPrompt;
         secondAudio.choices = ['s', 'l'];
         secondAudio.trial_duration = parseFloat(secondClip['Duration (s)']) * 1000 + 3000;
-        secondAudio.response_ends_trial = false;  // Changed to false!
+        secondAudio.response_ends_trial = false;  // We'll end it manually after feedback
         secondAudio.trial_ends_after_audio = false;
         secondAudio.response_allowed_while_playing = true;
         
@@ -197,6 +263,19 @@ function generateTrials(trial_ord, audio_trials, response_trials) {
         secondAudio.on_load = function() {
             let responded = false;
             let jsPsych = this.jsPsych || window.jsPsych;
+            
+            // Add error handler for audio file
+            const audioElement = document.querySelector('audio');
+            if (audioElement) {
+                audioElement.addEventListener('error', function(e) {
+                    console.warn('Failed to load:', this.src);
+                    if (this.src.endsWith('.wav')) {
+                        const newSrc = this.src.replace('.wav', '.WAV');
+                        console.log('Trying uppercase:', newSrc);
+                        this.src = newSrc;
+                    }
+                }, { once: true });
+            }
             
             function handleKeyPress(e) {
                 if (responded) return;
@@ -229,12 +308,14 @@ function generateTrials(trial_ord, audio_trials, response_trials) {
             this.keyPressHandler = handleKeyPress;
         };
 
+        // Cleanup on trial finish
         secondAudio.on_finish = function(data) {
             if (this.keyPressHandler) {
                 document.removeEventListener('keydown', this.keyPressHandler);
             }
         };
 
+        // Capture second clip data
         secondAudio.data = {
             ID: secondClip['Clip ID'],
             talker: secondClip['Speaker ID'],
@@ -243,6 +324,7 @@ function generateTrials(trial_ord, audio_trials, response_trials) {
             duration: secondClip['Duration (s)'],
             speech_rate: secondClip['Speech rate (words per s)'],
             transcript: secondClip['Transcription'],
+            // Trial pair information
             clip1_id: firstClip['Clip ID'],
             clip2_id: secondClip['Clip ID'],
             clip1_speaker: firstClip['Speaker ID'],
