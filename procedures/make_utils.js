@@ -32,21 +32,25 @@ function generateBlankTrials(num_trials, audio_array, response_array, audio_temp
     }
 }
 
+
 function generatePracticeTrials(audio_trials, response_trials) {
     let firstPrompt = `
         <center>
             <div id="clip1" class="visual-play">Clip 1</div>
-            <div class="visual">Clip 2</div>
+            <div id="clip2" class="visual">Clip 2</div>
         </center>
-        <p style="text-align:center">Listening to clips</p>`;
+        <p style="text-align:center">Which clip sounds more like someone who was born in Boston?</p>
+        <p style="text-align:center">Press "S" for Clip 1 or "L" for Clip 2</p>`;
 
     let secondPrompt = `
         <center>
-            <div class="visual">Clip 1</div>
+            <div id="clip1" class="visual">Clip 1</div>
             <div id="clip2" class="visual-play">Clip 2</div>
         </center>
         <p style="text-align:center">Which clip sounds more like someone who was born in Boston?</p>
         <p style="text-align:center">Press "S" for Clip 1 or "L" for Clip 2</p>`;
+
+
 
     for (let i = 0; i < audio_trials.length; i++) {
         let [firstAudio, secondAudio] = audio_trials[i];
@@ -60,8 +64,8 @@ function generatePracticeTrials(audio_trials, response_trials) {
         firstAudio.prompt = firstPrompt;
         firstAudio.choices = "NO_KEYS";
         firstAudio.trial_duration = 4000;
+        firstAudio.response_ends_trial = false;
         
-        // Capture practice data for first clip
         firstAudio.data.ID = 'practice_trial' + trial_num + '_clip1';
         firstAudio.data.talker = 'practice_speaker';
         firstAudio.data.gender = 'unknown';
@@ -73,10 +77,58 @@ function generatePracticeTrials(audio_trials, response_trials) {
         // Second practice audio - ALLOW responses, RT collection starts here
         secondAudio.stimulus = secondAudioPath;
         secondAudio.prompt = secondPrompt;
-        secondAudio.choices = ['s', 'l'];  // Allow S and L responses
-        secondAudio.trial_duration = 7000;  // 4000ms audio + 3000ms response window
+        secondAudio.choices = ['s', 'l'];
+        secondAudio.trial_duration = 7000;
+        secondAudio.response_ends_trial = false;  // Changed to false!
+        secondAudio.trial_ends_after_audio = false;
+        secondAudio.response_allowed_while_playing = true;
         
-        // Capture practice data for second clip
+        // Visual feedback with delayed trial end
+        secondAudio.on_load = function() {
+            let responded = false;
+            let jsPsych = this.jsPsych || window.jsPsych;
+            
+            function handleKeyPress(e) {
+                if (responded) return;
+                
+                let key = e.key.toLowerCase();
+                if (key === 's' || key === 'l') {
+                    responded = true;
+                    
+                    // Add visual feedback
+                    if (key === 's') {
+                        let clip1Element = document.getElementById('clip1');
+                        console.log('Clip 1 element:', clip1Element); // Debug
+                        if (clip1Element) {
+                            clip1Element.classList.add('selected');
+                            console.log('Added selected class to clip1'); // Debug
+                        }
+                    } else if (key === 'l') {
+                        let clip2Element = document.getElementById('clip2');
+                        console.log('Clip 2 element:', clip2Element); // Debug
+                        if (clip2Element) {
+                            clip2Element.classList.add('selected');
+                            console.log('Added selected class to clip2'); // Debug
+                        }
+                    }
+                    
+                    // End trial after 500ms delay to show feedback
+                    setTimeout(function() {
+                        jsPsych.finishTrial();
+                    }, 500);
+                }
+            }
+            
+            document.addEventListener('keydown', handleKeyPress);
+            this.keyPressHandler = handleKeyPress;
+        };
+
+        secondAudio.on_finish = function(data) {
+            if (this.keyPressHandler) {
+                document.removeEventListener('keydown', this.keyPressHandler);
+            }
+        };
+        
         secondAudio.data.ID = 'practice_trial' + trial_num + '_clip2';
         secondAudio.data.talker = 'practice_speaker';
         secondAudio.data.gender = 'unknown';
@@ -84,35 +136,33 @@ function generatePracticeTrials(audio_trials, response_trials) {
         secondAudio.data.duration = 4;
         secondAudio.data.speech_rate = 'unknown';
         secondAudio.data.transcript = 'practice_transcript';
-        
-        // Add practice trial information to second audio data
         secondAudio.data.clip1_id = 'practice_trial' + trial_num + '_clip1';
         secondAudio.data.clip2_id = 'practice_trial' + trial_num + '_clip2';
         secondAudio.data.trial_type = 'practice';
     }
 }
 
+
 function generateTrials(trial_ord, audio_trials, response_trials) {
     let firstPrompt = `
         <center>
             <div id="clip1" class="visual-play">Clip 1</div>
-            <div class="visual">Clip 2</div>
+            <div id="clip2" class="visual">Clip 2</div>
         </center>
-        <p style="text-align:center">Listening to clips</p>`; // initial prompt for first clip
+        <p style="text-align:center">Listening to clips</p>`;
 
     let secondPrompt = `
         <center>
-            <div class="visual">Clip 1</div>
+            <div id="clip1" class="visual">Clip 1</div>
             <div id="clip2" class="visual-play">Clip 2</div>
         </center>
         <p style="text-align:center">Which clip sounds more like someone who was born in Boston?</p>
-        <p style="text-align:center">Press "S" for Clip 1 or "L" for Clip 2</p>`; // prompt for second clip with response instructions
-
+        <p style="text-align:center">Press "S" for Clip 1 or "L" for Clip 2</p>`;
 
     for (let i = 0; i < trial_ord.length; i++) {
         let [firstClip, secondClip] = trial_ord[i];
-        let [firstAudio, secondAudio] = audio_trials[i]; // blank template to fill
-        let response = response_trials[i]; // not used in timeline anymore
+        let [firstAudio, secondAudio] = audio_trials[i];
+        let response = response_trials[i];
 
         let firstAudioPath = '../audio/' + firstClip['Clip ID'] + '.wav';
         let secondAudioPath = '../audio/' + secondClip['Clip ID'] + '.wav';
@@ -120,66 +170,133 @@ function generateTrials(trial_ord, audio_trials, response_trials) {
         // First audio clip - NO responses allowed
         firstAudio.stimulus = firstAudioPath;
         firstAudio.prompt = firstPrompt;
-        firstAudio.choices = "NO_KEYS";  // Prevent responses during first clip
+        firstAudio.choices = "NO_KEYS";
         firstAudio.trial_duration = parseFloat(firstClip['Duration (s)']) * 1000 + 500;
+        firstAudio.response_ends_trial = false;
         
-        // Capture first clip data
-        firstAudio.data.ID = firstClip['Clip ID'];
-        firstAudio.data.talker = firstClip['Speaker ID'];
-        firstAudio.data.gender = firstClip['Gender'];
-        firstAudio.data.order = 1;
-        firstAudio.data.duration = firstClip['Duration (s)'];
-        firstAudio.data.speech_rate = firstClip['Speech rate (words per s)'];
-        firstAudio.data.transcript = firstClip['Transcription'];
+        firstAudio.data = {
+            ID: firstClip['Clip ID'],
+            talker: firstClip['Speaker ID'],
+            gender: firstClip['Gender'],
+            order: 1,
+            duration: firstClip['Duration (s)'],
+            speech_rate: firstClip['Speech rate (words per s)'],
+            transcript: firstClip['Transcription']
+        };
 
-        // Second audio clip - ALLOW responses, RT collection starts here
+        // Second audio clip - ALLOW responses during clip + extra time after
         secondAudio.stimulus = secondAudioPath;
         secondAudio.prompt = secondPrompt;
-        secondAudio.choices = ['s', 'l'];  // Allow S and L keys
-        secondAudio.trial_duration = parseFloat(secondClip['Duration (s)']) * 1000 + 3000;  // Audio duration + 3s response window
+        secondAudio.choices = ['s', 'l'];
+        secondAudio.trial_duration = parseFloat(secondClip['Duration (s)']) * 1000 + 3000;
+        secondAudio.response_ends_trial = false;  // Changed to false!
+        secondAudio.trial_ends_after_audio = false;
+        secondAudio.response_allowed_while_playing = true;
         
-        // Capture second clip data
-        secondAudio.data.ID = secondClip['Clip ID'];
-        secondAudio.data.talker = secondClip['Speaker ID'];
-        secondAudio.data.gender = secondClip['Gender'];
-        secondAudio.data.order = 2;
-        secondAudio.data.duration = secondClip['Duration (s)'];
-        secondAudio.data.speech_rate = secondClip['Speech rate (words per s)'];
-        secondAudio.data.transcript = secondClip['Transcription'];
-        
-        // Add trial pair information to second audio data
-        secondAudio.data.clip1_id = firstClip['Clip ID'];
-        secondAudio.data.clip2_id = secondClip['Clip ID'];
-        secondAudio.data.clip1_speaker = firstClip['Speaker ID'];
-        secondAudio.data.clip2_speaker = secondClip['Speaker ID'];
-        secondAudio.data.clip1_gender = firstClip['Gender'];
-        secondAudio.data.clip2_gender = secondClip['Gender'];
-        secondAudio.data.clip1_transcript = firstClip['Transcription'];
-        secondAudio.data.clip2_transcript = secondClip['Transcription'];
-        secondAudio.data.trial_type = 'experimental';
+        // Visual feedback with delayed trial end
+        secondAudio.on_load = function() {
+            let responded = false;
+            let jsPsych = this.jsPsych || window.jsPsych;
+            
+            function handleKeyPress(e) {
+                if (responded) return;
+                
+                let key = e.key.toLowerCase();
+                if (key === 's' || key === 'l') {
+                    responded = true;
+                    
+                    // Add visual feedback
+                    if (key === 's') {
+                        let clip1Element = document.getElementById('clip1');
+                        if (clip1Element) {
+                            clip1Element.classList.add('selected');
+                        }
+                    } else if (key === 'l') {
+                        let clip2Element = document.getElementById('clip2');
+                        if (clip2Element) {
+                            clip2Element.classList.add('selected');
+                        }
+                    }
+                    
+                    // End trial after 500ms delay to show feedback
+                    setTimeout(function() {
+                        jsPsych.finishTrial();
+                    }, 500);
+                }
+            }
+            
+            document.addEventListener('keydown', handleKeyPress);
+            this.keyPressHandler = handleKeyPress;
+        };
+
+        secondAudio.on_finish = function(data) {
+            if (this.keyPressHandler) {
+                document.removeEventListener('keydown', this.keyPressHandler);
+            }
+        };
+
+        secondAudio.data = {
+            ID: secondClip['Clip ID'],
+            talker: secondClip['Speaker ID'],
+            gender: secondClip['Gender'],
+            order: 2,
+            duration: secondClip['Duration (s)'],
+            speech_rate: secondClip['Speech rate (words per s)'],
+            transcript: secondClip['Transcription'],
+            clip1_id: firstClip['Clip ID'],
+            clip2_id: secondClip['Clip ID'],
+            clip1_speaker: firstClip['Speaker ID'],
+            clip2_speaker: secondClip['Speaker ID'],
+            clip1_gender: firstClip['Gender'],
+            clip2_gender: secondClip['Gender'],
+            clip1_transcript: firstClip['Transcription'],
+            clip2_transcript: secondClip['Transcription'],
+            trial_type: 'experimental'
+        };
     }
 }
 
 function generateTrialOrderFromClipSet(trial_ord, stimuliData, clipSet, num_trials) {
-    // Filter to only include clips from the specified set
-    const availableClips = stimuliData.filter(clip => clipSet.includes(clip['Clip ID']));
+    // Filter stimuliData to only include clips from the specified set
+    let filteredStimuli = stimuliData.filter(clip => {
+        return clipSet.includes(clip['Clip ID']);
+    });
     
-    // Shuffle the available clips
-    const shuffledClips = shuffleArray([...availableClips]);
+    // Create a pool where each clip appears exactly 2 times
+    let clipPool = [];
+    for (let i = 0; i < 2; i++) {
+        clipPool = clipPool.concat([...filteredStimuli]); // Spread to create new copies
+    }
     
-    // Generate trials
+    // Shuffle the pool
+    shuffleArray(clipPool);
+    
+    // Pair them up, ensuring they don't pair with themselves
     for (let i = 0; i < num_trials; i++) {
-        const firstClipIndex = i * 2;
-        const secondClipIndex = i * 2 + 1;
-        
-        if (firstClipIndex >= shuffledClips.length || secondClipIndex >= shuffledClips.length) {
-            console.error('Not enough clips to generate all trials');
+        if (clipPool.length < 2) {
+            console.warn('Not enough clips remaining in pool');
             break;
         }
         
-        trial_ord.push([shuffledClips[firstClipIndex], shuffledClips[secondClipIndex]]);
+        let clip1 = clipPool.pop();
+        let clip2 = clipPool.pop();
+        
+        // If they're the same clip ID, put clip2 back and draw another
+        let attempts = 0;
+        while (clip1['Clip ID'] === clip2['Clip ID'] && clipPool.length > 0 && attempts < 10) {
+            clipPool.push(clip2);
+            shuffleArray(clipPool);
+            clip2 = clipPool.pop();
+            attempts++;
+        }
+        
+        let trial = [clip1, clip2];
+        trial_ord.push(trial);
     }
+    
+    return trial_ord;
 }
+
 
 // Shuffle function (Fisher-Yates)
 function shuffleArray(array) {
