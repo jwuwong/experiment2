@@ -50,8 +50,7 @@ var preload_trial = {
 
 
 
-timeline.push(preload_practice);
-timeline.push(preload_trial);
+
 
 /*
 var stopCollection = {
@@ -101,6 +100,12 @@ var instructions = {
   button_html: `<button class="continue-btn">%choice%</button>`,
 };
 timeline.push(instructions);
+
+timeline.push(preload_trial);
+timeline.push(preload_practice);
+
+
+
 
 /* define welcome message trial */
 var legalinfo = {
