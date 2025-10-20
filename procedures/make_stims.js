@@ -58,24 +58,12 @@ function createPreloadArray(blocks) {
             const firstAudio = currentBlock[trialIndex];
             const secondAudio = currentBlock[trialIndex + 1];
             
-            // Add both .wav and .WAV versions to preload array
-            if (firstAudio.stimulus) {
-                const basePath = firstAudio.stimulus.replace(/\.(wav|WAV)$/i, '');
-                if (!preload_exp.includes(basePath + '.wav')) {
-                    preload_exp.push(basePath + '.wav');
-                }
-                if (!preload_exp.includes(basePath + '.WAV')) {
-                    preload_exp.push(basePath + '.WAV');
-                }
+            // Add audio files to preload array (avoid duplicates)
+            if (firstAudio.stimulus && !preload_exp.includes(firstAudio.stimulus)) {
+                preload_exp.push(firstAudio.stimulus);
             }
-            if (secondAudio.stimulus) {
-                const basePath = secondAudio.stimulus.replace(/\.(wav|WAV)$/i, '');
-                if (!preload_exp.includes(basePath + '.wav')) {
-                    preload_exp.push(basePath + '.wav');
-                }
-                if (!preload_exp.includes(basePath + '.WAV')) {
-                    preload_exp.push(basePath + '.WAV');
-                }
+            if (secondAudio.stimulus && !preload_exp.includes(secondAudio.stimulus)) {
+                preload_exp.push(secondAudio.stimulus);
             }
         }
     }
