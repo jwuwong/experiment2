@@ -82,29 +82,174 @@ var browser_check = {
 timeline.push(browser_check);
 
 
+var enter_fullscreen = {
+    type: jsPsychFullscreen,
+    fullscreen_mode: true
+  };
+  
+timeline.push(enter_fullscreen);
+
+/* Consent form */
+var check_consent = function(elem) {
+    if (document.getElementById('consent_checkbox').checked) {
+      return true;
+    }
+    else {
+      alert("If you wish to participate, you must check the box next to the statement 'I agree to participate in this study.'");
+      return false;
+    }
+    return false;
+  };
+  
+  var consent_page1 = {
+    type: jsPsychHtmlButtonResponse,
+    stimulus: `
+  <div class="consent-container">
+      <div class="consent-box">
+          <h2>Research Consent Form</h2>
+          
+          <div class="section">
+              <h3>Title of Research Study</h3>
+              <p>Understanding Language Perception and Production</p>
+          </div>
+          
+          <div class="section">
+              <h3>Researcher</h3>
+              <p>Chigusa Kurumada, Department of Brain and Cognitive Sciences</p>
+          </div>
+          
+          <div class="section">
+              <h3>What will I be asked to do?</h3>
+              <p>The study investigates how people process language. 
+              During the study, you will read and/or listen to language materials 
+              and answer some questions about them. The study will take up to 30 
+              minutes.</p>
+          </div>
+          
+          <div class="section">
+              <h3>What are the risks involved in participating in this study?</h3>
+              <p>There are no known risks associated with participation in this study. 
+              The risks associated with participation in this study are no greater than 
+              those ordinarily encountered in daily life or during the performance of 
+              routine procedures.</p>
+          </div>
+          
+          <div class="section">
+              <h3>Will I be compensated?</h3>
+              <p>You will be compensated through Prolific at a rate of $9.00 per hour 
+              for participating in this study.</p>
+          </div>
+      </div>
+  </div>
+  `,
+    choices: ["Continue"],
+    button_html: '<button class="continue-btn">%choice%</button>',
+  };
+  
+  var consent_page2 = {
+    type: jsPsychHtmlButtonResponse,
+    stimulus: `
+  <div class="consent-container">
+      <div class="consent-box">
+          <div class="section">
+              <h3>Can I stop participating at any time?</h3>
+              <p>Your participation in this study is completely voluntary and you are 
+              free to choose whether to be in it or not. If you choose to be in this 
+              study, you may subsequently withdraw from it at any time without penalty 
+              or consequences of any kind. You may also refuse to answer any questions 
+              you do not want to answer and still remain in the study.</p>
+          </div>
+          
+          <div class="section">
+              <h3>Will my identity and responses be kept confidential?</h3>
+              <p>All data from this study are strictly confidential. The results of the 
+              study may be published or otherwise made public, but no personally 
+              identifiable information will be shared. Any reports based on this 
+              research will use only aggregate data and will not identify you or any 
+              individual as being affiliated with this project.</p>
+          </div>
+          
+          <div class="section">
+              <h3>Whom can I contact if I have questions or concerns?</h3>
+              <p>Chigusa Kurumada, (585) 275-8705, <a href="mailto:ckurumada@ur.rochester.edu">ckurumada@ur.rochester.edu</a></p>
+              <p>The University of Rochester Research Subjects Review Board, 265 Crittenden Blvd., 
+              CU 420315, Rochester, NY 14642, (585) 276-0005 or (877) 449-4441.</p>
+          </div>
+          
+          <div class="section">
+              <h3>Agreement</h3>
+              <p>The above information has been explained to me and all my current questions 
+              have been answered. I understand that I am encouraged to ask questions, voice 
+              concerns, or make complaints about any aspect of this research study during its 
+              course, and that such future questions, concerns, or complaints will be answered 
+              by the researchers listed on the first page of this form.</p>
+          </div>
+      </div>
+  </div>
+  `,
+    choices: ["Continue"],
+    button_html: '<button class="continue-btn">%choice%</button>',
+  };
+  
+  var consent_page3 = {
+    type: jsPsychHtmlButtonResponse,
+    stimulus: `
+  <div class="consent-container">
+      <div class="consent-box">
+          <div class="section">
+              <h3>Final Agreement</h3>
+              <p>I understand that I may withdraw my consent and discontinue participation at 
+              any time without penalty or loss of benefits to which I am otherwise entitled. 
+              I understand that data collected as part of this research project will be kept 
+              strictly confidential and that the confidentiality of my data is not guaranteed 
+              after I transmit it over the internet to the researcher. Finally, I understand 
+              that I will be given a copy of this consent form for my own records.</p>
+              
+              <p>By clicking the "I agree" button below, I certify that I am 18 years of age 
+              or older, I consent to participate in this research study, and I agree to be 
+              audio-recorded during the experiment.</p>
+              
+              <p style="text-align:center; margin-top: 30px;">
+                  <label style="font-size: 16px;">
+                      <input type="checkbox" id="consent_checkbox" />
+                      I agree to participate in this study.
+                  </label>
+              </p>
+          </div>
+      </div>
+  </div>
+  `,
+    choices: ["Continue"],
+    button_html: '<button class="continue-btn">%choice%</button>',
+    on_finish: function(data){
+      if(document.getElementById('consent_checkbox').checked) {
+        data.consent = true;
+      } else{
+        data.consent = false;
+      }
+    }
+  };
+
+timeline.push(consent_page1);
+timeline.push(consent_page2);
+timeline.push(consent_page3);
 
 
-
-var instructions = {
+var welcome = {
   type: jsPsychHtmlButtonResponse,
   stimulus: `
-        <div class="text" id="instruction" >
-            <img src="../images/stanford_logo.png" alt="stanford logo" width="180" height="80">
-            <p><b>Only complete this study if you are a Massachussets resident who is 18 years old or older.</b></p>
-            <p>Please share this link with other people you know who live in the area, but <u>do not participate in this study more than once</u>.
-            <BR>You will not be compensated more than once.</p> 
-            <p>In this experiment, you will be listening to pairs of audio clips.</p>
-            <p>Each pair of audio clips will be played once in consecutive order. Your task is to decide which one of the clips sounds like the speaker was born in Boston.</p>
-            <p>Please ensure that you use earphones or headphones for the duration of this experiment.</p>
-            <p>This experiment should be completed on a <b><u>desktop or laptop</u></b> using the <b><u>Google Chrome browser</u></b>.</p>
-            <p>The experiment will take approximately 20 minutes. You will be compensated as advertised on Prolific for your time.</p>
-        </div>
+  <center>
+    <div class="instruction-box">
+      <p>Welcome to the experiment!</p>
+      <p>Click <strong>Continue</strong> to begin.</p>
+  </center>
       `,
   choices: ["Continue"],
   button_html: `<button class="continue-btn">%choice%</button>`,
 };
-timeline.push(instructions);
+timeline.push(welcome);
 
+<<<<<<< HEAD
 timeline.push(preload_trial);
 timeline.push(preload_practice);
 
@@ -160,6 +305,8 @@ const soundcheck = {
   mistake_fn: function () { alert("Wrong answer. Please make sure your audio is working properly and try again. Make sure you're using lowercase") }
 };
 timeline.push(soundcheck);
+=======
+>>>>>>> parent of e50d11f (fixed response, need to test output and maybe modify feedback)
 
 /* Practice trial instructions */
 var practiceinstructions_page1 = {
