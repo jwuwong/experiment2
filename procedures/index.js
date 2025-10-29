@@ -21,27 +21,19 @@ var jsPsych = initJsPsych({
 const subject_id = jsPsych.randomization.randomID(10);
 const filename = `${subject_id}.csv`;
 
-// Create a save data function that can be reused
-function createSaveCheckpoint(checkpoint_name) {
-  jsPsych.data.addProperties({
-    last_checkpoint: checkpoint_name,
-    checkpoint_time: Date.now()
-  });
-  
-  return {
+
+
+const save_data = {
     type: jsPsychPipe,
     action: "save",
-    experiment_id: "gifLBl3Gt40D",
+    experiment_id: "gifLBl3Gt40D", // Your experiment ID
     filename: filename,
-    data_string: () => {
-      return jsPsych.data.get().csv();
-    },
-    on_finish: function() {
-      console.log('Saved checkpoint:', checkpoint_name);
-    }
-  };
-}
-            
+    data_string: ()=>jsPsych.data.get().csv()
+};
+          
+
+
+
 /* create timeline */
 var timeline = [];
 
@@ -59,7 +51,7 @@ function checkNoResponseTermination() {
       experiment_termination: 'no_response_timeout'
     });
     
-    jsPsych.endExperiment('<p>The experiment has ended because you did not respond to multiple trials in a row.</p><p>Unfortunately, you will not receive compensation for this study.</p>');
+    jsPsych.endExperiment('<p>The experiment has ended early because you did not respond to multiple trials in a row.</p>');
   }
 }
 
@@ -317,7 +309,6 @@ for (let i = 0; i < practice_trial_audio_objects.length; i++) {
     timeline.push(practice_trial_feedback_objects[i]); // feedback
 }
 
-timeline.push(createSaveCheckpoint('practice_complete'));
 
 
 /* REAL trial instructions */
@@ -359,7 +350,7 @@ timeline.push(realinstructions_page1);
 timeline.push(realinstructions_page2);
 
 
-// Add each block to the timeline with checkpoints
+// Add each block to the timeline
 for (let blockIndex = 0; blockIndex < blocks.length; blockIndex++) {
     const currentBlock = blocks[blockIndex];
     
@@ -408,12 +399,10 @@ for (let blockIndex = 0; blockIndex < blocks.length; blockIndex++) {
         timeline.push(response);
         timeline.push(feedback);
     }
-    
-    // Save after each block
-    timeline.push(createSaveCheckpoint(`block_${blockIndex + 1}_complete`));
+  
 }
 
-timeline.push(createSaveCheckpoint('all_trials_complete'));
+timeline.push(save_data);
 
 /* survey 1: demographic questions */
 var survey1 = {
@@ -607,7 +596,6 @@ var survey2b_part2 = {
   button_label_finish: 'Continue',
 };
 timeline.push(survey2b_part2);
-timeline.push(createSaveCheckpoint('demographics_complete'));
 
 /* survey 3: open-ended Boston questions */
 
@@ -709,16 +697,8 @@ var futurestudies = {
   button_label_finish: 'Continue',
 };
 timeline.push(futurestudies);
-timeline.push(createSaveCheckpoint('surveys_complete'));
+timeline.push(save_data);
 
-
-const save_data = {
-  type: jsPsychPipe,
-  action: "save",
-  experiment_id: "gifLBl3Gt40D",
-  filename: filename,
-  data_string: ()=>jsPsych.data.get().csv()
-};
 
 
 
@@ -737,7 +717,7 @@ const thankyou = {
 };
 
 // Final save
-timeline.push(createSaveCheckpoint('experiment_complete'));
+timeline.push(save_data);
 timeline.push(thankyou);
 
 
