@@ -36,10 +36,10 @@ let audio_temp = {
     choices: [],
     data: {}
 }
-
 // what to put here?
 let response_data = {
 }
+
 
 let response_temp = {
     type: jsPsychHtmlKeyboardResponse,
@@ -51,20 +51,13 @@ let response_temp = {
 // Function to extract all audio file paths for preloading
 function createPreloadArray(blocks) {
     let preload_exp = [];
-    
     for (let blockIndex = 0; blockIndex < blocks.length; blockIndex++) {
         const currentBlock = blocks[blockIndex];
-        
         // Go through each trial in the block (every 2 items: audio1, audio2)
         for (let trialIndex = 0; trialIndex < currentBlock.length; trialIndex += 2) {
             const firstAudio = currentBlock[trialIndex];
             const secondAudio = currentBlock[trialIndex + 1];
-            
-<<<<<<< HEAD
-            // Add audio files to preload array (avoid duplicates)
-=======
             // Add the stimulus paths to preload array
->>>>>>> parent of 2068aff (tried to handle .wav better)
             if (firstAudio.stimulus && !preload_exp.includes(firstAudio.stimulus)) {
                 preload_exp.push(firstAudio.stimulus);
             }
@@ -73,7 +66,6 @@ function createPreloadArray(blocks) {
             }
         }
     }
-    
     return preload_exp;
 }
 
@@ -88,10 +80,8 @@ function makeCounterbalancedBlocks(stimuliData, num_trials_per_block, audio_temp
     // Get counterbalance ID from URL
     const urlParams = new URLSearchParams(window.location.search);
     const counterbalanceID = parseInt(urlParams.get('counterbalance')) || 1;
-    
     // Determine block order based on counterbalance ID
     let firstBlockType, secondBlockType, firstClipSet, secondClipSet;
-    
     if (counterbalanceID % 2 === 1) {
         // Odd IDs: Short first, then Long
         firstBlockType = 'short';
@@ -105,7 +95,6 @@ function makeCounterbalancedBlocks(stimuliData, num_trials_per_block, audio_temp
         firstClipSet = LONG_CLIPS;
         secondClipSet = SHORT_CLIPS;
     }
-    
     let all_blocks = [];
     
     // Generate 3 blocks of first type
@@ -117,20 +106,12 @@ function makeCounterbalancedBlocks(stimuliData, num_trials_per_block, audio_temp
         // Generate blank trials
         generateBlankTrials(num_trials_per_block, audio_trials, response_trials, 
                           audio_template, response_template, audio_data_template, response_data_template);
-        
-        // Generate trial order using first clip set
-        generateTrialOrderFromClipSet(trial_ord, stimuliData, firstClipSet, num_trials_per_block);
-        
-        // Fill in the trials
-        generateTrials(trial_ord, audio_trials, response_trials);
-        
         // Add block type information to response data (now in second audio trial)
         for (let i = 0; i < audio_trials.length; i++) {
             audio_trials[i][1].data.block_type = firstBlockType;
             audio_trials[i][1].data.block_number = blockNum + 1;
             audio_trials[i][1].data.counterbalance_id = counterbalanceID;
         }
-        
         // Combine audio trials into block format (no separate response trials)
         let block = [];
         for (let i = 0; i < num_trials_per_block; i++) {
@@ -156,23 +137,24 @@ function makeCounterbalancedBlocks(stimuliData, num_trials_per_block, audio_temp
         
         // Fill in the trials
         generateTrials(trial_ord, audio_trials, response_trials);
-        
+      
         // Add block type information to response data (now in second audio trial)
         for (let i = 0; i < audio_trials.length; i++) {
             audio_trials[i][1].data.block_type = secondBlockType;
             audio_trials[i][1].data.block_number = blockNum + 4; // blocks 4, 5, 6
             audio_trials[i][1].data.counterbalance_id = counterbalanceID;
         }
-        
         // Combine audio trials into block format (no separate response trials)
         let block = [];
         for (let i = 0; i < num_trials_per_block; i++) {
             block.push(audio_trials[i][0]); // first audio
             block.push(audio_trials[i][1]); // second audio (with response)
         }
-        
         all_blocks.push(block);
     }
-    
     return all_blocks;
 }
+    
+        
+
+    

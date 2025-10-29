@@ -9,12 +9,12 @@ var jsPsych = initJsPsych({
 var timeline = [];
 
 const sounds = [ // These are just the practice trial sounds! REAL trial sounds are in the audio folder
-  '../practice/trial1_clip1.WAV',
-  '../practice/trial1_clip2.WAV',
-  '../practice/trial2_clip1.WAV',
-  '../practice/trial2_clip2.WAV',
-  '../practice/trial3_clip1.WAV',
-  '../practice/trial3_clip2.WAV'
+  '../practice/trial1_clip1.wav',
+  '../practice/trial1_clip2.wav',
+  '../practice/trial2_clip1.wav',
+  '../practice/trial2_clip2.wav',
+  '../practice/trial3_clip1.wav',
+  '../practice/trial3_clip2.wav'
 ];
 
 
@@ -39,17 +39,13 @@ const preload_exp = createPreloadArray(blocks);
 const preload_practice = {
   type: jsPsychPreload,
   audio: sounds,
-  max_load_time: 120000, // 2 minutes
-  continue_after_error: true,  // Add this
-  show_detailed_errors: true   // Add this
+  max_load_time: 120000 // 2 minutes
 }
 
 var preload_trial = {
   type: jsPsychPreload,
   audio: preload_exp,
-  max_load_time: 120000, // 2 minutes
-  continue_after_error: true,  // Add this
-  show_detailed_errors: true   // Add this
+  max_load_time: 120000 // 2 minutes
 }
 
 
