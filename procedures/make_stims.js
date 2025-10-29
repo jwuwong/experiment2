@@ -48,17 +48,23 @@ let response_temp = {
     data: {}
 }
 
+// Function to extract all audio file paths for preloading
 function createPreloadArray(blocks) {
     let preload_exp = [];
     
     for (let blockIndex = 0; blockIndex < blocks.length; blockIndex++) {
         const currentBlock = blocks[blockIndex];
         
+        // Go through each trial in the block (every 2 items: audio1, audio2)
         for (let trialIndex = 0; trialIndex < currentBlock.length; trialIndex += 2) {
             const firstAudio = currentBlock[trialIndex];
             const secondAudio = currentBlock[trialIndex + 1];
             
+<<<<<<< HEAD
             // Add audio files to preload array (avoid duplicates)
+=======
+            // Add the stimulus paths to preload array
+>>>>>>> parent of 2068aff (tried to handle .wav better)
             if (firstAudio.stimulus && !preload_exp.includes(firstAudio.stimulus)) {
                 preload_exp.push(firstAudio.stimulus);
             }
@@ -170,5 +176,3 @@ function makeCounterbalancedBlocks(stimuliData, num_trials_per_block, audio_temp
     
     return all_blocks;
 }
-
-
