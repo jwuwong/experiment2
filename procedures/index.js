@@ -58,10 +58,11 @@ const sounds = [ // These are just the practice trial sounds! REAL trial sounds 
 const blocks = makeCounterbalancedBlocks(
     stimuliData, 
     20, 
-    audio_temp,        // your audio_temp
-    response_temp,     // your response_temp  
-    audio_data,        // your audio_data
-    response_data      // your response_data
+    audio_temp_first,   // first audio template
+    audio_temp_second,  // second audio template
+    response_temp,
+    audio_data,
+    response_data
 );
 
 
@@ -225,17 +226,54 @@ timeline.push(practiceinstructions_page2);
 
 /* Practice trials */
 for (let i = 0; i < practice_trial_audio_objects.length; i++) {
+    // Push first audio
     timeline.push(practice_trial_audio_objects[i][0]);
+    
+    // Add on_finish to second audio to handle responses during playback
+    practice_trial_audio_objects[i][1].on_finish = function(data) {
+        if (data.response !== null) {
+            // They responded during the audio
+            if (data.response === 's') {
+                data.selected_clip = 1;
+            } else if (data.response === 'l') {
+                data.selected_clip = 2;
+            }
+            
+            data.responded_during_audio = true;
+            consecutive_no_responses = 0;
+        } else {
+            data.responded_during_audio = false;
+        }
+    };
+    
     timeline.push(practice_trial_audio_objects[i][1]);
 
-    // Dynamically set the stimulus for response trials
-    practice_trial_response_objects[i].stimulus = `
-        <center>
-            <div id="clip1" class="visual">Clip 1<p>Press "S"</p></div>
-            <div id="clip2" class="visual">Clip 2<p>Press "L"</p></div>
-        </center>
-        <p style="text-align:center">Which clip sounds more like someone who was born in Boston?</p>`;
-    practice_trial_response_objects[i].on_finish = handleTrialResponse; // Fixed: was all_trial_response_objects
+    // Response screen - only shown if no response during audio
+    practice_trial_response_objects[i].on_start = function(trial) {
+        // Check if they already responded during the audio
+        let last_trial = jsPsych.data.get().last(1).values()[0];
+        if (last_trial.response !== null && last_trial.responded_during_audio === true) {
+            // They already responded, skip this trial immediately
+            trial.trial_duration = 1; // End immediately
+            trial.choices = []; // Don't accept any responses
+        }
+    };
+    
+    practice_trial_response_objects[i].on_finish = function(data) {
+        // Check if this was a real response or just a skip
+        let last_audio_trial = jsPsych.data.get().last(2).values()[0];
+        if (last_audio_trial.response !== null && last_audio_trial.responded_during_audio === true) {
+            // This was just a skip, don't count it
+            data.skipped = true;
+            data.response = last_audio_trial.response; // Copy the response from audio trial
+            data.selected_clip = last_audio_trial.selected_clip;
+        } else {
+            // This was a real response
+            data.skipped = false;
+            handleTrialResponse(data);
+        }
+    };
+    
     timeline.push(practice_trial_response_objects[i]);
 }
 
@@ -290,18 +328,55 @@ for (let blockIndex = 0; blockIndex < blocks.length; blockIndex++) {
         const secondAudio = currentBlock[trialIndex + 1];
         const responseTrialObj = currentBlock[trialIndex + 2];
         
-        // Add the two audio clips
+        // Add the first audio clip
         timeline.push(firstAudio);
+        
+        // Add on_finish to second audio to handle responses during playback
+        secondAudio.on_finish = function(data) {
+            if (data.response !== null) {
+                // They responded during the audio
+                if (data.response === 's') {
+                    data.selected_clip = 1;
+                } else if (data.response === 'l') {
+                    data.selected_clip = 2;
+                }
+                
+                data.responded_during_audio = true;
+                consecutive_no_responses = 0;
+            } else {
+                data.responded_during_audio = false;
+            }
+        };
+        
+        // Add the second audio clip
         timeline.push(secondAudio);
         
-        // Dynamically set the stimulus for response trials (same as your current code)
-        responseTrialObj.stimulus = `
-            <center>
-                <div id="clip1" class="visual">Clip 1<p>Press "S"</p></div>
-                <div id="clip2" class="visual">Clip 2<p>Press "L"</p></div>
-            </center>
-            <p style="text-align:center">Which clip sounds more like someone who was born in Boston?</p>`;
-        responseTrialObj.on_finish = handleTrialResponse;
+        // Response screen - only shown if no response during audio
+        responseTrialObj.on_start = function(trial) {
+            // Check if they already responded during the audio
+            let last_trial = jsPsych.data.get().last(1).values()[0];
+            if (last_trial.response !== null && last_trial.responded_during_audio === true) {
+                // They already responded, skip this trial immediately
+                trial.trial_duration = 1; // End immediately
+                trial.choices = []; // Don't accept any responses
+            }
+        };
+        
+        responseTrialObj.on_finish = function(data) {
+            // Check if this was a real response or just a skip
+            let last_audio_trial = jsPsych.data.get().last(2).values()[0];
+            if (last_audio_trial.response !== null && last_audio_trial.responded_during_audio === true) {
+                // This was just a skip, don't count it
+                data.skipped = true;
+                data.response = last_audio_trial.response; // Copy the response from audio trial
+                data.selected_clip = last_audio_trial.selected_clip;
+            } else {
+                // This was a real response
+                data.skipped = false;
+                handleTrialResponse(data);
+            }
+        };
+        
         timeline.push(responseTrialObj);
     }
 }
