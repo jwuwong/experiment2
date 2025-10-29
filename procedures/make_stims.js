@@ -33,10 +33,12 @@ let audio_temp_first = {
     trial_duration: 0,
     post_trial_gap: 0,
     response_allowed_while_playing: false,
-    choices: [],
+    choices: "NO_KEYS",  // Changed from [] to "NO_KEYS"
     data: {}
 }
 
+
+// Template for SECOND audio clip - responses allowed
 // Template for SECOND audio clip - responses allowed
 let audio_temp_second = {
     stimulus: 'UNKNOWN',
@@ -48,18 +50,7 @@ let audio_temp_second = {
     response_allowed_while_playing: true,
     choices: ['s', 'l'],
     data: {}
-}
-// Response data includes information about both clips for the trial pair
-let response_data = {
-    clip1_id: 'UNKNOWN',
-    clip2_id: 'UNKNOWN',
-    clip1_speaker: 'UNKNOWN',
-    clip2_speaker: 'UNKNOWN',
-    clip1_gender: 'UNKNOWN',
-    clip2_gender: 'UNKNOWN',
-    clip1_transcript: 'UNKNOWN',
-    clip2_transcript: 'UNKNOWN',
-    trial_type: 'UNKNOWN'
+    // No on_load or on_finish needed!
 }
 
 let response_temp = {
@@ -74,8 +65,8 @@ let response_temp = {
             <p style="text-align:center">Which clip sounds more like someone who was born in Boston?</p>`;
     },
     trial_duration: 2000,
-    response_ends_trial: true,  // Changed from false
-    post_trial_gap: 500,
+    response_ends_trial: true,
+    post_trial_gap: 0,
     data: {},
 
     on_finish: function(data) {
@@ -96,6 +87,48 @@ let response_temp = {
         }
     }
 };
+
+
+let feedback_temp = {
+    type: jsPsychHtmlKeyboardResponse,
+    choices: "NO_KEYS",
+    trial_duration: 500, // Show for 500ms
+    stimulus: function() {
+        // Get the last trial's response
+        const lastTrial = jsPsych.data.get().last(1).values()[0];
+        const response = lastTrial.response;
+        
+        let clip1Class = 'visual';
+        let clip2Class = 'visual';
+        
+        if (response === 's') {
+            clip1Class = 'visual selected';
+        } else if (response === 'l') {
+            clip2Class = 'visual selected';
+        }
+        
+        return `
+            <center>
+                <div class="${clip1Class}">Clip 1<p>Press "S"</p></div>
+                <div class="${clip2Class}">Clip 2<p>Press "L"</p></div>
+            </center>
+            <p style="text-align:center">Which clip sounds more like someone who was born in Boston?</p>`;
+    }
+};
+
+// Response data includes information about both clips for the trial pair
+let response_data = {
+    clip1_id: 'UNKNOWN',
+    clip2_id: 'UNKNOWN',
+    clip1_speaker: 'UNKNOWN',
+    clip2_speaker: 'UNKNOWN',
+    clip1_gender: 'UNKNOWN',
+    clip2_gender: 'UNKNOWN',
+    clip1_transcript: 'UNKNOWN',
+    clip2_transcript: 'UNKNOWN',
+    trial_type: 'UNKNOWN'
+}
+
 
 const counterbalanceID = Math.floor(Math.random() * 2); // 0 or 1
 const shortFirst = counterbalanceID === 0; // true = short first, false = long first
@@ -159,61 +192,35 @@ function generateTrialOrder(trial_ord, stimuliData, num_clips, num_trials) {
 }
 
 //modified for two different audio
-function generateBlankTrials(num_trials, audio_array, response_array, audio_template_first, audio_template_second, response_template, audio_data_template, response_data_template) {
+function generateBlankTrials(num_trials, audio_array, response_array, feedback_array, audio_template_first, audio_template_second, response_template, feedback_template, audio_data_template, response_data_template) {
     for (let i = 0; i < num_trials; i++) {
         // for audio; two clips with different templates
         let trial_copy = []
         
         // First audio - no responses
-        let audio_copy_first = {
-            type: audio_template_first.type  // Copy type directly
-        };
-        for (let key in audio_template_first) {
-            if (key !== 'type' && key !== 'data') {  // Skip type and data
-                audio_copy_first[key] = audio_template_first[key];
-            }
-        }
-        let audio_data_copy_first = {};
-        for (let key in audio_data_template) {
-            audio_data_copy_first[key] = audio_data_template[key];
-        }
+        let audio_copy_first = Object.assign({}, audio_template_first);
+        let audio_data_copy_first = Object.assign({}, audio_data_template);
         audio_copy_first.data = audio_data_copy_first;
         trial_copy.push(audio_copy_first);
         
         // Second audio - responses allowed
-        let audio_copy_second = {
-            type: audio_template_second.type  // Copy type directly
-        };
-        for (let key in audio_template_second) {
-            if (key !== 'type' && key !== 'data') {  // Skip type and data
-                audio_copy_second[key] = audio_template_second[key];
-            }
-        }
-        let audio_data_copy_second = {};
-        for (let key in audio_data_template) {
-            audio_data_copy_second[key] = audio_data_template[key];
-        }
+        let audio_copy_second = Object.assign({}, audio_template_second);
+        let audio_data_copy_second = Object.assign({}, audio_data_template);
         audio_copy_second.data = audio_data_copy_second;
         trial_copy.push(audio_copy_second);
         
         audio_array.push(trial_copy);
 
         // for response
-        let response_copy = {
-            type: response_template.type  // Copy type directly
-        };
-        for (let key in response_template) {
-            if (key !== 'type' && key !== 'data') {  // Skip type and data
-                response_copy[key] = response_template[key];
-            }
-        }
-        let response_data_copy = {};
-        for (let key in response_data_template) {
-            response_data_copy[key] = response_data_template[key];
-        }
+        let response_copy = Object.assign({}, response_template);
+        let response_data_copy = Object.assign({}, response_data_template);
         response_data_copy.Order = i + 1;
         response_copy.data = response_data_copy;
         response_array.push(response_copy);
+        
+        // for feedback
+        let feedback_copy = Object.assign({}, feedback_template);
+        feedback_array.push(feedback_copy);
     }
 }
 
@@ -333,7 +340,7 @@ function generateTrials(trial_ord, audio_trials, response_trials) {
     }
 }
 
-function makeCounterbalancedBlocks(stimuliData, num_trials_per_block, audio_template_first, audio_template_second, response_template, audio_data_template, response_data_template) {
+function makeCounterbalancedBlocks(stimuliData, num_trials_per_block, audio_template_first, audio_template_second, response_template, feedback_template, audio_data_template, response_data_template) {
     let all_blocks = [];
     
     const firstClipSet = shortFirst ? SHORT_CLIPS : LONG_CLIPS;
@@ -348,9 +355,10 @@ function makeCounterbalancedBlocks(stimuliData, num_trials_per_block, audio_temp
         let trial_ord = [];
         let audio_trials = [];
         let response_trials = [];
+        let feedback_trials = [];  // NEW
         
-        generateBlankTrials(num_trials_per_block, audio_trials, response_trials, 
-                          audio_template_first, audio_template_second, response_template, 
+        generateBlankTrials(num_trials_per_block, audio_trials, response_trials, feedback_trials,
+                          audio_template_first, audio_template_second, response_template, feedback_template,
                           audio_data_template, response_data_template);
         
         generateTrialOrderFromClipSet(trial_ord, stimuliData, firstClipSet, num_trials_per_block);
@@ -367,6 +375,7 @@ function makeCounterbalancedBlocks(stimuliData, num_trials_per_block, audio_temp
             block.push(audio_trials[i][0]); // first audio
             block.push(audio_trials[i][1]); // second audio
             block.push(response_trials[i]);  // response
+            block.push(feedback_trials[i]);  // feedback - NEW
         }
         
         all_blocks.push(block);
@@ -377,9 +386,10 @@ function makeCounterbalancedBlocks(stimuliData, num_trials_per_block, audio_temp
         let trial_ord = [];
         let audio_trials = [];
         let response_trials = [];
+        let feedback_trials = [];  // NEW
         
-        generateBlankTrials(num_trials_per_block, audio_trials, response_trials, 
-                          audio_template_first, audio_template_second, response_template,
+        generateBlankTrials(num_trials_per_block, audio_trials, response_trials, feedback_trials,
+                          audio_template_first, audio_template_second, response_template, feedback_template,
                           audio_data_template, response_data_template);
         
         generateTrialOrderFromClipSet(trial_ord, stimuliData, secondClipSet, num_trials_per_block);
@@ -396,6 +406,7 @@ function makeCounterbalancedBlocks(stimuliData, num_trials_per_block, audio_temp
             block.push(audio_trials[i][0]); // first audio
             block.push(audio_trials[i][1]); // second audio
             block.push(response_trials[i]);  // response
+            block.push(feedback_trials[i]);  // feedback - NEW
         }
         
         all_blocks.push(block);
@@ -404,18 +415,19 @@ function makeCounterbalancedBlocks(stimuliData, num_trials_per_block, audio_temp
     return all_blocks;
 }
 
-// Fixed to handle 3 items per trial (audio1, audio2, response)
+// Fixed to handle 4 items per trial (audio1, audio2, response, feedback)
 function createPreloadArray(blocks) {
     let preload_exp = [];
     
     for (let blockIndex = 0; blockIndex < blocks.length; blockIndex++) {
         const currentBlock = blocks[blockIndex];
         
-        // Go through each trial in the block (every 3 items: audio1, audio2, response)
-        for (let trialIndex = 0; trialIndex < currentBlock.length; trialIndex += 3) {
+        // Go through each trial in the block (every 4 items: audio1, audio2, response, feedback)
+        for (let trialIndex = 0; trialIndex < currentBlock.length; trialIndex += 4) {
             const firstAudio = currentBlock[trialIndex];
             const secondAudio = currentBlock[trialIndex + 1];
             // const response = currentBlock[trialIndex + 2]; // doesn't have audio
+            // const feedback = currentBlock[trialIndex + 3]; // doesn't have audio
             
             if (firstAudio.stimulus && !preload_exp.includes(firstAudio.stimulus)) {
                 preload_exp.push(firstAudio.stimulus);
@@ -431,6 +443,7 @@ function createPreloadArray(blocks) {
 
 let practice_trial_audio_objects = [];
 let practice_trial_response_objects = [];
-generateBlankTrials(NUM_PRACTICE, practice_trial_audio_objects, practice_trial_response_objects, 
-                    audio_temp_first, audio_temp_second, response_temp, audio_data, response_data);
+let practice_trial_feedback_objects = [];
+generateBlankTrials(NUM_PRACTICE, practice_trial_audio_objects, practice_trial_response_objects, practice_trial_feedback_objects,
+                    audio_temp_first, audio_temp_second, response_temp, feedback_temp, audio_data, response_data);
 generatePracticeTrials(practice_trial_audio_objects, practice_trial_response_objects);

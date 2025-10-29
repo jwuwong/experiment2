@@ -1,16 +1,46 @@
 /* initialize jsPsych */
 var jsPsych = initJsPsych({
   show_progress_bar: true,
-  on_finish: function () {
-    //jsPsych.data.displayData();
-    window.location = "https://jwuwong.github.io/boston/procedures/thanks.html";
-    proliferate.submit({ "trials": jsPsych.data.get().values() });
+  on_finish: function (data) {
+    // Only redirect and submit if the experiment completed normally
+    // Check if the experiment ended early
+    const allData = jsPsych.data.get();
+    const lastTrial = allData.last(1).values()[0];
+    
+    // Only do the normal completion if we reached the actual end
+    // (not if experiment was terminated early)
+    if (lastTrial && lastTrial.trial_type === 'html-button-response' && lastTrial.stimulus && lastTrial.stimulus.includes('Thank you for completing')) {
+      window.location = "https://jwuwong.github.io/boston/procedures/thanks.html";
+      proliferate.submit({ "trials": jsPsych.data.get().values() });
+    }
+    // Otherwise, the experiment ended early and jsPsych.endExperiment already showed a message
   },
   default_iti: 250
 });
 
- const subject_id = jsPsych.randomization.randomID(10);
- const filename = `${subject_id}.csv`;
+const subject_id = jsPsych.randomization.randomID(10);
+const filename = `${subject_id}.csv`;
+
+// Create a save data function that can be reused
+function createSaveCheckpoint(checkpoint_name) {
+  jsPsych.data.addProperties({
+    last_checkpoint: checkpoint_name,
+    checkpoint_time: Date.now()
+  });
+  
+  return {
+    type: jsPsychPipe,
+    action: "save",
+    experiment_id: "gifLBl3Gt40D",
+    filename: filename,
+    data_string: () => {
+      return jsPsych.data.get().csv();
+    },
+    on_finish: function() {
+      console.log('Saved checkpoint:', checkpoint_name);
+    }
+  };
+}
             
 /* create timeline */
 var timeline = [];
@@ -22,10 +52,14 @@ var consecutive_no_responses = 0;
 const MAX_CONSECUTIVE_NO_RESPONSES = 5;
 
 /* Create a function to check if we should terminate the experiment */
+/* Create a function to check if we should terminate the experiment */
 function checkNoResponseTermination() {
   if (consecutive_no_responses >= MAX_CONSECUTIVE_NO_RESPONSES) {
-    // End the experiment with a message
-    jsPsych.endExperiment('The experiment has ended because you did not respond to multiple trials in a row.');
+    jsPsych.data.addProperties({
+      experiment_termination: 'no_response_timeout'
+    });
+    
+    jsPsych.endExperiment('<p>The experiment has ended because you did not respond to multiple trials in a row.</p><p>Unfortunately, you will not receive compensation for this study.</p>');
   }
 }
 
@@ -61,6 +95,7 @@ const blocks = makeCounterbalancedBlocks(
     audio_temp_first,   // first audio template
     audio_temp_second,  // second audio template
     response_temp,
+    feedback_temp,      // NEW - add feedback template
     audio_data,
     response_data
 );
@@ -113,6 +148,10 @@ var checkBrowser = {
   }
 };
 timeline.push(checkBrowser);
+
+
+
+
 
 
 var instructions = {
@@ -224,12 +263,11 @@ timeline.push(practiceinstructions_page1);
 timeline.push(practiceinstructions_page2);
 
 
-/* Practice trials */
+// Practice trials
 for (let i = 0; i < practice_trial_audio_objects.length; i++) {
-    // Push first audio
-    timeline.push(practice_trial_audio_objects[i][0]);
+    timeline.push(practice_trial_audio_objects[i][0]); // first audio
     
-    // Add on_finish to second audio to handle responses during playback
+    // Add on_finish to second audio to track if they responded
     practice_trial_audio_objects[i][1].on_finish = function(data) {
         if (data.response !== null) {
             // They responded during the audio
@@ -238,7 +276,6 @@ for (let i = 0; i < practice_trial_audio_objects.length; i++) {
             } else if (data.response === 'l') {
                 data.selected_clip = 2;
             }
-            
             data.responded_during_audio = true;
             consecutive_no_responses = 0;
         } else {
@@ -246,9 +283,9 @@ for (let i = 0; i < practice_trial_audio_objects.length; i++) {
         }
     };
     
-    timeline.push(practice_trial_audio_objects[i][1]);
-
-    // Response screen - only shown if no response during audio
+    timeline.push(practice_trial_audio_objects[i][1]); // second audio
+    
+    // Response screen - conditionally skip if they already responded
     practice_trial_response_objects[i].on_start = function(trial) {
         // Check if they already responded during the audio
         let last_trial = jsPsych.data.get().last(1).values()[0];
@@ -259,8 +296,9 @@ for (let i = 0; i < practice_trial_audio_objects.length; i++) {
         }
     };
     
+    // Keep the original on_finish but check if this was skipped
+    const originalOnFinish = practice_trial_response_objects[i].on_finish;
     practice_trial_response_objects[i].on_finish = function(data) {
-        // Check if this was a real response or just a skip
         let last_audio_trial = jsPsych.data.get().last(2).values()[0];
         if (last_audio_trial.response !== null && last_audio_trial.responded_during_audio === true) {
             // This was just a skip, don't count it
@@ -268,14 +306,18 @@ for (let i = 0; i < practice_trial_audio_objects.length; i++) {
             data.response = last_audio_trial.response; // Copy the response from audio trial
             data.selected_clip = last_audio_trial.selected_clip;
         } else {
-            // This was a real response
-            data.skipped = false;
-            handleTrialResponse(data);
+            // This was a real response, call original on_finish
+            if (originalOnFinish) {
+                originalOnFinish(data);
+            }
         }
     };
     
-    timeline.push(practice_trial_response_objects[i]);
+    timeline.push(practice_trial_response_objects[i]); // response
+    timeline.push(practice_trial_feedback_objects[i]); // feedback
 }
+
+timeline.push(createSaveCheckpoint('practice_complete'));
 
 
 /* REAL trial instructions */
@@ -317,30 +359,23 @@ timeline.push(realinstructions_page1);
 timeline.push(realinstructions_page2);
 
 
-// Then add each block to the timeline
+// Add each block to the timeline with checkpoints
 for (let blockIndex = 0; blockIndex < blocks.length; blockIndex++) {
     const currentBlock = blocks[blockIndex];
     
-    // Add all trials from this block
-    for (let trialIndex = 0; trialIndex < currentBlock.length; trialIndex += 3) {
-        // Each "trial" consists of 3 elements: audio1, audio2, response
+    for (let trialIndex = 0; trialIndex < currentBlock.length; trialIndex += 4) {
         const firstAudio = currentBlock[trialIndex];
         const secondAudio = currentBlock[trialIndex + 1];
-        const responseTrialObj = currentBlock[trialIndex + 2];
+        const response = currentBlock[trialIndex + 2];
+        const feedback = currentBlock[trialIndex + 3];
         
-        // Add the first audio clip
-        timeline.push(firstAudio);
-        
-        // Add on_finish to second audio to handle responses during playback
         secondAudio.on_finish = function(data) {
             if (data.response !== null) {
-                // They responded during the audio
                 if (data.response === 's') {
                     data.selected_clip = 1;
                 } else if (data.response === 'l') {
                     data.selected_clip = 2;
                 }
-                
                 data.responded_during_audio = true;
                 consecutive_no_responses = 0;
             } else {
@@ -348,38 +383,37 @@ for (let blockIndex = 0; blockIndex < blocks.length; blockIndex++) {
             }
         };
         
-        // Add the second audio clip
-        timeline.push(secondAudio);
-        
-        // Response screen - only shown if no response during audio
-        responseTrialObj.on_start = function(trial) {
-            // Check if they already responded during the audio
+        response.on_start = function(trial) {
             let last_trial = jsPsych.data.get().last(1).values()[0];
             if (last_trial.response !== null && last_trial.responded_during_audio === true) {
-                // They already responded, skip this trial immediately
-                trial.trial_duration = 1; // End immediately
-                trial.choices = []; // Don't accept any responses
+                trial.trial_duration = 1;
+                trial.choices = [];
             }
         };
         
-        responseTrialObj.on_finish = function(data) {
-            // Check if this was a real response or just a skip
+        const originalOnFinish = response.on_finish;
+        response.on_finish = function(data) {
             let last_audio_trial = jsPsych.data.get().last(2).values()[0];
             if (last_audio_trial.response !== null && last_audio_trial.responded_during_audio === true) {
-                // This was just a skip, don't count it
                 data.skipped = true;
-                data.response = last_audio_trial.response; // Copy the response from audio trial
+                data.response = last_audio_trial.response;
                 data.selected_clip = last_audio_trial.selected_clip;
-            } else {
-                // This was a real response
-                data.skipped = false;
-                handleTrialResponse(data);
+            } else if (originalOnFinish) {
+                originalOnFinish(data);
             }
         };
         
-        timeline.push(responseTrialObj);
+        timeline.push(firstAudio);
+        timeline.push(secondAudio);
+        timeline.push(response);
+        timeline.push(feedback);
     }
+    
+    // Save after each block
+    timeline.push(createSaveCheckpoint(`block_${blockIndex + 1}_complete`));
 }
+
+timeline.push(createSaveCheckpoint('all_trials_complete'));
 
 /* survey 1: demographic questions */
 var survey1 = {
@@ -573,7 +607,7 @@ var survey2b_part2 = {
   button_label_finish: 'Continue',
 };
 timeline.push(survey2b_part2);
-
+timeline.push(createSaveCheckpoint('demographics_complete'));
 
 /* survey 3: open-ended Boston questions */
 
@@ -675,6 +709,8 @@ var futurestudies = {
   button_label_finish: 'Continue',
 };
 timeline.push(futurestudies);
+timeline.push(createSaveCheckpoint('surveys_complete'));
+
 
 const save_data = {
   type: jsPsychPipe,
@@ -685,7 +721,6 @@ const save_data = {
 };
 
 
-timeline.push(save_data);
 
 /* thank you */
 const thankyou = {
@@ -700,7 +735,9 @@ const thankyou = {
   choices: ["Submit"],
   button_html: `<button class="submit-btn">%choice%</button>`
 };
-timeline.push(save_data);
+
+// Final save
+timeline.push(createSaveCheckpoint('experiment_complete'));
 timeline.push(thankyou);
 
 
