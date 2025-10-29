@@ -110,6 +110,7 @@ function generatePracticeTrials(audio_trials, response_trials) {
         // Second practice audio - ALLOW responses, RT collection starts here
         secondAudio.stimulus = secondAudioPath;
         secondAudio.prompt = secondPrompt;
+<<<<<<< HEAD
         secondAudio.choices = ['s', 'l'];
         secondAudio.trial_duration = 7000;  // 4000ms audio + 3000ms response window
         secondAudio.response_ends_trial = false;  // We'll end it manually after feedback
@@ -171,6 +172,10 @@ function generatePracticeTrials(audio_trials, response_trials) {
                 document.removeEventListener('keydown', this.keyPressHandler);
             }
         };
+=======
+        secondAudio.choices = ['s', 'l'];  // Allow S and L responses
+        secondAudio.trial_duration = 7000;  // 4000ms audio + 3000ms response window
+>>>>>>> parent of e50d11f (fixed response, need to test output and maybe modify feedback)
         
         // Capture practice data for second clip
         secondAudio.data.ID = 'practice_trial' + trial_num + '_clip2';
@@ -220,6 +225,7 @@ function generateTrials(trial_ord, audio_trials, response_trials) {
         firstAudio.trial_duration = parseFloat(firstClip['Duration (s)']) * 1000 + 500;
         
         // Capture first clip data
+<<<<<<< HEAD
         firstAudio.data = {
             ID: firstClip['Clip ID'],
             talker: firstClip['Speaker ID'],
@@ -331,6 +337,41 @@ function generateTrials(trial_ord, audio_trials, response_trials) {
             clip2_transcript: secondClip['Transcription'],
             trial_type: 'experimental'
         };
+=======
+        firstAudio.data.ID = firstClip['Clip ID'];
+        firstAudio.data.talker = firstClip['Speaker ID'];
+        firstAudio.data.gender = firstClip['Gender'];
+        firstAudio.data.order = 1;
+        firstAudio.data.duration = firstClip['Duration (s)'];
+        firstAudio.data.speech_rate = firstClip['Speech rate (words per s)'];
+        firstAudio.data.transcript = firstClip['Transcription'];
+
+        // Second audio clip - ALLOW responses, RT collection starts here
+        secondAudio.stimulus = secondAudioPath;
+        secondAudio.prompt = secondPrompt;
+        secondAudio.choices = ['s', 'l'];  // Allow S and L keys
+        secondAudio.trial_duration = parseFloat(secondClip['Duration (s)']) * 1000 + 3000;  // Audio duration + 3s response window
+        
+        // Capture second clip data
+        secondAudio.data.ID = secondClip['Clip ID'];
+        secondAudio.data.talker = secondClip['Speaker ID'];
+        secondAudio.data.gender = secondClip['Gender'];
+        secondAudio.data.order = 2;
+        secondAudio.data.duration = secondClip['Duration (s)'];
+        secondAudio.data.speech_rate = secondClip['Speech rate (words per s)'];
+        secondAudio.data.transcript = secondClip['Transcription'];
+        
+        // Add trial pair information to second audio data
+        secondAudio.data.clip1_id = firstClip['Clip ID'];
+        secondAudio.data.clip2_id = secondClip['Clip ID'];
+        secondAudio.data.clip1_speaker = firstClip['Speaker ID'];
+        secondAudio.data.clip2_speaker = secondClip['Speaker ID'];
+        secondAudio.data.clip1_gender = firstClip['Gender'];
+        secondAudio.data.clip2_gender = secondClip['Gender'];
+        secondAudio.data.clip1_transcript = firstClip['Transcription'];
+        secondAudio.data.clip2_transcript = secondClip['Transcription'];
+        secondAudio.data.trial_type = 'experimental';
+>>>>>>> parent of e50d11f (fixed response, need to test output and maybe modify feedback)
     }
 }
 
