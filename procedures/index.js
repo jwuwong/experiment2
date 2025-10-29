@@ -249,7 +249,6 @@ var welcome = {
 };
 timeline.push(welcome);
 
-<<<<<<< HEAD
 timeline.push(preload_trial);
 timeline.push(preload_practice);
 
@@ -305,8 +304,6 @@ const soundcheck = {
   mistake_fn: function () { alert("Wrong answer. Please make sure your audio is working properly and try again. Make sure you're using lowercase") }
 };
 timeline.push(soundcheck);
-=======
->>>>>>> parent of e50d11f (fixed response, need to test output and maybe modify feedback)
 
 /* Practice trial instructions */
 var practiceinstructions_page1 = {
