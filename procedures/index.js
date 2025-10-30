@@ -23,13 +23,6 @@ const filename = `${subject_id}.csv`;
 
 
 
-const save_data = {
-    type: jsPsychPipe,
-    action: "save",
-    experiment_id: "gifLBl3Gt40D", // Your experiment ID
-    filename: filename,
-    data_string: ()=>jsPsych.data.get().csv()
-};
           
 
 
@@ -402,7 +395,13 @@ for (let blockIndex = 0; blockIndex < blocks.length; blockIndex++) {
   
 }
 
-timeline.push(save_data);
+const save_data = {
+  type: jsPsychPipe,
+  action: "save",
+  experiment_id: "gifLBl3Gt40D",
+  filename: filename,
+  data_string: ()=>jsPsych.data.get().csv()
+};
 
 /* survey 1: demographic questions */
 var survey1 = {
@@ -697,7 +696,6 @@ var futurestudies = {
   button_label_finish: 'Continue',
 };
 timeline.push(futurestudies);
-timeline.push(save_data);
 
 
 
