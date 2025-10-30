@@ -159,24 +159,6 @@ var instructions = {
 };
 timeline.push(instructions);
 
-var survey3a = {
-type: jsPsychSurveyHtmlForm,
-preamble: '<p>Thinking about the experiment, please answer the questions below:</p>',
-html:
-'<p><strong>How would you describe the speakers you thought were MORE likely to have been born in Boston</strong><br>' +
-'<input name="boston1" type="text" placeholder="Word 1" required><br><br>' +
-'<input name="boston2" type="text" placeholder="Word 2" required><br><br>' +
-'<input name="boston3" type="text" placeholder="Word 3" required></p>' +
-'<p><strong>How would you describe the speakers you thought were NOT from Boston</strong><br>' +
-'<input name="nonboston1" type="text" placeholder="Word 1" required><br><br>' +
-'<input name="nonboston2" type="text" placeholder="Word 2" required><br><br>' +
-'<input name="nonboston3" type="text" placeholder="Word 3" required></p>' +
-
-'<p><strong>Describe your overall impressions of all the clips</strong><br>' +
-'<textarea name="all_stimuli" placeholder="Type your description here" rows="4" style="width:100%" required></textarea></p>'
-
-};
-timeline.push(survey3a);
 
 /* define welcome message trial */
 var legalinfo = {
@@ -630,7 +612,7 @@ html:
 '<input name="nonboston2" type="text" placeholder="Word 2" required><br><br>' +
 '<input name="nonboston3" type="text" placeholder="Word 3" required></p>' +
 
-'<p><strong>Describe your overall impressions of all the clips</strong><br>' +
+'<p><strong>In a few words, what was your overall impressions of all the clips.</strong><br>' +
 '<textarea name="all_stimuli" placeholder="Type your description here" rows="4" style="width:100%" required></textarea></p>'
 
 };
