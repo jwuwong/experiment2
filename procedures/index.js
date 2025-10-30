@@ -159,6 +159,25 @@ var instructions = {
 };
 timeline.push(instructions);
 
+var survey3a = {
+type: jsPsychSurveyHtmlForm,
+preamble: '<p>Thinking about the experiment, please answer the questions below:</p>',
+html:
+'<p><strong>How would you describe the speakers you thought were MORE likely to have been born in Boston</strong><br>' +
+'<input name="boston1" type="text" placeholder="Word 1" required><br><br>' +
+'<input name="boston2" type="text" placeholder="Word 2" required><br><br>' +
+'<input name="boston3" type="text" placeholder="Word 3" required></p>' +
+'<p><strong>How would you describe the speakers you thought were NOT from Boston</strong><br>' +
+'<input name="nonboston1" type="text" placeholder="Word 1" required><br><br>' +
+'<input name="nonboston2" type="text" placeholder="Word 2" required><br><br>' +
+'<input name="nonboston3" type="text" placeholder="Word 3" required></p>' +
+
+'<p><strong>Describe your overall impressions of all the clips</strong><br>' +
+'<textarea name="all_stimuli" placeholder="Type your description here" rows="4" style="width:100%" required></textarea></p>'
+
+};
+timeline.push(survey3a);
+
 /* define welcome message trial */
 var legalinfo = {
   type: jsPsychHtmlButtonResponse,
@@ -231,13 +250,13 @@ var practiceinstructions_page2 = {
     stimulus: `
     <center>   
       <div class="instruction-box">   
-        <p>Please place your left index finger on the "S" key and your right index finger on the "L" key.</p>
-        <p><img src="../procedures/keyboard.png" width="500" style="margin-top:-10px"></p>
-        <p>If the <strong>first clip</strong> sounds more like someone who was born in Boston, please <strong>press S</strong>.</p>
-        <p>If the <strong>second clip</strong> sounds more like someone who was born in Boston, please <strong>press L</strong>.</p>
-        <p><b>Respond as quickly as possible when both clips have finished playing.</b></p>
-        <p>This is a timed task. If you do not respond in time, the next question will appear automatically.</p>
-        <p><b>Please answer as quickly and accurately as possible.</b></p>
+        <p><strong>Please place your left index finger on "S" and your right index finger on "L".</strong></p> 
+        <p><img src="../procedures/keyboard.png" width="500" style="margin-top:-10px"></p> 
+        <p><strong>Press "S"</strong> if the first clip sounds more like someone from Boston.</p>
+        <p><strong>Press "L"</strong> if the second clip sounds more like someone from Boston.</p> 
+        <p><strong>You may respond as soon as you know.</p> 
+        <p> You do NOT need to wait for the second clip to finish. You can press "S" or "L" during the second clip or after it ends.</strong></p> 
+        <p><strong>Respond quickly and accurately. This is a timed task; if you do not respond in time, the next question will appear automatically.</strong></p>
     </center>
         `,
     choices: ["Continue"],
@@ -324,15 +343,15 @@ var realinstructions_page1 = {
 var realinstructions_page2 = {
     type: jsPsychHtmlButtonResponse,
     stimulus: `
-    <center>
-      <div class="instruction-box">
-        <p>Please place your left index finger on the "S" key and your right index finger on the "L" key.</p>
-        <p><img src="../procedures/keyboard.png" width="500" style="margin-top:-10px"></p>
-        <p>If the <strong>first clip</strong> sounds more like someone who was born in Boston, please <strong>press S</strong>.</p>
-        <p>If the <strong>second clip</strong> sounds more like someone who was born in Boston, please <strong>press L</strong>.</p>
-        <p><b>Respond as quickly as possible when both clips have finished playing.</b></p>
-        <p>This is a timed task. If you do not respond in time, the next question will appear automatically.</p>
-        <p><b>Please answer as quickly and accurately as possible.</b></p>
+    <center>   
+      <div class="instruction-box">   
+        <p><strong>Please place your left index finger on "S" and your right index finger on "L".</strong></p> 
+        <p><img src="../procedures/keyboard.png" width="500" style="margin-top:-10px"></p> 
+        <p><strong>Press "S"</strong> if the first clip sounds more like someone from Boston.</p>
+        <p><strong>Press "L"</strong> if the second clip sounds more like someone from Boston.</p> 
+        <p><strong>You may respond as soon as you know.</p> 
+        <p> You do NOT need to wait for the second clip to finish. You can press "S" or "L" during the second clip or after it ends.</strong></p> 
+        <p><strong>Respond quickly and accurately. This is a timed task; if you do not respond in time, the next question will appear automatically.</strong></p>
     </center>
         `,
     choices: ["Continue"],
@@ -599,9 +618,21 @@ timeline.push(survey2b_part2);
 /* survey 3: open-ended Boston questions */
 
 var survey3a = {
-  type: jsPsychSurveyHtmlForm,
-  preamble: '<p>Thinking to the experiment, list three attributes to describe the speakers that sounded like they were more likely to have been born in Boston:</p>',
-  html: '<p><input name="word1" class="try" type="text" placeholder="Word 1" required><BR><BR><input name="word2" type="text" placeholder="Word 2" required><BR><BR><input name="word3" type="text" placeholder="Word 3" required></p>'
+type: jsPsychSurveyHtmlForm,
+preamble: '<p>Thinking about the experiment, please answer the questions below:</p>',
+html:
+'<p><strong>How would you describe the speakers you thought were MORE likely to have been born in Boston</strong><br>' +
+'<input name="boston1" type="text" placeholder="Word 1" required><br><br>' +
+'<input name="boston2" type="text" placeholder="Word 2" required><br><br>' +
+'<input name="boston3" type="text" placeholder="Word 3" required></p>' +
+'<p><strong>How would you describe the speakers you thought were NOT from Boston</strong><br>' +
+'<input name="nonboston1" type="text" placeholder="Word 1" required><br><br>' +
+'<input name="nonboston2" type="text" placeholder="Word 2" required><br><br>' +
+'<input name="nonboston3" type="text" placeholder="Word 3" required></p>' +
+
+'<p><strong>Describe your overall impressions of all the clips</strong><br>' +
+'<textarea name="all_stimuli" placeholder="Type your description here" rows="4" style="width:100%" required></textarea></p>'
+
 };
 timeline.push(survey3a);
 
@@ -707,6 +738,7 @@ const thankyou = {
         <div class="text" id="trial">
             <p>Thank you for completing the experiment!</p>
             <p>Here is the study link for completion: https://app.prolific.com/submissions/complete?cc=C10MFI6S</p>
+            <p>Here is the completion code: C10MFI6S </p>
             <p>Please click the "Submit" button to submit your responses and complete the study.</p>
         </div>
       `,
